@@ -5,6 +5,6 @@ course: GEL-1000
 date: 2024-11-29T23:59
 ponderation: 2
 note:
-Complete: false
+status: En cours
 ---
 #school/GEL-1000  

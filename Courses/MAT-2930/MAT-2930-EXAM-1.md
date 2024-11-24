@@ -5,6 +5,6 @@ course: MAT-2930
 date: 2024-10-24T13:30
 ponderation: 35
 note: 92
-Complete: true
+status: Compléter
 ---
 #school/MAT-2930 

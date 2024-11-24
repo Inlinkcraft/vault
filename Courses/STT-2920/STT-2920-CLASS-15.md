@@ -3,7 +3,7 @@ name: Cours-15
 type: Class
 course: STT-2920
 date: 2024-11-04T15:30
-Complete: true
+status: "À Réviser"
 ---
 #school/STT-2920 
 ***

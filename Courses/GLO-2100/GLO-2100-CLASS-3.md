@@ -3,7 +3,7 @@ name: Cours-3
 type: Class
 course: GLO-2100
 date: 2024-09-12T10:30
-Complete: true
+status: "Compléter"
 ---
 #school/GLO-2100 
 ***

@@ -3,7 +3,7 @@ name: Cours-9
 type: Class
 course: MAT-2930
 date: 2024-10-03T13:30
-Complete: true
+status: "Compléter"
 ---
 #school/MAT-2930
 ***

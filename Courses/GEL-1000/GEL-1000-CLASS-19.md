@@ -3,7 +3,7 @@ name: Cours-19
 type: Class
 course: GEL-1000
 date: 2024-11-22T09:30
-Complete: false
+status: À Réviser
 ---
 #school/GEL-1000  
 *** 

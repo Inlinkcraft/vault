@@ -3,7 +3,7 @@ name: Cours-3
 type: Class
 course: STT-2920
 date: 2024-09-11T15:30
-Complete: true
+status: "Compléter"
 ---
 #school/STT-2920 
 ***

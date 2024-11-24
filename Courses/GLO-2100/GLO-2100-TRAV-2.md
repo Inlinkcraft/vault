@@ -5,7 +5,7 @@ course: GLO-2100
 date: 2024-11-19T14:00
 ponderation: 12
 note:
-Complete: true
+status: Compléter
 ---
 #school/GLO-2100 
 # Réseau IP

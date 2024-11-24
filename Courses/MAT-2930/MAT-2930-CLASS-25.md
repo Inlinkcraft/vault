@@ -3,7 +3,7 @@ name: Cours-25
 type: Class
 course: MAT-2930
 date: 2024-12-12T13:30
-Complete: false
+status: "À Faire"
 ---
 #school/MAT-2930
 ***

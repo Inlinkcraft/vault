@@ -5,6 +5,6 @@ course: MAT-2930
 date: 2024-11-06T23:59
 ponderation: 6
 note:
-Complete: true
+status: Compléter
 ---
 #school/MAT-2930 
