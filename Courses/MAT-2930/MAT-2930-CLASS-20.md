@@ -1,9 +1,8 @@
----
-name: Cours-20
+---name: Cours-20
 type: Class
 course: MAT-2930
 date: 2024-11-25T11:30
-status: "Cette semaine"
+status: À Réviser
 ---
 #school/MAT-2930
 ***
