@@ -29,8 +29,10 @@ $$R = \frac{1}{(r-1)!} \frac{d^{r-1}}{ds^{r-1}} \left. \left[ (s+a)^{r} \frac{N(
 ([[Chapitre-6.pdf#page=21&selection=23,0,30,13&color=yellow|Chapitre-6, p.21]])
 
 ##### Pôle complexe
+Les pôle complexe ce traite comme les pôle simple ou multiple a l'exeption qu'il ne faut pas oublier le conjuguer du nombre complexe.
 
-
+> [!Tip]
+> Les nombre complexe peuvent mener à des fonction sinusoïdale
 ### Procédure de résolution
 ---
 Procédure de transformation de Laplace inverse : 
