@@ -9,4 +9,7 @@ L'inverse de la [[Transformation de Laplace|transformation de Laplace]].
 
 ### Définition mathématique
 ---
-$$f(t) = L^{-1}[F(s)] = \frac{1}{2\pi j}\int_{\sigma-j \infty}^{\sigma}$$
+$$f(t) = L^{-1}[F(s)] = \frac{1}{2\pi j}\int_{\sigma-j \infty}^{\sigma+\infty}F(s)e^{st} \ ds$$
+> Cette intégrale peut être évaluée à l'aide du [[Théorème du résidus|théorème du résidu]]
+> ([[Chapitre-6.pdf#page=20&selection=146,0,148,21&color=yellow|Chapitre-6, p.20]])
+
