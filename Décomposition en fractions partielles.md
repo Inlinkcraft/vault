@@ -35,6 +35,7 @@ $$Q_{s} = a_{n}(s-p_{1})(s-p_{2})(s-p_{3})\dots(s-p_{n})$$
 2. Trouver les $K_{j}$ avec cette formule: $$K_{j}=\left.(s-p_{j})F(s)\right|_{s=p_{j}}$$
 3. La réponse finale aura cette allure: $$f(t)=\left(K_{1}e^{p_{1}t}+K_{2}e^{p_{2}t}+...+K_{n}e^{p_{n}t}\right)u(t)$$
 ##### Cas 2 : pôles complexes simples
-
+Si $p_{1}$ est un pôle complexe simple de $F(s)$, alors $p_{2} = p_{1}^{*}$ est aussi un pôle simple de $F(s)$.
+([[Chapitre-6.pdf#page=28&selection=52,0,64,8&color=yellow|Chapitre-6, p.28]])
 
 ##### Cas 3 : pôles multiples
