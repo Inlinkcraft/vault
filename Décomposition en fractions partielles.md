@@ -48,7 +48,7 @@ $$p_{1}=-a+jb \qquad p_{2} = -a-jb$$
 ##### Cas 3 : pôles multiples
 Lorsque $s = p_{i}$ est une racine d'ordre $r$ de $Q(s)$ ([[Chapitre-6.pdf#page=37&selection=40,0,44,32&color=yellow|Chapitre-6, p.37]])
  1. Trouver la forme: $$F(s)=\frac{K_{i1}}{s-p_{i}}+\frac{K_{i2}}{\left(s-p_{i}\right)^{2}}+\ldots+\frac{K_{i j}}{\left(s-p_{i}\right)^{j}}+\ldots+\frac{K_{i r}}{\left(s-p_{i}\right)^{r}}+\dots$$
- 2. Trouver les $K_{ij}$
+ 2. Trouver les $K_{ij}$: $$K_{ij} = \frac{1}{(r-j)!} \frac{d^{r-j}}{ds^{r-j}} \left.\left[ (s-p_{i}^{r})F(s)\right]\right|_{s=p_{i}}$$
 
 ##### Méthode des coefficient indéterminé
 Transformation d'un polynôme rationnelle en prenant compte de sont degree: $F(s) =$
