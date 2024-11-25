@@ -37,5 +37,9 @@ $$Q_{s} = a_{n}(s-p_{1})(s-p_{2})(s-p_{3})\dots(s-p_{n})$$
 ##### Cas 2 : pôles complexes simples
 Si $p_{1}$ est un pôle complexe simple de $F(s)$, alors $p_{2} = p_{1}^{*}$ est aussi un pôle simple de $F(s)$.
 ([[Chapitre-6.pdf#page=28&selection=52,0,64,8&color=yellow|Chapitre-6, p.28]])
+$$p_{1}=-a+jb \qquad p_{2} = -a-jb$$
+1. Trouver l'expression de la forme $$F
+   (s)= \frac{K_{1}}{(s-p_{1})}+\frac{K_{1}^{*}}{s-p_{1}^{*}} + \dots = \frac{A}{(s+a-jb)}+\frac{A^{*}}{(s+a+jb)}+\dots$$
+2. Trouver A avec $$A=\left.(s-p_{1})F(s)\right|_{s=p_{1}}=\left.(s+a-jb)F(s)\right|_{s=-a+jb}$$
 
 ##### Cas 3 : pôles multiples
