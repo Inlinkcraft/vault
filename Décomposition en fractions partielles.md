@@ -45,5 +45,10 @@ $$p_{1}=-a+jb \qquad p_{2} = -a-jb$$
   > ![[Chapitre-6.pdf#page=31&rect=252,94,367,660&color=yellow|Chapitre-6, p.31]]
 1. Trouver A avec $$A=\left.(s-p_{1})F(s)\right|_{s=p_{1}}=\left.(s+a-jb)F(s)\right|_{s=-a+jb}$$
 2. Finalement l'inverse sera donnée par: $$f(t) = |A|e^{j\angle A}e^{(-a+jb)t}+|A|e^{-j\angle A}e^{(-a-jb)t}=2|A|e^{-at}\cos{(bt+\angle A)}u(t)$$
-
 ##### Cas 3 : pôles multiples
+Lorsque $s = p_{i}$ est une racine d'ordre $r$ de $Q(s)$ ([[Chapitre-6.pdf#page=37&selection=40,0,44,32&color=yellow|Chapitre-6, p.37]])
+
+
+##### Méthode des coefficient indéterminé
+Transformation d'un polynôme rationnelle en prenant compte de sont degree: $F(s) =$
+$$\frac{9s+5}{(s+4)(s^{2}+4s+20)} = \frac{A}{s+5}+\frac{Bs+C}{s_{2}2+4s+20}= \frac{(A+B)s^{2}+(4A+5B+C)s+20A+5C}{(s+5)(s^{2}2+4s+20)}$$
