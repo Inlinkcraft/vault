@@ -40,6 +40,10 @@ Si $p_{1}$ est un pôle complexe simple de $F(s)$, alors $p_{2} = p_{1}^{*}$ est
 $$p_{1}=-a+jb \qquad p_{2} = -a-jb$$
 1. Trouver l'expression de la forme $$F
    (s)= \frac{K_{1}}{(s-p_{1})}+\frac{K_{1}^{*}}{s-p_{1}^{*}} + \dots = \frac{A}{(s+a-jb)}+\frac{A^{*}}{(s+a+jb)}+\dots$$
-2. Trouver A avec $$A=\left.(s-p_{1})F(s)\right|_{s=p_{1}}=\left.(s+a-jb)F(s)\right|_{s=-a+jb}$$
+  > [!Info] Annulation
+  > Nous réduisons certaine fraction à zero pour trouver le coefficient des autre: 
+  > ![[Chapitre-6.pdf#page=31&rect=252,94,367,660&color=yellow|Chapitre-6, p.31]]
+1. Trouver A avec $$A=\left.(s-p_{1})F(s)\right|_{s=p_{1}}=\left.(s+a-jb)F(s)\right|_{s=-a+jb}$$
+2. Finalement l'inverse sera donnée par: $$f(t) = |A|e^{j\angle A}e^{(-a+jb)t}+|A|e^{-j\angle A}e^{(-a-jb)t}=2|A|e^{-at}\cos{(bt+\angle A)}u(t)$$
 
 ##### Cas 3 : pôles multiples
