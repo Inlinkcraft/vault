@@ -15,3 +15,9 @@ Théorème de la valeur initiale et la valeur final
 ![[Théorème de la valeur finale]]
 ### Transformation de Laplace inverse
 ![[Transformation de Laplace inverse]]
+
+### Théorème des résidue
+![[Théorème du résidus]]
+
+### Décomposition en fraction partielle
+![[Décomposition en fractions partielles]]
