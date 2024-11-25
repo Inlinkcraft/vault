@@ -14,3 +14,4 @@ Théorème de la valeur initiale et la valeur final
 ![[Théorème de la valeur initiale]]
 ![[Théorème de la valeur finale]]
 ### Transformation de Laplace inverse
+![[Transformation de Laplace inverse]]
