@@ -217,7 +217,60 @@ $q_{2}=\begin{bmatrix} 0 \\ \frac{1}{\sqrt{ 2 } } \\ \frac{1}{\sqrt{ 2 } } \end{
 Quelle est la relation entre l’espace des colonnes de et celui de ? ([[Chapitre-5d.pdf#page=8&selection=4,0,8,1&color=yellow|Chapitre-5d, p.8]])
 C'est le même !!
 
-### Une nouvelle sorte de factorisation ?
-$A \to Q$
-Une autre matrices va apparaitre qui se nommera $R$ où
-$$A = QR$$
+---
+### Factorisation QR
+Sachant que $A=QR$:
+> [!Question] Qu'est ce que $R$
+>  $$
+> \begin{array}{c}
+> A=QR \\
+> Q^{-1}A = Q^{-1}QR \\
+> Q^{-1}A=R \\
+> R = Q^{T}A
+> \end{array}
+> $$
+>   ![[Chapitre-5e.pdf#page=3&rect=576,608,1335,913|Chapitre-5e, p.3]]
+>   $$R= \begin{bmatrix} * & * & * \\ 0 & * & * \\ 0 & 0 & * 
+ \end{bmatrix}$$
+
+---
+### Factorisation en générale
+![[Factorisation PTLU]]
+
+![[Diagonalisation]]
+
+![[Orthogonalisation]]
+
+### Matrice (réelles) symétrique
+---
+##### Définition
+$$A = A^{T}$$
+##### Propriété
+- [[Matrice]] carrée
+- Ses valeurs propres sont toutes réelles
+- Ses vecteurs propres sont toutes orthogonaux
+([[Chapitre-5f.pdf#page=2&selection=4,0,6,27&color=yellow|Chapitre-5f, p.2]])
+
+##### Conséquence
+Diagonalisation d’une matrice symétrique
+$$A=PDP^{-1} = QDQ^{T}$$
+$$\dots=\lambda_{1}q_{1}q_{1}^{T}+\lambda_{2}q_{2}q_{2}^{T}+\lambda_{3}q_{3}q_{3}^{T} + \dots + \lambda_{n}q_{n}q_{n}^{T}$$
+([[Chapitre-5f.pdf#page=4&selection=0,0,0,40&color=yellow|Chapitre-5f, p.4]])
+> [!question] Qu'est ce que $q_{1}q_{1}^{T}$
+> Ce sont des matrice de projection sur le vecteur propre associer
+
+>[!tip] Wow
+> Une matrice symétrique est une combinaison de matrices de projection orthogonales
+> ([[Chapitre-5f.pdf#page=5&selection=19,0,32,0&color=red|Chapitre-5f, p.5]])
+
+### Analyse en composante principales
+
+> [!note] But
+> Le but de (ACP) est d'analyser des données en hautes dimensions avec un modèle linéaires avec objectif de réduire le nombre de dimensions
+
+##### Matrice de covariance
+$$C = \frac{1}{n-1}(x-\bar{x})(x-\bar{x})^{T}$$
+$\to$ Ceci est une matrice symétrique !!
+Si on calcule la valeur et le vecteur propre:
+	Vecteur propres: Représente la direction de variation des donnée
+	Valeur propres associer: Force de la variation 

@@ -21,6 +21,12 @@ status: "Cette semaine"
 
 ## Notes supplémentaire
 
+- Chapitre 10
+	- Ex1
+		- a) 400 employer, Tableau de valeur $\to$ hystograme
+		- b) ...
+		- ... ??
+	- 
 
 ---
 # En retrospective
