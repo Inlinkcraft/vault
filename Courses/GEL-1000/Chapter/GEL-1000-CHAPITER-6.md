@@ -171,3 +171,8 @@ où p1, p2, ….., pn sont des pôles, z 1, z 2, ….., zm sont des zéros, et K
 > Nous devons trouver comment dessiner cela ....
 
 #### Diagramme de Bode ? : Matlab (à voir)
+??????
+
+#### Filtre et Passe
+
+
