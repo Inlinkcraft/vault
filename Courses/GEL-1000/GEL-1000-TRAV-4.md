@@ -38,11 +38,25 @@ status: En cours
 
 ### Note et démarche
 ##### Question 1:
-**a): Déterminez d’abord l’expression analytique de Va(s) en supposant que les conditions initiales sont nulles partout sous la forme : ([[TP4.pdf#page=2&selection=147,0,153,35&color=red|TP4, p.2]])**
+
+```circuitjs
+
+```
+
+**a): Déterminez d’abord l’expression analytique de $V_{a}(s)$ en supposant que les conditions initiales sont nulles partout sous la forme : 
+$$V_{a} = \underbrace{{\frac{P_{1}(s)}{Q(s)}}V_{s}}_{V_{a1}(s)}+\underbrace{\frac{P_{2}(s)}{Q(s)}I_{s}}_{V_{a2}(s)}$$
+([[TP4.pdf#page=2&selection=147,0,153,35&color=red|TP4, p.2]])**
     
 
-**b): À l’aide de Matlab, donnez les pôles et résidus de chacune des fonctions Vak(s) (k = 1, 2) permettant de déterminer ensuite les expressions analytiques de va1(t), et va2(t) séparément. Ajoutez la saisie des commandes et des résultats retournés de l’invite de commande pour l’obtention de va1(t) (pensez à utiliser la fonction conv). ([[TP4.pdf#page=2&selection=178,0,237,2&color=red|TP4, p.2]])**
+**b): À l’aide de Matlab, donnez les pôles et résidus de chacune des fonctions $V_{ak}(s) \ \ (k = 1, 2)$ permettant de déterminer ensuite les expressions analytiques de $v_{a1}(t)$, et $v_{a2}(t)$ séparément. Ajoutez la saisie des commandes et des résultats retournés de l’invite de commande pour l’obtention de $v_{a1}(t)$ (pensez à utiliser la fonction conv). ([[TP4.pdf#page=2&selection=178,0,237,2&color=red|TP4, p.2]])**
     
 
-**c): Faites tracer le régime transitoire de va(t) fourni par le simulateur Altium. Exportez l’image pour présenter les résultats obtenus avec Altium. Vous devrez modifier les paramètres de la source pour s’assurer de la bonne fréquence de 9 2𝜋Hz (et non en rad/s), la bonne phase (0°) et un facteur d’amortissement nul. ([[TP4.pdf#page=2&selection=241,0,266,36&color=red|TP4, p.2]])**
+**c): Faites tracer le régime transitoire de $v_{a}(t)$ fourni par le simulateur Altium. 
+Exportez l’image pour présenter les résultats obtenus avec Altium. Vous devrez modifier les paramètres de la source pour s’assurer de la bonne fréquence de $\frac{9}{2𝜋}$Hz (et non en rad/s), la bonne phase ($0°$) et un facteur d’amortissement nul. ([[TP4.pdf#page=2&selection=241,0,266,36&color=red|TP4, p.2]])**
+    
+
+##### Question 2:
+**On mesure la tension aux bornes d’une inductance dans un circuit linaire. La transformée de Laplace de cette tension s’exprime par :
+$$V_{L}{\big(}s{\big)}\!=\!\frac{0.4s^{5}\!+\!12.1s^{4}\!+\!132.8s^{3}+723.8s^{2}\!+\!1993.8s\!+\!2096.1}{s^{5}\!+\!18s^{4}\!+\!142s^{3}+620s^{2}\!+\!1425s\!+\!1250}$$
+A l’aide de Matlab (ou Octave), trouvez l’expression analytique de VL(t). Arrondissez à 2 chiffres après le point. Faites une saisie des commandes et des résultats retournés de l’invite de commande de Matlab (ou Octave), et décrivez les étapes menant à votre résultat. ([[TP4.pdf#page=3&selection=28,0,173,1&color=red|TP4, p.3]])**
     
