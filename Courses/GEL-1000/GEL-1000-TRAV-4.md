@@ -7,4 +7,7 @@ ponderation: 2
 note:
 status: En cours
 ---
-#school/GEL-1000  
+#school/GEL-1000
+- [ ] TP4 Circuit - 📅 2024-11-29
+      [clock::2024-11-26T16:52:36]
+
