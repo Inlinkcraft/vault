@@ -71,7 +71,8 @@ $$V_{a} = \underbrace{{\frac{P_{1}(s)}{Q(s)}}V_{s}}_{V_{a1}(s)}+\underbrace{\fra
 $$\begin{array}{l}
 0= \\
 \underbrace{\frac{V_{a}(s)-V_{s}(s)}{10s}}_{L_{10}}+\underbrace{\frac{V_{a}(s)-V_{s}(s)}{15s}}_{L_{15}}+\underbrace{(V_{a}(s)-V_{ref})0.170s}_{C_{0.170}} + \underbrace{(V_{a}(s)-V_{ref})0.030s}_{C_{0.030}}+\underbrace{\frac{V_{a}(s)-V_{ref}}{12}}_{R_{12}}+I_{s}(s)+\underbrace{\frac{V_{a}(s)-V_{ref}}{24}}_{R_{24}}\\
-\underbrace{\frac{V_{a}(s)-V_{s}(s)}{10s}-\frac{V_{a}(s)-V_{s}(s)}{10s}}_{L_{10}}+\underbrace{\frac{V_{a}(s)}{15s}}_{L_{15}}+\underbrace{(V_{a}(s)-V_{ref})0.170s}_{C_{0.170}} + \underbrace{(V_{a}(s)-V_{ref})0.030s}_{C_{0.030}}+\underbrace{\frac{V_{a}(s)-V_{ref}}{12}}_{R_{12}}+I_{s}(s)+\underbrace{\frac{V_{a}(s)-V_{ref}}{24}}_{R_{24}}\\
+\frac{V_{a}(s)}{10s}-\frac{V_{s}(s)}{10s}+\frac{V_{a}(s)}{15s}-\frac{V_{s}(s)}{15s}+0.170sV_{a}(s) + 0.030sV_{a}(s)+\frac{V_{a}(s)}{12}+\frac{V_{a}(s)}{24}+I_{s}(s) \\
+V_{a}(s)(\frac{1}{10s}+\frac{1}{15s}+0.170s+ 0.030s+\frac{1}{12}+\frac{1}{24})+V_{s}(s)(-\frac{1}{10s}-\frac{1}{15s})+I_{s}(s)
 \end{array}$$
 **b): À l’aide de Matlab, donnez les pôles et résidus de chacune des fonctions $V_{ak}(s) \ \ (k = 1, 2)$ permettant de déterminer ensuite les expressions analytiques de $v_{a1}(t)$, et $v_{a2}(t)$ séparément. Ajoutez la saisie des commandes et des résultats retournés de l’invite de commande pour l’obtention de $v_{a1}(t)$ (pensez à utiliser la fonction conv). ([[TP4.pdf#page=2&selection=178,0,237,2&color=red|TP4, p.2]])**
     
