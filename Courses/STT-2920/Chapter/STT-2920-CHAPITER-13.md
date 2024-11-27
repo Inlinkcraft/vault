@@ -37,8 +37,35 @@ Le seuil de signification et la zone de rejet
 $$\alpha = \mathbb{P}[\text{Rejeter } H_{0} | H_{0} \text{ est vrai}]$$
 ![[STT-2920-Chapter-13.pdf#page=5&rect=50,36,403,115&color=yellow|STT-2920-Chapter-13, p.5]]
 **Règle de décision**:
+![[STT-2920-Chapter-13.pdf#page=6&rect=24,156,203,205&color=yellow|STT-2920-Chapter-13, p.6]]
 
-
+$$Z_{\text{obs}} = \frac{\bar{X}-\mu_{0}}{\frac{\sigma}{\sqrt{n}}}$$
+> [!example] Example
+> > [!question] Question
+> > Une industrie produit des piles. Un ingénieur propose des modifications au processus de fabrication dans le but d’augmenter la durée de vie des piles produites. Toutefois, il ne faudrait pas que ces modifications affectent le voltage moyen des piles produites. ==Avec le procédé actuel==, on sait ==que le voltage des piles suit une loi normale de moyenne 12.5 V==, avec ==un écart-type 0.25 V==. Avant de faire les modifications à grande échelle, il faudrait vérifier qu’effectivement le voltage moyen n’est pas affecté. On supposera ici que la distribution ==du voltage des piles produites avec le nouveau procédé est normale avec même écart-type qu’avant==. On ==produit un échantillon de 100 piles avec le nouveau procédé== et on ==obtient un voltage moyen de 12, 53 V.== Faites un ==test d’hypothèse au seuil de signification α = 0.05== permettant de ==vérifier si le voltage moyen du nouveau procédé diffère de 12.5 V==.
+> 
+> > [!success] Réponse
+> > Soit $u$ : :e réelle coltage moyen du nouveau procédé
+> > Hypothèse:
+> > 	$H_{0}: \mu = 12.5$V (le nouveau procédé ne change pas le voltage moyen)
+> > 	$H_{1}: \mu \ne 12.5$V
+> > on a un test bilatéeal au seuil $\alpha = 0.05$
+> > Collecte des donnée échantillonnales: $n = 100, \ \ \bar{x} = 12.53$V
+> > Distribution d'échantillonage à utiliser:
+> > 	population mère normale avec $\sigma$ connue, $\sigma = 0.25$V
+> > 	$$z=\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{ n }}} \sim N(0, 1)$$
+> > 	sous $H_{0}$
+> > 	$$Z = \frac{\bar{X}-12.5}{\frac{\sigma}{\sqrt{ n }}} \sim N(0, 1)$$
+> > 	![[STT-2920-Chapter-13.pdf#page=5&rect=183,41,284,114&color=yellow|STT-2920-Chapter-13, p.5]]
+> > 	$\frac{\alpha}{2}=0.025$
+> > Règle de décision
+> > 	$z_{\frac{\alpha}{2}} = 1.96$
+> > 	règle:
+> > 		rejet de $H_{0}: |Z_{\text{obs}}| > 1.96$
+> > Valeur observée
+> > 	$Z_{\text{obs}} = \frac{\bar{X}-12.5}{\frac{\sigma}{\sqrt{ n }}} = \frac{12.53-12.5}{\frac{0.25}{\sqrt{ n }}} $
+> 
+([[STT-2920-Chapter-13.pdf#page=7&selection=0,0,37,2&color=yellow|STT-2920-Chapter-13, p.7]])
 
 Test d’hypothèse sur une moyenne (présentation détaillée)
 ---
