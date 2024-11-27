@@ -8,8 +8,8 @@ note:
 status: En cours
 ---
 #school/GEL-1000
-- [ ] TP4 Circuit - 📅 2024-11-29
-      [clock::2024-11-26T16:52:36]
+- [x] TP4 Circuit - 📅 2024-11-29
+      [clock::2024-11-26T16:52:36--2024-11-27T13:59:02]
 
 > [!PDF|yellow] [[TP4.pdf#page=1&selection=23,0,151,29&color=yellow|TP4, p.1]]
 > La fonction residue retourne trois vecteurs de valeurs contenant respectivement les résidus, les pôles et les termes directes. Il faut appeler cette fonction avec deux arguments. Le premier est un vecteur qui représente les coefficients du polynôme du numérateur et le second, ceux du dénominateur. Par exemple, pour le polynôme $P(s) = s2 + 4$, le vecteur correspondant doit s’écrire sous la forme suivante :
@@ -28,11 +28,11 @@ status: En cours
 > ```
 
 ### Bien Livrable 
-- [ ] Vous devez fournir l’ensemble de vos démarches ou analyses dans un document PDF TP4.pdf. 
-- [ ] L’ensemble des réponses doivent être rédigées avec un logiciel de traitement de texte. 
-- [ ] Les copies manuscrites ne seront pas corrigées et se verront attribuer la note de 0. 
-- [ ] Le nombre de pages autorisées pour ce travail est de 1 en excluant les captures d’écran ; soyez concis. 2
-- [ ] Inserez les images de capture faites dans altium en donnant un titre qui réfère clairement à la question. 
+- [x] Vous devez fournir l’ensemble de vos démarches ou analyses dans un document PDF TP4.pdf. 
+- [x] L’ensemble des réponses doivent être rédigées avec un logiciel de traitement de texte. 
+- [x] Les copies manuscrites ne seront pas corrigées et se verront attribuer la note de 0. 
+- [x] Le nombre de pages autorisées pour ce travail est de 1 en excluant les captures d’écran ; soyez concis. 2
+- [x] Inserez les images de capture faites dans altium en donnant un titre qui réfère clairement à la question. 
 - [ ] Vous devez remettre une archive Zip nommée NomPrénom TP4.zip contenant les 2 fichiers demandés ( 1× .pdf et 1× .SchDoc) dans la boite de dépôt du portail du cours.
 ([[TP4.pdf#page=1&color=note|TP4, p.1]])
 
