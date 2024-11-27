@@ -80,6 +80,14 @@ Or, la distribution d’échantillonnage de la variable aléatoire $\bar{X} -\ba
 > où $s_{c}^{2}$ est la variance échantillonnale regroupée : $s_{c}^{2} = \dots$
 ([[STT-2920-Chapter-11-12.pdf#page=35&selection=25,0,169,1&color=yellow|STT-2920-Chapter-11-12, p.35]])
 
-Estimation de la différence de deux proportions p1  p2
+Estimation de la différence de deux proportions $p1 - p2$
 ---
 ([[STT-2920-Chapter-11-12.pdf#page=36&selection=0,47,8,1&color=yellow|STT-2920-Chapter-11-12, p.36]])
+
+$$\left[ (\hat{p_{1}}-\hat{p_{2}})-z_{\frac{\alpha}{2}} \sqrt{ \frac{\hat{p_{1}}(1-\hat{p_{1}})}{n_{1}}+\frac{\hat{p_{2}}(1-\hat{p_{2}})}{n_{2}} }; (\hat{p_{1}}-\hat{p_{2}})+z_{\frac{\alpha}{2}} \sqrt{ \frac{\hat{p_{1}}(1-\hat{p_{1}})}{n_{1}}+\frac{\hat{p_{2}}(1-\hat{p_{2}})}{n_{2}} }\right]$$
+
+> [!success] Valide si
+> $n_{1} \ge 30, \ n_{1} \hat{p_{1}} \ge 5, \ n_{1}(1-\hat{p_{1}} \ge 5)$
+>  $n_{2} \ge 30, \ n_{2} \hat{p_{1}} \ge 5, \ n_{2}(1-\hat{p_{2}} \ge 5)$
+
+Exemple 9 ([[STT-2920-Chapter-11-12.pdf#page=37&selection=10,0,10,8&color=yellow|STT-2920-Chapter-11-12, p.37]])
