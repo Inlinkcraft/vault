@@ -78,6 +78,13 @@ $$-V_{a}(s)(\frac{1}{10s}+\frac{1}{15s}+0.170s+ 0.030s+\frac{1}{12}+\frac{1}{24}
 $$V_{a}(s)=\frac{-(V_{s}(s)(-\frac{1}{10s}-\frac{1}{15s})+I_{s}(s))}{\frac{1}{10s}+\frac{1}{15s}+0.170s+ 0.030s+\frac{1}{12}+\frac{1}{24}}$$
 $$V_{a}(s)=\frac{-V_{s}(s)\left( -\frac{1}{10s}-\frac{1}{15s} \right)-I_{s}(s)}{\frac{1}{s}\left( \frac{1}{10}+\frac{1}{15} \right)+s(0.170 + 0.030)+\frac{3}{24}}$$
 $$V_{a}(s)=\frac{-V_{s}(s)\left( -\frac{1}{10s}-\frac{1}{15s} \right)-I_{s}(s)}{\frac{1}{s}\left( \frac{1}{10}+\frac{1}{15} \right)+0.2s+0.125}$$
+$$V_{a}(s)=\frac{\frac{1}{6s}V_{s}(s)-I_{s}(s)}{\frac{1}{6s}+0.2s+0.125}$$
+$$V_{a}(s)=\frac{\frac{1}{6s}V_{s}(s)}{\frac{1}{6s}+0.2s+0.125}-\frac{I_{s}(s)}{\frac{1}{6s}+0.2s+0.125}$$
+> Multiplication par $\frac{s}{s}$
+
+$$V_{a}(s)=\frac{\frac{1}{6}V_{s}(s)}{0.2s^{2}+0.125s+\frac{1}{6}}-\frac{sI_{s}(s)}{0.2s^{2}+0.125s+\frac{1}{6}}$$
+$$V_{a}(s)=\frac{\frac{1}{6}}{0.2s^{2}+0.125s+\frac{1}{6}}V_{s}(s)+\frac{-s}{0.2s^{2}+0.125s+\frac{1}{6}}I_{s}(s)$$
+
 
 **b): À l’aide de Matlab, donnez les pôles et résidus de chacune des fonctions $V_{ak}(s) \ \ (k = 1, 2)$ permettant de déterminer ensuite les expressions analytiques de $v_{a1}(t)$, et $v_{a2}(t)$ séparément. Ajoutez la saisie des commandes et des résultats retournés de l’invite de commande pour l’obtention de $v_{a1}(t)$ (pensez à utiliser la fonction conv). ([[TP4.pdf#page=2&selection=178,0,237,2&color=red|TP4, p.2]])**
     
