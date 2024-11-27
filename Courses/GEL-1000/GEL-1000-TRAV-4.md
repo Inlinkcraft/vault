@@ -5,7 +5,7 @@ course: GEL-1000
 date: 2024-11-29T23:59
 ponderation: 2
 note:
-status: En cours
+status: Compléter
 ---
 #school/GEL-1000
 - [x] TP4 Circuit - 📅 2024-11-29
@@ -33,7 +33,7 @@ status: En cours
 - [x] Les copies manuscrites ne seront pas corrigées et se verront attribuer la note de 0. 
 - [x] Le nombre de pages autorisées pour ce travail est de 1 en excluant les captures d’écran ; soyez concis. 2
 - [x] Inserez les images de capture faites dans altium en donnant un titre qui réfère clairement à la question. 
-- [ ] Vous devez remettre une archive Zip nommée NomPrénom TP4.zip contenant les 2 fichiers demandés ( 1× .pdf et 1× .SchDoc) dans la boite de dépôt du portail du cours.
+- [x] Vous devez remettre une archive Zip nommée NomPrénom TP4.zip contenant les 2 fichiers demandés ( 1× .pdf et 1× .SchDoc) dans la boite de dépôt du portail du cours.
 ([[TP4.pdf#page=1&color=note|TP4, p.1]])
 
 ### Note et démarche
