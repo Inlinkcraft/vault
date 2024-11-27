@@ -120,7 +120,7 @@ PVa2 =
 
 **c): Faites tracer le régime transitoire de $v_{a}(t)$ fourni par le simulateur Altium. 
 Exportez l’image pour présenter les résultats obtenus avec Altium. Vous devrez modifier les paramètres de la source pour s’assurer de la bonne fréquence de $\frac{9}{2𝜋}$Hz (et non en rad/s), la bonne phase ($0°$) et un facteur d’amortissement nul. ([[TP4.pdf#page=2&selection=241,0,266,36&color=red|TP4, p.2]])**
-    
+     Fait facilement....
 
 ##### Question 2:
 **On mesure la tension aux bornes d’une inductance dans un circuit linaire. La transformée de Laplace de cette tension s’exprime par :
