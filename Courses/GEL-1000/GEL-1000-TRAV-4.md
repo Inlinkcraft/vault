@@ -89,6 +89,34 @@ $$V_{a}(s)=\frac{\frac{1}{6}}{0.2s^{2}+0.125s+\frac{1}{6}}V_{s}(s)+\frac{-s}{0.2
 **b): À l’aide de Matlab, donnez les pôles et résidus de chacune des fonctions $V_{ak}(s) \ \ (k = 1, 2)$ permettant de déterminer ensuite les expressions analytiques de $v_{a1}(t)$, et $v_{a2}(t)$ séparément. Ajoutez la saisie des commandes et des résultats retournés de l’invite de commande pour l’obtention de $v_{a1}(t)$ (pensez à utiliser la fonction conv). ([[TP4.pdf#page=2&selection=178,0,237,2&color=red|TP4, p.2]])**
     $$V_{s}(s) = \frac{9}{s^{2}+9^{2}} \qquad I_{s}(s) = \frac{0.4}{s}$$
     $$V_{a}(s)=\frac{\frac{1}{6}}{0.2s^{2}+0.125s+\frac{1}{6}}\frac{9}{s^{2}+9^{2}}+\frac{-s}{0.2s^{2}+0.125s+\frac{1}{6}}\frac{0.4}{s}$$
+```
+RVa1 =
+
+  -3.6290e-04 + 5.1720e-03i
+  -3.6290e-04 - 5.1720e-03i
+   3.6290e-04 - 5.4402e-02i
+   3.6290e-04 + 5.4402e-02i
+
+PVa1 =
+
+        0 + 9.0000i
+        0 - 9.0000i
+  -0.3125 + 0.8577i
+  -0.3125 - 0.8577i
+
+RVa2 =
+
+   0.0000 + 1.1659i
+   0.0000 - 1.1659i
+        0 +      0i
+
+PVa2 =
+
+  -0.3125 + 0.8577i
+  -0.3125 - 0.8577i
+        0 +      0i
+
+```
 
 **c): Faites tracer le régime transitoire de $v_{a}(t)$ fourni par le simulateur Altium. 
 Exportez l’image pour présenter les résultats obtenus avec Altium. Vous devrez modifier les paramètres de la source pour s’assurer de la bonne fréquence de $\frac{9}{2𝜋}$Hz (et non en rad/s), la bonne phase ($0°$) et un facteur d’amortissement nul. ([[TP4.pdf#page=2&selection=241,0,266,36&color=red|TP4, p.2]])**
