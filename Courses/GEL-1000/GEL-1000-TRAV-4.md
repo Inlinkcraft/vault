@@ -126,4 +126,31 @@ Exportez l’image pour présenter les résultats obtenus avec Altium. Vous devr
 **On mesure la tension aux bornes d’une inductance dans un circuit linaire. La transformée de Laplace de cette tension s’exprime par :
 $$V_{L}{\big(}s{\big)}\!=\!\frac{0.4s^{5}\!+\!12.1s^{4}\!+\!132.8s^{3}+723.8s^{2}\!+\!1993.8s\!+\!2096.1}{s^{5}\!+\!18s^{4}\!+\!142s^{3}+620s^{2}\!+\!1425s\!+\!1250}$$
 A l’aide de Matlab (ou Octave), trouvez l’expression analytique de VL(t). Arrondissez à 2 chiffres après le point. Faites une saisie des commandes et des résultats retournés de l’invite de commande de Matlab (ou Octave), et décrivez les étapes menant à votre résultat. ([[TP4.pdf#page=3&selection=28,0,173,1&color=red|TP4, p.3]])**
-    
+```
+VL = (sym)
+
+     5        4        3         2
+  2*s    121*s    664*s    3619*s    9969*s   20961
+  ---- + ------ + ------ + ------- + ------ + -----
+   5       10       5         5        5        10
+  -------------------------------------------------
+      5       4        3        2
+     s  + 18*s  + 142*s  + 620*s  + 1425*s + 1250
+
+vl = (sym)
+
+  /                                                2*t          3*t         \  -5*t
+  \111180*t + 21*(5563*sin(4*t) + 10284*cos(4*t))*e    + 81400*e    + 202436/*e
+  ---------------------------------------------------------------------------------
+                                        102000
+
+vl = (sym)
+
+         /                                                        2*t            3*t          \  -5*t
+  9.8e-6*\1.11e+5*t + 21.0*(5.56e+3*sin(4*t) + 1.03e+4*cos(4*t))*e    + 8.14e+4*e    + 2.02e+5/*e
+
+```
+
+$$\frac{\left(111180t + 21(5563sin(4t) + 10284cos(4t))e^{2t} + 81400e^{3t} + 202436\right)e^{-5t}}{102000}
+$$
+$$\left(1.09t + \frac{7}{34000}(5563sin(4t) + 10284cos(4t))e^{2t} + \frac{407}{510}e^{3t} + 1.984666667\right)e^{-5t}$$
