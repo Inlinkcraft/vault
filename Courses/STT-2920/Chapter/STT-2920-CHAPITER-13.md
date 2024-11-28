@@ -51,19 +51,22 @@ $$Z_{\text{obs}} = \frac{\bar{X}-\mu_{0}}{\frac{\sigma}{\sqrt{n}}}$$
 > > 	$H_{1}: \mu \ne 12.5$V
 > > on a un test bilatéeal au seuil $\alpha = 0.05$
 > > Collecte des donnée échantillonnales: $n = 100, \ \ \bar{x} = 12.53$V
-> > Distribution d'échantillonage à utiliser:
+> > **Distribution d'échantillonage à utiliser:**
 > > 	population mère normale avec $\sigma$ connue, $\sigma = 0.25$V
 > > 	$$z=\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{ n }}} \sim N(0, 1)$$
 > > 	sous $H_{0}$
 > > 	$$Z = \frac{\bar{X}-12.5}{\frac{\sigma}{\sqrt{ n }}} \sim N(0, 1)$$
 > > 	![[STT-2920-Chapter-13.pdf#page=5&rect=183,41,284,114&color=yellow|STT-2920-Chapter-13, p.5]]
 > > 	$\frac{\alpha}{2}=0.025$
-> > Règle de décision
+> > **Règle de décision**
 > > 	$z_{\frac{\alpha}{2}} = 1.96$
 > > 	règle:
 > > 		rejet de $H_{0}: |Z_{\text{obs}}| > 1.96$
-> > Valeur observée
-> > 	$Z_{\text{obs}} = \frac{\bar{X}-12.5}{\frac{\sigma}{\sqrt{ n }}} = \frac{12.53-12.5}{\frac{0.25}{\sqrt{ n }}} $
+> > **Valeur observée**
+> > 	$Z_{\text{obs}} = \frac{\bar{X}-12.5}{\frac{\sigma}{\sqrt{ n }}} = \frac{12.53-12.5}{\frac{0.25}{\sqrt{ 100 }}}=1.2$
+> > 	$|Z_{\text{obs}}| = 1.2 \ngtr 1.96$, on ne rejette pas $H_{0}$
+> > **Conclusion:**
+> > Au seuil de signification 5%, aucune évidence statistique ne nous permet de croire que le nouveau procédé change le voltage moyen théorique
 > 
 ([[STT-2920-Chapter-13.pdf#page=7&selection=0,0,37,2&color=yellow|STT-2920-Chapter-13, p.7]])
 
