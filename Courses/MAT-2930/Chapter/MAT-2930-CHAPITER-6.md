@@ -47,3 +47,24 @@ Je souhaite que $\epsilon$ soit perpendiculaire avec $\vec{a_{1}}$ et $\vec{a_{2
 
 ##### Dans quel sous-espace est situé $(b-A \hat{x})$ ?
 Dans l'espace-null de $A^T$
+
+### Déterminer $\hat{x}$
+---
+$$A^T(b-A \hat{x}) = 0$$
+> [!info] Rappel
+> $\hat{x}$ est l'approximation de $\vec{x}$ dans $A \vec{x} = \vec{b}$
+
+$$A^T b - A^TA \hat{x} = 0$$
+$$A^TA \hat{x} = A^T b$$
+Si $A^TA$ est inversible, alors $$\hat{x} = (A^TA)^{-1}A^Tb$$
+Alors $(A^TA)^{-1}A^T$ est la pseudo inverse
+
+> [!info] Lien avec orthogonalité
+> $$\hat{x} = (A^TA)^{-1}A^Tb$$
+> Projection de b:
+> $$\hat{b} = A \hat{x} = A(A^TA)^{-1}A^Tb$$
+> Ces le cas général de la projection d'un vecteur $\vec{b}$ dans le sous-espace engendré par les colonnes de $A$ lorsqu'elle ne sont pas orthogonales.
+> > [!question] Qu'arrive-t-il si les colonne de $A$ sont orthonormal
+> > $$\hat{b} = A(A^TA)^{-1}A^Tb$$
+> > Donc sachant notre initialité $(A^TA) = I$
+> > $$\hat{b}=AA^Tb$$
