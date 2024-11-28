@@ -116,6 +116,6 @@ $$\epsilon = ||b - \hat{b}||$$
  2 & 2 & 0 & 0 & -4\\
  2 & 0 & 2 & 0 & 2\\
  2 & 0 & 0 & 2 & 6 
-\end{bmatrix}\right]$$
+\end{array}\right]$$
 > ....
-> 
+
