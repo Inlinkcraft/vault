@@ -158,3 +158,58 @@ void insertionColoriage(Noeud& noeud){
 - Ensuite, on doit gérer le coloriage et le balancement. 
 - On verra 3 cas pour la suppression et 6 pour fixer le coloriage
 ([[Chapitre-9.pdf#page=93&selection=6,0,50,0&color=yellow|Chapitre-9, p.93]])
+
+![[Chapitre-9.pdf#page=94&rect=135,113,783,447&color=yellow|Chapitre-9, p.94]]
+
+##### Cas 1: Supression à deux feuilles comme enfant
+1. On suprime et remplace par un `null_ptr`
+
+##### Cas 2: Supression à une feuille comme enfant
+1. On suprime le noeud et on le remplace par sont enfant unique
+
+##### Cas 3:  Supression à deux noeud interne
+1. Comme pour les arbres AVL, il faut donc d’abord retrouver son successeur minimal à droite à l’aide d’une boucle simple (une fois à droite, plein de fois à gauche).
+2. Ensuite, on doit les échanger et on supprime le noeud
+([[Chapitre-9.pdf#page=97&selection=24,0,80,0&color=yellow|Chapitre-9, p.97]])
+
+> [!attention]  Réparé les propriété
+> - Lorsqu’on fait ce changement et qu’on supprimer un noeud, il se peut que certaines propriétés de l’arbre rouge-noire soit violées. 
+> - Il faut faire des changements pour respecter ces propriétés. 
+> - On verra plusieurs cas. 
+> - Noter que dans tous les cas, le noeud supprimé aura 0 ou 1 enfant, puisque dans le cas où il y avait deux enfants, nous avons fait un changement de noeud.
+([[Chapitre-9.pdf#page=102&selection=12,0,122,1&color=yellow|Chapitre-9, p.102]])
+
+##### Réparation des propriété
+###### Cas 1:
+- 𝑥 ou 𝑏 est rouge (comme on ne peut pas avoir deux noeuds consécutifs rouge, on au maximum un des deux noeuds rouges)
+- Dans ce cas, on remplace la couleur de l’enfant par noir. Ici, le noeud contenant 5 devient donc noir.
+([[Chapitre-9.pdf#page=104&selection=18,0,49,7&color=yellow|Chapitre-9, p.104-105]])
+
+###### Cas 2:
+- Les deux noeuds sont noirs. 
+- Dans ce cas, retirer un noeud enlève un noeud noir du chemin. On doit donc fixer la propriété pour ramener deux noeuds noirs sur chaque chemin. 
+- On verra plusieurs sous-cas : 
+	- Si 𝑥 est la racine 
+		Si le noeud 𝑥 est devenu la racine, on recolorie la racine en noir ([[Chapitre-9.pdf#page=107&selection=24,0,47,3&color=yellow|Chapitre-9, p.107]])
+	- Si 𝑓 est noir et ses enfants sont rouges. 
+		Résolution :
+		 - Supprimer x 
+		 - Rebalancement #1 
+			 - 𝑓 est à droite de 𝑏 
+				 - On rebalance en faisant un ZigZigDroit sur 𝑟. 
+			 - 𝑓 est à gauche de 𝑏 
+				 - On rebalance en faisant un ZigZigGauche sur 𝑟. 
+		- colorier 𝑟 en noir
+		([[Chapitre-9.pdf#page=108&selection=30,0,81,4&color=yellow|Chapitre-9, p.108]])
+	- Si 𝑓 est noir un de ses enfants est rouge. 
+		Résolution
+		- Supprimer x
+		- Rebalancement #1
+			- f est à droite de b et le noeud rouge est l
+				- on rebalance en fesant un sigzagDroit sur B
+			- f est à gauche de b et le noeud rouge est l
+				- on rebalance en fesant un sigzag sur B
+			- colorier l en noir
+	- Si 𝑓 est noir et ses enfants sont noirs. 
+	- Si 𝑓 est rouge
+([[Chapitre-9.pdf#page=106&selection=14,0,155,5&color=yellow|Chapitre-9, p.106]])
