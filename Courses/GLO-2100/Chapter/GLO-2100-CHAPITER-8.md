@@ -569,4 +569,136 @@ void Arbre<E>::_enleverSuccMinDroite(Noeud* noeud)
 
 **Complexité:**  𝑂(log 𝑛) pour un arbre AVL
 ([[Chapitre-8.pdf#page=117&selection=0,3,221,3&color=yellow|Chapitre-8, p.117]])
-**Toujours re-balancer ?:** Changement d'algorithme (arbre rouge et noir) (Mêm)
+**Toujours re-balancer ?:** Changement d'algorithme (arbre rouge et noir) (Même croissance asymptotique)
+
+## Recherche d'un élément
+
+```c++
+template<typename E> 
+bool Arbre<E>::appartient(const E& data) const 
+{ 
+	return _auxAppartient(racine, data) != 0; 
+}
+```
+([[Chapitre-8.pdf#page=119&selection=8,0,51,1&color=red|Chapitre-8, p.119]])
+
+```c++
+template<typename E> 
+typename Arbre<E>::Noeud* Arbre<E>::_auxAppartient(Noeud* arbre, const E& data) const 
+{ 
+	if (arbre == 0) 
+		return 0; //si data n’est pas dans l’arbre 
+		
+	if (data < arbre->data) 
+		return _auxAppartient(arbre->gauche, data);
+	else if (arbre->data < data) 
+		return _auxAppartient(arbre->droite, data); 
+	else 
+		return arbre; //car arbre->data == data 
+}
+```
+([[Chapitre-8.pdf#page=120&selection=8,0,145,1&color=red|Chapitre-8, p.120]])
+
+##### Trouver l'élément maximal
+```c++
+template<typename E> const E& Arbre<E>::max() const 
+{ 
+	if(nb_noeuds<=0) 
+		throw logic_error("Doit être non vide"); 
+		Noeud* temp = racine; 
+		while (temp->droite!=0) 
+			temp = temp->droite; 
+		return temp->data; 
+}
+```
+([[Chapitre-8.pdf#page=121&selection=71,0,154,1&color=red|Chapitre-8, p.121]])
+
+**Dans la stl :** [[Set]], [[Map]], etc
+
+## SET
+- La valeur d’un élément dans un set est son identifiant et doit être unique et non modifiable. 
+- Les élément sont ordonnés selon operator< défini par le type T des éléments du set 
+	- Il est possible d’utiliser un foncteur lors de la création du set pour définir l’opérateur de comparaison 
+- On utilise iterator pour accéder aux élements 
+	- la méthode begin () retourne un itérateur pointant sur le premier (i.e. le plus petit) élément et end() retourne un iterator pointant sur un élément (sentinelle) après le dernier
+([[Chapitre-8.pdf#page=124&selection=10,0,147,16&color=yellow|Chapitre-8, p.124]])
+
+- On utilise insert(const T&) pour ajouter un élément et ça retourne un objet de type pair<iterator,bool> où le membre bool nous indique si l’insertion a échoué (élément déjà dans le set) ou a été effectué avec succès (dans ce cas iterator pointe sur l’élément inséré). 
+- On utilise erase(const T&) ou erase(iterator) pour enlever un élément du set. 
+- On utilise find(const T&) pour obtenir un iterator pointant sur l’élément recherché s’il est trouvé ou pointant sur la sentinelle à la fin du set si cet élément n’est pas dans le set.
+([[Chapitre-8.pdf#page=125&selection=10,0,158,4&color=yellow|Chapitre-8, p.125]])
+
+### Example
+```c++
+#include <iostream> 
+#include <set> 
+int main() 
+{
+	std::set<int> myset; 
+	std::set<int>::iterator it; 
+	myset.insert(30); 
+	myset.insert(10); 
+	myset.insert(20); 
+	myset.insert(5); 
+	myset.insert(15); 
+	it = myset.begin(); 
+	myset.erase(it); //enlève le plus petit élément 
+	it = myset.end(); 
+	myset.erase(--it); //enlève le plus grand 
+	std::cout << "myset contains:"; 
+	for (it = myset.begin(); it != myset.end(); ++it) 
+		std::cout << ' ' << *it; //affiche 10 15 20 
+	std::cout << std::endl; 
+	return 0; 
+}
+```
+([[Chapitre-8.pdf#page=126&selection=12,0,205,1&color=yellow|Chapitre-8, p.126]])
+
+## Map
+- Est un ensemble ordonné de paires de type pair<KeyType,ValueType> 
+- Les élément sont ordonnés selon operator< défini par le type KeyType 
+	- Il est possible d’utiliser un foncteur lors de la création du map pour définir l’opérateur de comparaison 
+- Pour accéder aux éléments, on peut utiliser un iterator ou, plus simplement, l’opérateur d’indexation [ ] dont le prototype est: 
+	- ValueType & operator[] (const KeyType & key)
+([[Chapitre-8.pdf#page=127&selection=10,0,122,6&color=yellow|Chapitre-8, p.127]])
+
+- Fonctionnement: Si key est dans le map alors une référence à la valeur associé à key est retournée. Si key n’est pas dans le map, key est inséré dans la map avec une valeur associé par défaut (défini par le constructeur sans paramètre de ValueType). 
+	- operator[] est un modificateur: il est donc inutilisable dans une fonction où le map est passé par référence constante. 
+- Il est donc généralement plus prudent de tester d’abord si une clé est dans le map avant de lui associer une valeur. Pour cela on utilise find(const KeyType & key) qui retourne un itérateur pointant sur la paire pair<key,value> si key est dans le map (et value est la valeur associé à key). Sinon, l’itérateur retourné pointe sur un élément de map passé le dernier.
+([[Chapitre-8.pdf#page=128&selection=10,0,226,21&color=yellow|Chapitre-8, p.128]])
+
+#### EXAMPLE
+```c++
+std::map<string, unsigned int> tailles; 
+//insère éventuellement une paire <‘’Julie’’,162> dans tailles
+tailles["Julie"] = 162;
+std::cout << tailles["Julie"] << endl; //affiche 162
+std::cout << tailles["Robert"] << endl; //insère une paire <‘’Robert’’,0> 
+	//dans tailles et affiche 0
+```
+([[Chapitre-8.pdf#page=129&selection=80,0,172,12&color=red|Chapitre-8, p.129]])
+
+ - Le deuxième énoncé: tailles[‘’Julie’’] insère d’abord <‘’Julie’’,0> dans tailles et retourne par référence la valeur associée de 0 . Cette valeur est ensuite écrasée par 162 avec l’opérateur d’affectation =. 
+ - Le dernier énoncé insère <‘’Robert’’,0> dans tailles et affiche 0
+([[Chapitre-8.pdf#page=129&selection=12,1,78,12&color=yellow|Chapitre-8, p.129]])
+
+```c++
+std::map<std::string, unsigned int>::const_iterator itr; 
+itr = tailles.find("Robert"); 
+if(itr==tailles.end()) 
+	std::cout << "Absent de notre base de donnée" << endl; 
+else 
+	//affiche la valeur associée à la clé Robert
+	std::cout << itr->second << endl; 
+```
+([[Chapitre-8.pdf#page=130&selection=56,0,147,5&color=yellow|Chapitre-8, p.130]])
+
+- À la place de ce dernier énoncé, on peut d’abord vérifier si ‘’Robert’’ est dans le map et, si c’est le cas, afficher sa taille:
+([[Chapitre-8.pdf#page=130&selection=12,0,54,7&color=yellow|Chapitre-8, p.130]])
+
+#### Synthèse
+- Dans la STL 
+	- set, map, multiset et multimap ✓ insert erase find Iterator begin end ✓ Clés non modifiables ✓ Arbres rouge et noir 
+- set (duplicatas interdits), multiset (duplicatas autorisés) ➢ operator< défini par le type T (data) 
+- map (duplicatas interdits), multimap (duplicatas autorisés) ➢ pair<KeyType,ValueType> ➢ operator< défini par le type KeyType ➢ operator[
+([[Chapitre-8.pdf#page=131&selection=6,0,82,9&color=yellow|Chapitre-8, p.131]])
