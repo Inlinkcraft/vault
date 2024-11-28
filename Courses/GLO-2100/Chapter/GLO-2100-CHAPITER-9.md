@@ -29,8 +29,32 @@ Arbres rouge et noir
 ---
 ![[Chapitre-9.pdf#page=5&rect=147,45,818,452|Chapitre-9, p.5]]
 ##### Erreur deux nœud rouge
+![[Chapitre-9.pdf#page=6&rect=79,48,834,435|Chapitre-9, p.6]]
+
+> Le noeud 90 et 95 se touche et il sont tous les deux rouge...
+
+##### Erreur pas le même nombre de nœud noir entre deux branche
+![[Chapitre-9.pdf#page=7&rect=52,36,818,436|Chapitre-9, p.7]]
 
 ### Insertions
 ---
+**3 cas possible pour l'Insertion**
+Nous avons:
+- x (le noeud)
+- père de x
+- frère de x
+- grand-père de x
+- oncle de x
+##### Insertion rouge-noir
+```c++
+void insertionRougeNoir(int valeur)
+	Noeud* noeud = new Noeud;
+	noeud -> data = valeur;
+	noeud -> parent = null_ptr;
+	noeud -> gauche =
+	noeud -> droit = 
+	noeud -> couleur = Rouge
+```
+
 ### Suppression
 ---
