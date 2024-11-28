@@ -274,3 +274,17 @@ $\to$ Ceci est une matrice symétrique !!
 Si on calcule la valeur et le vecteur propre:
 	Vecteur propres: Représente la direction de variation des donnée
 	Valeur propres associer: Force de la variation 
+
+> [!note] Bon pour réduire les dimensionnalité
+> Pour ce faire nous allons projeter tous les point (centré) sur le vecteur principal
+> $$\text{proj} = \frac{p_{1}^{T}v_{1}}{v_{1}^{T}v_{1}}v_{1}$$
+> Nous voulons concersever la coordonné seulement
+> $$c_{1}=p_{1}^{T}v_{1} \ \text{ou} \ v_{1}^{T}p_{1}$$
+
+## Comment savoir combien de vecteur propres conserver
+
+> [!important] Idée
+> utiliser les vecteur propres !
+> $$\lambda_{1}, \lambda_{2}, \lambda_{3}, \dots, \lambda_{n}$$
+> convertir en pourcentage
+> $$\frac{\lambda_{1}}{\sum^{#}_{#}}$$
