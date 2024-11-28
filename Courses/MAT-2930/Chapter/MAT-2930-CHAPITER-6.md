@@ -68,3 +68,54 @@ Alors $(A^TA)^{-1}A^T$ est la pseudo inverse
 > > $$\hat{b} = A(A^TA)^{-1}A^Tb$$
 > > Donc sachant notre initialité $(A^TA) = I$
 > > $$\hat{b}=AA^Tb$$
+
+### Erreur commise
+---
+L'erreur commise est
+$$\epsilon = ||b - \hat{b}||$$
+> [!tip] Erreur quadratique
+> L’erreur quadratique moyenne est définie par 
+> $$\epsilon^{2} = ||b - \hat{b}||^{2}$$
+> ([[Chapitre-6a.pdf#page=9&selection=22,1,50,7&color=yellow|Chapitre-6a, p.9]])
+
+>[!example] Exemple
+> $$A=\begin{bmatrix}
+ 1 & 1 & 0 & 0\\
+ 1 & 1 & 0 & 0\\
+ 1 & 0 & 1 & 0\\
+ 1 & 0 & 1 & 0\\
+ 1 & 0 & 0 & 1\\
+ 1 & 0 & 0 & 1
+\end{bmatrix}$$
+> $$b=\begin{bmatrix}
+ -3\\
+ -1\\
+ 0\\
+ 2\\
+ 5\\
+ 1
+\end{bmatrix}$$
+> 0 solution !
+> Qu'elle est la meilleur approximation
+> > "Meilleur" Au sens moindre carrés, solution qui minimise l'erreu quadratique moyenne
+>  $$A^T=\begin{bmatrix}
+ 1 & 1 & 1 & 1 & 1 & 1\\
+ 1 & 1 & 0 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0 & 1 & 1
+\end{bmatrix}$$
+> $$=\begin{bmatrix}
+ 6 & 2 & 2 & 2 \\
+ 2 & 2 & 0 & 0 \\
+ 2 & 0 & 2 & 0 \\
+ 2 & 0 & 0 & 2 
+\end{bmatrix}$$
+> ...
+>  $$=\left[\begin{array}{cccc|c}
+ 6 & 2 & 2 & 2 & 4\\
+ 2 & 2 & 0 & 0 & -4\\
+ 2 & 0 & 2 & 0 & 2\\
+ 2 & 0 & 0 & 2 & 6 
+\end{bmatrix}\right]$$
+> ....
+> 
