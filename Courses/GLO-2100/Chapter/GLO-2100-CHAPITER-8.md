@@ -419,6 +419,92 @@ bool Arbre <E>::_sousArbrePencheADroite(Noeud* arbre) const
 ([[Chapitre-8.pdf#page=72&selection=10,0,84,2&color=red|Chapitre-8, p.72]])
 
 #### Implémentation de ZIG-ZIG-Gauche
+```c++
+template <typename E> 
+void Arbre<E>::_zigZigGauche(Noeud*& K2) 
+{
+	Noeud* K1 = K2->gauche; 
+	K2->gauche = K1->droite; 
+	K1->droite = K2; 
+	K2->hauteur = 
+		1+ max(_hauteur(K2->gauche),_hauteur(K2->droite)); 
+	K1->hauteur = 
+		1 + max(_hauteur(K1->gauche), K2->hauteur); 
+	K2 = K1;
+}
+```
+([[Chapitre-8.pdf#page=73&selection=10,0,132,0&color=red|Chapitre-8, p.73]])
 #### Implémentation de ZIG-ZIG-Droit
+```C++
+template <typename E> 
+void Arbre<E>::_zigZigGauche(Noeud*& K2) 
+{ 
+	Noeud* K1 = K2->droite; 
+	K2->droite = K1->gauche; 
+	K1->gauche = K2; 
+	K2->hauteur = 
+		1 + max(_hauteur(K2->droite), _hauteur(K2->gauche)); 
+	K1->hauteur = 
+		1 + max(_hauteur(K1->droite), K2->hauteur); 
+	K2 = K1; 
+}
+```
+([[Chapitre-8.pdf#page=74&selection=10,1,135,0&color=red|Chapitre-8, p.74]])
 #### Implémentation de ZIG-ZAG-Gauche
+```c++
+template <typename E> 
+void Arbre<E>::_zigZagGauche(Noeud*& K3) 
+{ 
+	_zigZigDroit(K3->gauche); 
+	_zigZigGauche(K3); 
+}
+```
+([[Chapitre-8.pdf#page=75&selection=10,0,50,1&color=red|Chapitre-8, p.75]])
 #### Implémentation de ZIG-ZAG-Droit
+```c++
+template <typename E> 
+void Arbre<E>::_zigZagDroit(Noeud*& K3) 
+{ 
+	_zigZigGauche(K3->droite); 
+	_zigZigDroit(K3); 
+}
+```
+([[Chapitre-8.pdf#page=76&selection=10,0,51,1&color=red|Chapitre-8, p.76]])
+
+### Synthèse
+ - Arbres AVL : équilibrés 
+	 - pour supporter efficacement les opérations de recherche, d’insertion et de suppression 
+	 - facteur d’équilibre 
+		 - |hauteur(sous-arbre droit) - hauteur(sous-arbre gauche)|= 𝑘 
+		 - 𝐻𝐵[𝑘] lorsque ≤ 𝑘 
+		 - AVL → arbres 𝐻𝐵[1] 
+	 - Déséquilibre → balancement 
+		 - Nœud critique 
+		 - Rotations : zigzig droit/gauche, zigzag droit/gauche 
+		 - Implémentation
+([[Chapitre-8.pdf#page=77&selection=7,0,104,14&color=red|Chapitre-8, p.77]])
+
+#### Analyse: complexité pour l’insertion dans AVL 
+- Les opérations suivantes se font en temps 𝑂(1) : 
+	- Insertion d’une donnée à partir d’une feuille 
+	- Vérification du débalancement (lecture des hauteurs) d’un noeud 
+	- Mise à jour de la hauteur d’un noeud 
+	- Le rebalancement (zigZig et zigZag) à une position donnée
+- Soit ℎ(𝑛) = hauteur de l’arbre AVL de 𝑛 nœuds. 
+- Or, la profondeur de la feuille la moins profonde dans un arbre AVL de hauteur ℎ est ≥ ⌈𝒉/𝟐⌉ (voir exercices). 
+- Les opérations suivantes se font donc en O(ℎ(𝑛)) : 
+	- trouver le point d’insertion (de la racine à une feuille) 
+	- Remonter du point d’insertion jusqu’à la racine (en rebalançant lorsque nécessaire) 
+- L’insertion se fait donc en 𝑂(ℎ(𝑛)) 
+- Or, nous allons voir que ℎ(𝑛) ∈ 𝑂(log 𝑛) pour un arbre AVL. 
+- L’insertion d’une donnée dans un arbre AVL se fait donc en 𝑂(log 𝑛)
+([[Chapitre-8.pdf#page=78&selection=0,2,294,0&color=yellow|Chapitre-8, p.78]])
+
+# Enlèvement dans un arbre AVL
+- Premier cas simple: le nœud à supprimer est une feuille. 
+	- Dans ce cas, il suffit de le supprimer directement. 
+- Deuxième cas simple: le nœud à supprimer possède un seul enfant. 
+	- Dans ce cas, il suffit de le remplacer par son seul enfant. 
+- Cas compliqué: le nœud à supprimer possède deux enfants. 
+	- Dans ce cas, il faut d’abord échanger ce nœud avec son successeur minimal à droite, ce qui nous mènera nécessairement à l’un des deux cas simples car ce successeur minimal à droite n’a pas d’enfant à gauche!
+([[Chapitre-8.pdf#page=84&selection=37,0,199,7&color=yellow|Chapitre-8, p.84]])
