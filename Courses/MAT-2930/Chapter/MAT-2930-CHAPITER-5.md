@@ -287,4 +287,18 @@ Si on calcule la valeur et le vecteur propre:
 > utiliser les vecteur propres !
 > $$\lambda_{1}, \lambda_{2}, \lambda_{3}, \dots, \lambda_{n}$$
 > convertir en pourcentage
-> $$\frac{\lambda_{1}}{\sum^{#}_{#}}$$
+> $$\frac{\lambda_{1}}{\sum_{i}\lambda_{i}} + \frac{\lambda_{2}}{\sum_{i}\lambda_{i}} + \frac{\lambda_{3}}{\sum_{i}\lambda_{i}} + \dots + \frac{\lambda_{n}}{\sum_{i}\lambda_{i}} $$
+
+**On ce donne un seuil**: On se donne un seuil sur la variance totale pour ensuite comparer avec les valeur et couper ceux qui sont superflut.
+
+Théorème spectral
+---
+Soit $A \in R^{n \times n}$ une matrice réelle. 
+$A$ est symétrique si et seulement si elle est diagonalisable orthogonalement
+$$A = QDQ^T$$
+([[Chapitre-5f.pdf#page=8&selection=4,0,8,73&color=yellow|Chapitre-5f, p.8]])
+
+> [!example] 
+> Déterminez la matrice $2 \times 2$ ayant les valeurs et vecteurs propres suivants :
+> $$A = \begin{bmatrix} 3 \\ 4 \end{bmatrix} \dots$$
+([[Chapitre-5f.pdf#page=9&selection=4,0,8,18&color=yellow|Chapitre-5f, p.9]])
