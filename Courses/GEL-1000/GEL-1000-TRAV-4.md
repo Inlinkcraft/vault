@@ -8,8 +8,6 @@ note:
 status: Compléter
 ---
 #school/GEL-1000
-- [x] TP4 Circuit - 📅 2024-11-29
-      [clock::2024-11-26T16:52:36--2024-11-27T13:59:02]
 
 > [!PDF|yellow] [[TP4.pdf#page=1&selection=23,0,151,29&color=yellow|TP4, p.1]]
 > La fonction residue retourne trois vecteurs de valeurs contenant respectivement les résidus, les pôles et les termes directes. Il faut appeler cette fonction avec deux arguments. Le premier est un vecteur qui représente les coefficients du polynôme du numérateur et le second, ceux du dénominateur. Par exemple, pour le polynôme $P(s) = s2 + 4$, le vecteur correspondant doit s’écrire sous la forme suivante :
