@@ -508,3 +508,65 @@ void Arbre<E>::_zigZagDroit(Noeud*& K3)
 - Cas compliqué: le nœud à supprimer possède deux enfants. 
 	- Dans ce cas, il faut d’abord échanger ce nœud avec son successeur minimal à droite, ce qui nous mènera nécessairement à l’un des deux cas simples car ce successeur minimal à droite n’a pas d’enfant à gauche!
 ([[Chapitre-8.pdf#page=84&selection=37,0,199,7&color=yellow|Chapitre-8, p.84]])
+
+![[Chapitre-8.pdf#page=86&rect=115,125,837,422&color=yellow|Chapitre-8, p.86]]
+![[Chapitre-8.pdf#page=87&rect=111,120,893,430&color=yellow|Chapitre-8, p.87]]![[Chapitre-8.pdf#page=88&rect=125,115,845,426&color=yellow|Chapitre-8, p.88]]
+##### Implémentation
+```c++
+template <typename E> 
+void Arbre<E>::enleverAVL(const E & data) 
+{ 
+_auxEnleverAVL(racine, data);
+}
+```
+([[Chapitre-8.pdf#page=114&selection=12,0,55,1&color=red|Chapitre-8, p.114]])
+
+```c++
+template <typename E> 
+void Arbre<E>::_auxEnleverAVL(Noeud*& noeud, const E& valeur) 
+{
+	if (noeud==0) throw logic_error("Tentative d’enlever une donnée absente");
+	if (valeur < noeud->data) _auxEnleverAVL(noeud->gauche, valeur); 
+	else if(noeud->data < valeur) _auxEnleverAVL(noeud->droite, valeur);
+	// valeur == noeud->data: ici on doit enlever le noeud pointé par noeud
+	else if(noeud->gauche != 0 && noeud->droite != 0) 
+	{ //Cas complexe: chercher le successeur minimal droit et l‘enlever 
+		_enleverSuccMinDroite(noeud); 
+	} 
+	else 
+	{ //Cas simples: un ou zéro enfant 
+		Noeud* vieuxNoeud = noeud; 
+		noeud = (noeud->gauche != 0) ? noeud->gauche : noeud->droite; 
+		delete vieuxNoeud; 
+		--nb_noeuds; 
+	} 
+	//dans tous les cas: rebalancer et mise à jour des hauteurs
+	_balancer(noeud);  
+}
+```
+([[Chapitre-8.pdf#page=115&selection=0,3,270,1&color=red|Chapitre-8, p.115]])
+
+```c++
+template <typename E> 
+void Arbre<E>::_enleverSuccMinDroite(Noeud* noeud) 
+{ 
+	Noeud* temp = noeud->droite; 
+	Noeud* parent = noeud; 
+	while ( temp->gauche != 0) 
+	{ 
+		parent = temp; 
+		temp = temp->gauche; 
+	} 
+	noeud->data = temp->data; //écrasement par le successeur minimal à droite
+	// enlever nœud (cas simple) 
+	if (temp == parent->gauche) 
+		_auxEnleverAVL(parent->gauche, temp->data); 
+	else 
+		_auxEnleverAVL(parent->droite, temp->data); 
+}
+```
+([[Chapitre-8.pdf#page=116&selection=12,0,177,1&color=red|Chapitre-8, p.116]])
+
+**Complexité:**  𝑂(log 𝑛) pour un arbre AVL
+([[Chapitre-8.pdf#page=117&selection=0,3,221,3&color=yellow|Chapitre-8, p.117]])
+**Toujours re-balancer ?:** Changement d'algorithme (arbre rouge et noir) (Mêm)
