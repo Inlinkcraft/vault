@@ -48,12 +48,74 @@ Nous avons:
 ##### Insertion rouge-noir
 ```c++
 void insertionRougeNoir(int valeur)
+{
 	Noeud* noeud = new Noeud;
 	noeud -> data = valeur;
 	noeud -> parent = null_ptr;
-	noeud -> gauche =
-	noeud -> droit = 
+	noeud -> gauche = *feuille;
+	noeud -> droit = *feuille;
 	noeud -> couleur = Rouge
+	
+	Noeud* y = null_ptr;
+	Noeud* x = *racine;
+	
+	Tant que (x != *feuille){
+		y = x;
+		si (noeud -> data < x -> data){
+			x = x -> gauche;
+		}
+		else
+		{
+			x = x -> droit;
+		}
+	}
+	
+	noeud -> parent = y;
+	
+	Si (y = null_ptr)
+	{
+		racine = noeud;
+	}
+	Sinon
+	{
+		Si (noeud -> data < y -> data)
+			y -> gauche = noeud;
+		Sinon
+			y -> droit = noeud;
+	}
+	
+	Si (noeud -> parent == null_ptr)
+	{
+		noeud -> couleur = noir;
+		return;
+	}
+	
+	Si (noeud -> parent -> parent == null_ptr)
+	{
+		return;
+	}
+	
+	insertionColoriage(noeud);
+	
+}
+```
+
+```c++
+void insertionColoriage(Noeud& noeud){
+	Tant que (noeud -> parent -> couleur == rouge)
+	{
+		Si (noeud -> parent == [(noeud -> parent) -> parent] -> droit)
+		{
+			u = [(noeud -> parent) -> parent] -> gauche;
+			Si (u -> couleur == rouge)
+			{
+				u -> couleur = noir;
+				noeud -> parent -> couleur = noir;
+				[(noeud)]
+			}
+		}
+	}
+}
 ```
 
 ### Suppression
