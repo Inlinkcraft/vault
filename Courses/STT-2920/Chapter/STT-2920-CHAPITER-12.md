@@ -43,8 +43,51 @@ Où b doit être estimé à partir de l’échantillon, on prendra en général 
 ##### Estimation de la différence de deux moyennes $μ1 - μ2$
 ([[STT-2920-Chapter-11-12.pdf#page=32&selection=0,44,8,1&color=yellow|STT-2920-Chapter-11-12, p.32]])
 Il arrive souvent que l’on souhaite, à partir de deux échantillons, inférer sur la comparaison de deux paramètres des populations respectives sous-jacentes des échantillons, par exemple la comparaison de deux moyenne. Le contexte général est le suivant : 
-On a un premier échantillon $X_{1}, X_{2}, . . . , X_{n_{1}}$ provenant de la population 1 (modèle probabiliste 1) de paramètres $μ1$ et $1$. 
-On a un deuxième échantillon $Y1, Y2, . . . , Yn2$ provenant de la population 2 (modèle probabiliste 2) de paramètres $μ2$ et $2$. 
+On a un premier échantillon $X_{1}, X_{2}, . . . , X_{n_{1}}$ provenant de la population 1 (modèle probabiliste 1) de paramètres $μ1$ et $\sigma_{1}$. 
+On a un deuxième échantillon $Y1, Y2, . . . , Yn2$ provenant de la population 2 (modèle probabiliste 2) de paramètres $μ2$ et $\sigma_{2}$. 
 Naturellement, un bon estimateur pour l’écart entre $μ1 - μ2$ sera $\bar{X} - \bar{Y}$. 
 Or, la distribution d’échantillonnage de la variable aléatoire $\bar{X} -\bar{Y}$, et les formules donnant l’I.C. pour $μ1 - μ2$ dépendra de la distribution de la population mère et de la connaissance ou non des valeurs de $\sigma^{1}$ et $\sigma^{2}$. Les cas typiques que nous rencontrerons se résument dans la proposition suivante.
 ([[STT-2920-Chapter-11-12.pdf#page=32&selection=10,0,119,81&color=yellow|STT-2920-Chapter-11-12, p.32]])
+
+> [!note] Proposition 8
+> Contexte global : On a deux échantillons (indépendants) $X_{1}, X_{2}, \dots , X_{n_{1}}$ et $Y_{1} Y_{2}, . . . , Y_{n2}$ porvenant de deux population mères distinctes. 
+> - Si les populations mères sont normales avec $\sigma_{1}$ et $\sigma_{2}$ connus, alors l’intervalle de confiance pour $μ1 - μ2$ au niveau de confiance $1- \alpha$ est:
+> $$\left[ (\bar{x} - \bar{y})-z_{\frac{\alpha}{2}}\sqrt{ \frac{\sigma_{1}^{2}}{n_{1}} + \frac{\sigma_{2}^{2}}{n_{2}}}; (\bar{x} - \bar{y})+z_{\frac{\alpha}{2}}\sqrt{ \frac{\sigma_{1}^{2}}{n_{1}} + \frac{\sigma_{2}^{2}}{n_{2}}} \right]$$
+> - Si les population mères sont normales avec $\sigma_{1}$ et $\sigma_{2}$ inconnu, mais on suppose que $\sigma_{1} = \sigma_{2}$, alors l’intervalle de confiance pour $μ1 - μ2$ au niveau de confiance $1 - \alpha$ est
+> $$\left[ (\bar{x} - \bar{y})-t_{n_{1}+n_{2}-2, \frac{\alpha}{2}}s_{c}\sqrt{ \frac{1}{n_{1}} + \frac{1}{n_{2}}}; (\bar{x} - \bar{y})+t_{n_{1}+n_{2}-2, \frac{\alpha}{2}}s_{c}\sqrt{ \frac{1}{n_{1}} + \frac{1}{n_{2}}} \right]$$
+> où $s_{c} = \sqrt{ \frac{s_{1}^{2}(n_{1}-1) + s_{2}^{2}(n_{2}-1)}{n_{1}+n_{2}-2} }$ est appelé l’écart-type regroupé. 
+> - Si les population mères sont quelconques et si les tailles échantillonnales $n1$ et $n2$ sont grandes, alors l’intervalle de confiance approximatif pour $μ1 - μ2$ au niveau de confiance $1 - \alpha$ est 
+> $$\left[ (\bar{x} - \bar{y})-z_{\frac{\alpha}{2}}\sqrt{ \frac{\hat{\sigma}_{1}^{2}}{n_{1}} + \frac{\hat{\sigma}_{2}^{2}}{n_{2}}};  (\bar{x} - \bar{y})+z_{\frac{\alpha}{2}}\sqrt{ \frac{\hat{\sigma}_{1}^{2}}{n_{1}} + \frac{\hat{\sigma}_{2}^{2}}{n_{2}}} \right]$$
+> - où la plupart du temps, on prend $\hat{\sigma}_{1} = s_{1}$ et $\hat{\sigma}_{2} = s_{2}$.
+([[STT-2920-Chapter-11-12.pdf#page=33&selection=0,55,490,1&color=yellow|STT-2920-Chapter-11-12, p.33]])
+
+> [!question] Q 8
+> On veut comparer la masse des rondelles produites par deux procédés de production (le procédé 1 et le procédé 2). On accepte que les deux procédés produisent des rondelles dont la masse est distribué normalement avec même écarttype. On a produit deux échantillons avec les procédés respectifs. 
+> procédé 1 : masse (g) : 170.05 170.01 170.09 170.11 169.95 170.03 170.05 170.00 170.06 
+> procédé 2 : masse (g) : 169.99 169.89 169.94 169.95 170.02 170.06 170.01 
+> Estimez par intervalle de confiance, au niveau de confiance 95%, l’écart entre les masses moyennes théoriques que produits les deux procédés
+> > [!success] Solution
+> > $n_{1} = 9$, $\bar{x} = 170.039$, $s_{1}^2 = 0.002336$, $n_{2} = 7$, $\bar{y} = 169.098$, $s_{2}^{2} = 0.003266$
+> > $s_{c} = \sqrt{ \frac{s_{1}^{2}(n_{1}-1) + s_{2}^{2}(n_{2}-1)}{n_{1}+n_{2}-2} } = 0.052293$
+> > $$\left[ (\bar{x} - \bar{y})-t_{n_{1}+n_{2}-2, \frac{\alpha}{2}}s_{c}\sqrt{ \frac{1}{n_{1}} + \frac{1}{n_{2}}}; (\bar{x} - \bar{y})+t_{n_{1}+n_{2}-2, \frac{\alpha}{2}}s_{c}\sqrt{ \frac{1}{n_{1}} + \frac{1}{n_{2}}} \right]$$
+> > Résultat : $[0.941-0.057;0.941+0.057] = [0.884; 0998]$
+> 
+> ([[STT-2920-Chapter-11-12.pdf#page=34&selection=0,116,40,26&color=red|STT-2920-Chapter-11-12, p.34]])
+
+> [!note] Proposition 9
+> Supposons que l’on a deux échantillons (1 et 2) indépendants provenant de deux populations mères normales de moyenne incounnues, mais qui ont la même variance ($\sigma^{2}$), alors l’intervalle de confiance pour $\sigma^{2}$ au niveau de confiance $1-\alpha$ est de la forme 
+> ...
+> où $s_{c}^{2}$ est la variance échantillonnale regroupée : $s_{c}^{2} = \dots$
+([[STT-2920-Chapter-11-12.pdf#page=35&selection=25,0,169,1&color=yellow|STT-2920-Chapter-11-12, p.35]])
+
+Estimation de la différence de deux proportions $p1 - p2$
+---
+([[STT-2920-Chapter-11-12.pdf#page=36&selection=0,47,8,1&color=yellow|STT-2920-Chapter-11-12, p.36]])
+
+$$\left[ (\hat{p_{1}}-\hat{p_{2}})-z_{\frac{\alpha}{2}} \sqrt{ \frac{\hat{p_{1}}(1-\hat{p_{1}})}{n_{1}}+\frac{\hat{p_{2}}(1-\hat{p_{2}})}{n_{2}} }; (\hat{p_{1}}-\hat{p_{2}})+z_{\frac{\alpha}{2}} \sqrt{ \frac{\hat{p_{1}}(1-\hat{p_{1}})}{n_{1}}+\frac{\hat{p_{2}}(1-\hat{p_{2}})}{n_{2}} }\right]$$
+
+> [!success] Valide si
+> $n_{1} \ge 30, \ n_{1} \hat{p_{1}} \ge 5, \ n_{1}(1-\hat{p_{1}} \ge 5)$
+>  $n_{2} \ge 30, \ n_{2} \hat{p_{1}} \ge 5, \ n_{2}(1-\hat{p_{2}} \ge 5)$
+
+Exemple 9 ([[STT-2920-Chapter-11-12.pdf#page=37&selection=10,0,10,8&color=yellow|STT-2920-Chapter-11-12, p.37]])

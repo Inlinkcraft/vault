@@ -419,6 +419,293 @@ bool Arbre <E>::_sousArbrePencheADroite(Noeud* arbre) const
 ([[Chapitre-8.pdf#page=72&selection=10,0,84,2&color=red|Chapitre-8, p.72]])
 
 #### Implémentation de ZIG-ZIG-Gauche
+```c++
+template <typename E> 
+void Arbre<E>::_zigZigGauche(Noeud*& K2) 
+{
+	Noeud* K1 = K2->gauche; 
+	K2->gauche = K1->droite; 
+	K1->droite = K2; 
+	K2->hauteur = 
+		1+ max(_hauteur(K2->gauche),_hauteur(K2->droite)); 
+	K1->hauteur = 
+		1 + max(_hauteur(K1->gauche), K2->hauteur); 
+	K2 = K1;
+}
+```
+([[Chapitre-8.pdf#page=73&selection=10,0,132,0&color=red|Chapitre-8, p.73]])
 #### Implémentation de ZIG-ZIG-Droit
+```C++
+template <typename E> 
+void Arbre<E>::_zigZigGauche(Noeud*& K2) 
+{ 
+	Noeud* K1 = K2->droite; 
+	K2->droite = K1->gauche; 
+	K1->gauche = K2; 
+	K2->hauteur = 
+		1 + max(_hauteur(K2->droite), _hauteur(K2->gauche)); 
+	K1->hauteur = 
+		1 + max(_hauteur(K1->droite), K2->hauteur); 
+	K2 = K1; 
+}
+```
+([[Chapitre-8.pdf#page=74&selection=10,1,135,0&color=red|Chapitre-8, p.74]])
 #### Implémentation de ZIG-ZAG-Gauche
+```c++
+template <typename E> 
+void Arbre<E>::_zigZagGauche(Noeud*& K3) 
+{ 
+	_zigZigDroit(K3->gauche); 
+	_zigZigGauche(K3); 
+}
+```
+([[Chapitre-8.pdf#page=75&selection=10,0,50,1&color=red|Chapitre-8, p.75]])
 #### Implémentation de ZIG-ZAG-Droit
+```c++
+template <typename E> 
+void Arbre<E>::_zigZagDroit(Noeud*& K3) 
+{ 
+	_zigZigGauche(K3->droite); 
+	_zigZigDroit(K3); 
+}
+```
+([[Chapitre-8.pdf#page=76&selection=10,0,51,1&color=red|Chapitre-8, p.76]])
+
+### Synthèse
+ - Arbres AVL : équilibrés 
+	 - pour supporter efficacement les opérations de recherche, d’insertion et de suppression 
+	 - facteur d’équilibre 
+		 - |hauteur(sous-arbre droit) - hauteur(sous-arbre gauche)|= 𝑘 
+		 - 𝐻𝐵[𝑘] lorsque ≤ 𝑘 
+		 - AVL → arbres 𝐻𝐵[1] 
+	 - Déséquilibre → balancement 
+		 - Nœud critique 
+		 - Rotations : zigzig droit/gauche, zigzag droit/gauche 
+		 - Implémentation
+([[Chapitre-8.pdf#page=77&selection=7,0,104,14&color=red|Chapitre-8, p.77]])
+
+#### Analyse: complexité pour l’insertion dans AVL 
+- Les opérations suivantes se font en temps 𝑂(1) : 
+	- Insertion d’une donnée à partir d’une feuille 
+	- Vérification du débalancement (lecture des hauteurs) d’un noeud 
+	- Mise à jour de la hauteur d’un noeud 
+	- Le rebalancement (zigZig et zigZag) à une position donnée
+- Soit ℎ(𝑛) = hauteur de l’arbre AVL de 𝑛 nœuds. 
+- Or, la profondeur de la feuille la moins profonde dans un arbre AVL de hauteur ℎ est ≥ ⌈𝒉/𝟐⌉ (voir exercices). 
+- Les opérations suivantes se font donc en O(ℎ(𝑛)) : 
+	- trouver le point d’insertion (de la racine à une feuille) 
+	- Remonter du point d’insertion jusqu’à la racine (en rebalançant lorsque nécessaire) 
+- L’insertion se fait donc en 𝑂(ℎ(𝑛)) 
+- Or, nous allons voir que ℎ(𝑛) ∈ 𝑂(log 𝑛) pour un arbre AVL. 
+- L’insertion d’une donnée dans un arbre AVL se fait donc en 𝑂(log 𝑛)
+([[Chapitre-8.pdf#page=78&selection=0,2,294,0&color=yellow|Chapitre-8, p.78]])
+
+# Enlèvement dans un arbre AVL
+- Premier cas simple: le nœud à supprimer est une feuille. 
+	- Dans ce cas, il suffit de le supprimer directement. 
+- Deuxième cas simple: le nœud à supprimer possède un seul enfant. 
+	- Dans ce cas, il suffit de le remplacer par son seul enfant. 
+- Cas compliqué: le nœud à supprimer possède deux enfants. 
+	- Dans ce cas, il faut d’abord échanger ce nœud avec son successeur minimal à droite, ce qui nous mènera nécessairement à l’un des deux cas simples car ce successeur minimal à droite n’a pas d’enfant à gauche!
+([[Chapitre-8.pdf#page=84&selection=37,0,199,7&color=yellow|Chapitre-8, p.84]])
+
+![[Chapitre-8.pdf#page=86&rect=115,125,837,422&color=yellow|Chapitre-8, p.86]]
+![[Chapitre-8.pdf#page=87&rect=111,120,893,430&color=yellow|Chapitre-8, p.87]]![[Chapitre-8.pdf#page=88&rect=125,115,845,426&color=yellow|Chapitre-8, p.88]]
+##### Implémentation
+```c++
+template <typename E> 
+void Arbre<E>::enleverAVL(const E & data) 
+{ 
+_auxEnleverAVL(racine, data);
+}
+```
+([[Chapitre-8.pdf#page=114&selection=12,0,55,1&color=red|Chapitre-8, p.114]])
+
+```c++
+template <typename E> 
+void Arbre<E>::_auxEnleverAVL(Noeud*& noeud, const E& valeur) 
+{
+	if (noeud==0) throw logic_error("Tentative d’enlever une donnée absente");
+	if (valeur < noeud->data) _auxEnleverAVL(noeud->gauche, valeur); 
+	else if(noeud->data < valeur) _auxEnleverAVL(noeud->droite, valeur);
+	// valeur == noeud->data: ici on doit enlever le noeud pointé par noeud
+	else if(noeud->gauche != 0 && noeud->droite != 0) 
+	{ //Cas complexe: chercher le successeur minimal droit et l‘enlever 
+		_enleverSuccMinDroite(noeud); 
+	} 
+	else 
+	{ //Cas simples: un ou zéro enfant 
+		Noeud* vieuxNoeud = noeud; 
+		noeud = (noeud->gauche != 0) ? noeud->gauche : noeud->droite; 
+		delete vieuxNoeud; 
+		--nb_noeuds; 
+	} 
+	//dans tous les cas: rebalancer et mise à jour des hauteurs
+	_balancer(noeud);  
+}
+```
+([[Chapitre-8.pdf#page=115&selection=0,3,270,1&color=red|Chapitre-8, p.115]])
+
+```c++
+template <typename E> 
+void Arbre<E>::_enleverSuccMinDroite(Noeud* noeud) 
+{ 
+	Noeud* temp = noeud->droite; 
+	Noeud* parent = noeud; 
+	while ( temp->gauche != 0) 
+	{ 
+		parent = temp; 
+		temp = temp->gauche; 
+	} 
+	noeud->data = temp->data; //écrasement par le successeur minimal à droite
+	// enlever nœud (cas simple) 
+	if (temp == parent->gauche) 
+		_auxEnleverAVL(parent->gauche, temp->data); 
+	else 
+		_auxEnleverAVL(parent->droite, temp->data); 
+}
+```
+([[Chapitre-8.pdf#page=116&selection=12,0,177,1&color=red|Chapitre-8, p.116]])
+
+**Complexité:**  𝑂(log 𝑛) pour un arbre AVL
+([[Chapitre-8.pdf#page=117&selection=0,3,221,3&color=yellow|Chapitre-8, p.117]])
+**Toujours re-balancer ?:** Changement d'algorithme (arbre rouge et noir) (Même croissance asymptotique)
+
+## Recherche d'un élément
+
+```c++
+template<typename E> 
+bool Arbre<E>::appartient(const E& data) const 
+{ 
+	return _auxAppartient(racine, data) != 0; 
+}
+```
+([[Chapitre-8.pdf#page=119&selection=8,0,51,1&color=red|Chapitre-8, p.119]])
+
+```c++
+template<typename E> 
+typename Arbre<E>::Noeud* Arbre<E>::_auxAppartient(Noeud* arbre, const E& data) const 
+{ 
+	if (arbre == 0) 
+		return 0; //si data n’est pas dans l’arbre 
+		
+	if (data < arbre->data) 
+		return _auxAppartient(arbre->gauche, data);
+	else if (arbre->data < data) 
+		return _auxAppartient(arbre->droite, data); 
+	else 
+		return arbre; //car arbre->data == data 
+}
+```
+([[Chapitre-8.pdf#page=120&selection=8,0,145,1&color=red|Chapitre-8, p.120]])
+
+##### Trouver l'élément maximal
+```c++
+template<typename E> const E& Arbre<E>::max() const 
+{ 
+	if(nb_noeuds<=0) 
+		throw logic_error("Doit être non vide"); 
+		Noeud* temp = racine; 
+		while (temp->droite!=0) 
+			temp = temp->droite; 
+		return temp->data; 
+}
+```
+([[Chapitre-8.pdf#page=121&selection=71,0,154,1&color=red|Chapitre-8, p.121]])
+
+**Dans la stl :** [[Set]], [[Map]], etc
+
+## SET
+- La valeur d’un élément dans un set est son identifiant et doit être unique et non modifiable. 
+- Les élément sont ordonnés selon operator< défini par le type T des éléments du set 
+	- Il est possible d’utiliser un foncteur lors de la création du set pour définir l’opérateur de comparaison 
+- On utilise iterator pour accéder aux élements 
+	- la méthode begin () retourne un itérateur pointant sur le premier (i.e. le plus petit) élément et end() retourne un iterator pointant sur un élément (sentinelle) après le dernier
+([[Chapitre-8.pdf#page=124&selection=10,0,147,16&color=yellow|Chapitre-8, p.124]])
+
+- On utilise insert(const T&) pour ajouter un élément et ça retourne un objet de type pair<iterator,bool> où le membre bool nous indique si l’insertion a échoué (élément déjà dans le set) ou a été effectué avec succès (dans ce cas iterator pointe sur l’élément inséré). 
+- On utilise erase(const T&) ou erase(iterator) pour enlever un élément du set. 
+- On utilise find(const T&) pour obtenir un iterator pointant sur l’élément recherché s’il est trouvé ou pointant sur la sentinelle à la fin du set si cet élément n’est pas dans le set.
+([[Chapitre-8.pdf#page=125&selection=10,0,158,4&color=yellow|Chapitre-8, p.125]])
+
+### Example
+```c++
+#include <iostream> 
+#include <set> 
+int main() 
+{
+	std::set<int> myset; 
+	std::set<int>::iterator it; 
+	myset.insert(30); 
+	myset.insert(10); 
+	myset.insert(20); 
+	myset.insert(5); 
+	myset.insert(15); 
+	it = myset.begin(); 
+	myset.erase(it); //enlève le plus petit élément 
+	it = myset.end(); 
+	myset.erase(--it); //enlève le plus grand 
+	std::cout << "myset contains:"; 
+	for (it = myset.begin(); it != myset.end(); ++it) 
+		std::cout << ' ' << *it; //affiche 10 15 20 
+	std::cout << std::endl; 
+	return 0; 
+}
+```
+([[Chapitre-8.pdf#page=126&selection=12,0,205,1&color=yellow|Chapitre-8, p.126]])
+
+## Map
+- Est un ensemble ordonné de paires de type pair<KeyType,ValueType> 
+- Les élément sont ordonnés selon operator< défini par le type KeyType 
+	- Il est possible d’utiliser un foncteur lors de la création du map pour définir l’opérateur de comparaison 
+- Pour accéder aux éléments, on peut utiliser un iterator ou, plus simplement, l’opérateur d’indexation [ ] dont le prototype est: 
+	- ValueType & operator[] (const KeyType & key)
+([[Chapitre-8.pdf#page=127&selection=10,0,122,6&color=yellow|Chapitre-8, p.127]])
+
+- Fonctionnement: Si key est dans le map alors une référence à la valeur associé à key est retournée. Si key n’est pas dans le map, key est inséré dans la map avec une valeur associé par défaut (défini par le constructeur sans paramètre de ValueType). 
+	- operator[] est un modificateur: il est donc inutilisable dans une fonction où le map est passé par référence constante. 
+- Il est donc généralement plus prudent de tester d’abord si une clé est dans le map avant de lui associer une valeur. Pour cela on utilise find(const KeyType & key) qui retourne un itérateur pointant sur la paire pair<key,value> si key est dans le map (et value est la valeur associé à key). Sinon, l’itérateur retourné pointe sur un élément de map passé le dernier.
+([[Chapitre-8.pdf#page=128&selection=10,0,226,21&color=yellow|Chapitre-8, p.128]])
+
+#### EXAMPLE
+```c++
+std::map<string, unsigned int> tailles; 
+//insère éventuellement une paire <‘’Julie’’,162> dans tailles
+tailles["Julie"] = 162;
+std::cout << tailles["Julie"] << endl; //affiche 162
+std::cout << tailles["Robert"] << endl; //insère une paire <‘’Robert’’,0> 
+	//dans tailles et affiche 0
+```
+([[Chapitre-8.pdf#page=129&selection=80,0,172,12&color=red|Chapitre-8, p.129]])
+
+ - Le deuxième énoncé: tailles[‘’Julie’’] insère d’abord <‘’Julie’’,0> dans tailles et retourne par référence la valeur associée de 0 . Cette valeur est ensuite écrasée par 162 avec l’opérateur d’affectation =. 
+ - Le dernier énoncé insère <‘’Robert’’,0> dans tailles et affiche 0
+([[Chapitre-8.pdf#page=129&selection=12,1,78,12&color=yellow|Chapitre-8, p.129]])
+
+```c++
+std::map<std::string, unsigned int>::const_iterator itr; 
+itr = tailles.find("Robert"); 
+if(itr==tailles.end()) 
+	std::cout << "Absent de notre base de donnée" << endl; 
+else 
+	//affiche la valeur associée à la clé Robert
+	std::cout << itr->second << endl; 
+```
+([[Chapitre-8.pdf#page=130&selection=56,0,147,5&color=yellow|Chapitre-8, p.130]])
+
+- À la place de ce dernier énoncé, on peut d’abord vérifier si ‘’Robert’’ est dans le map et, si c’est le cas, afficher sa taille:
+([[Chapitre-8.pdf#page=130&selection=12,0,54,7&color=yellow|Chapitre-8, p.130]])
+
+#### Synthèse
+- Dans la STL 
+	- set, map, multiset et multimap 
+		- insert erase find Iterator begin end 
+		- Clés non modifiables 
+		- Arbres rouge et noir 
+- set (duplicatas interdits), multiset (duplicatas autorisés) 
+	- operator< défini par le type T (data) 
+- map (duplicatas interdits), multimap (duplicatas autorisés) 
+	- pair<KeyType,ValueType> 
+	- operator< défini par le type KeyType 
+	- operator[]
+([[Chapitre-8.pdf#page=131&selection=6,0,82,9&color=yellow|Chapitre-8, p.131]])
