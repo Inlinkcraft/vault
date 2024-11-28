@@ -698,7 +698,14 @@ else
 
 #### Synthèse
 - Dans la STL 
-	- set, map, multiset et multimap ✓ insert erase find Iterator begin end ✓ Clés non modifiables ✓ Arbres rouge et noir 
-- set (duplicatas interdits), multiset (duplicatas autorisés) ➢ operator< défini par le type T (data) 
-- map (duplicatas interdits), multimap (duplicatas autorisés) ➢ pair<KeyType,ValueType> ➢ operator< défini par le type KeyType ➢ operator[
+	- set, map, multiset et multimap 
+		- insert erase find Iterator begin end 
+		- Clés non modifiables 
+		- Arbres rouge et noir 
+- set (duplicatas interdits), multiset (duplicatas autorisés) 
+	- operator< défini par le type T (data) 
+- map (duplicatas interdits), multimap (duplicatas autorisés) 
+	- pair<KeyType,ValueType> 
+	- operator< défini par le type KeyType 
+	- operator[]
 ([[Chapitre-8.pdf#page=131&selection=6,0,82,9&color=yellow|Chapitre-8, p.131]])
