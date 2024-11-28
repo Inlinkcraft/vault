@@ -111,7 +111,41 @@ void insertionColoriage(Noeud& noeud){
 			{
 				u -> couleur = noir;
 				noeud -> parent -> couleur = noir;
-				[(noeud)]
+				[(noeud -> parent) -> parent] -> couleur = rouge;
+				noeud = noeud -> parent -> parent;
+			}
+			Sinon
+			{
+				Si (noeud == noeud -> parent -> gauche)
+				{
+					noeud = noeud -> Parent;
+					_ZigZigGauche(noeud);
+				}
+				noeud -> parent -> couleur = noir;
+				noeud -> parent -> parent -> couleur = rouge
+				_ZigZigDroit(noeud -> parent -> parent);
+			}
+		}
+		Sinon (noeud -> parent == [(noeud -> parent)-> parent] -> gauche)
+		{
+			u = [(noeud -> parent) -> parent] -> droit;
+			Si (u -> couleur == rouge)
+			{
+				u -> couleur = noir;
+				noeud -> parent -> couleur = noir;
+				[(noeud -> parent) -> parent] -> couleur = rouge;
+				noeud = noeud -> parent -> parent;
+			}
+			Sinon
+			{
+				Si (noeud == noeud -> parent -> droit)
+				{
+					noeud = noeud -> parent;
+					_ZigZigDroit(noeud);
+				}
+				noeud -> parent -> couleur = noir;
+				noeud -> parent -> parent -> couleur = rouge;
+				_ZigZigGauche(noeud -> parent -> parent)
 			}
 		}
 	}
@@ -120,3 +154,7 @@ void insertionColoriage(Noeud& noeud){
 
 ### Suppression
 ---
+- Supprimer le noeud à la bonne position comme dans un arbre AVL. 
+- Ensuite, on doit gérer le coloriage et le balancement. 
+- On verra 3 cas pour la suppression et 6 pour fixer le coloriage
+([[Chapitre-9.pdf#page=93&selection=6,0,50,0&color=yellow|Chapitre-9, p.93]])
