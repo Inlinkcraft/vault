@@ -206,10 +206,36 @@ void insertionColoriage(Noeud& noeud){
 		- Supprimer x
 		- Rebalancement #1
 			- f est à droite de b et le noeud rouge est l
-				- on rebalance en fesant un sigzagDroit sur B
+				- on rebalance en fesant un zigzagDroit sur B
 			- f est à gauche de b et le noeud rouge est l
-				- on rebalance en fesant un sigzag sur B
+				- on rebalance en fesant un zigzagGauche sur B
 			- colorier l en noir
+	> On peut mettre les deux cas 𝑏 et 𝑐 dans le même cas et faire un ZigZig si le noeud rouge est à la bonne position.
+	
 	- Si 𝑓 est noir et ses enfants sont noirs. 
+		- Résolution 
+			- Supprimer x 
+			- Rebalancement #1 
+				- 𝑓 est à droite de 𝑏 ü 
+				- On colorie 𝑓 rouge 
+			- Si 𝑏 est noir, on refait les cas de supressions pour 𝑏 tant que 𝑏 est noir. 
+			- Si b est rouge, on le colorie noir.
+		([[Chapitre-9.pdf#page=140&selection=30,0,106,5&color=yellow|Chapitre-9, p.140]])
 	- Si 𝑓 est rouge
+		- Résolution 
+			- Supprimer x. 
+			- Rebalancement #1 
+				- 𝑓 est à droite de 𝑏 
+				- On rebalance en faisant un ZigZigDroit sur 𝑏. 
+			- Colorier 𝑓 noir 
+			- Colorier 𝑙 rouge
+			([[Chapitre-9.pdf#page=150&selection=22,0,79,5&color=yellow|Chapitre-9, p.150]])
 ([[Chapitre-9.pdf#page=106&selection=14,0,155,5&color=yellow|Chapitre-9, p.106]])
+
+
+Synthèse
+---
+- Arbre rouge et noir plus complexe que AVL 
+- Moins de rotations que les arbres AVL 
+- Recherche plus longue pour red-black (l’arbre peut être un peu plus débalancé que AVL)
+([[Chapitre-9.pdf#page=162&selection=6,0,53,4&color=yellow|Chapitre-9, p.162]])
