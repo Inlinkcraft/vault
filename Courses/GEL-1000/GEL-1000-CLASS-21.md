@@ -21,6 +21,10 @@ status: Cette semaine
 
 ## Notes supplémentaire
 
+> [!example] 
+> 
+
+> Une unité manquante  $\to$ -1 point
 
 ---
 # En retrospective
