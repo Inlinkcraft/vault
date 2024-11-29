@@ -53,7 +53,19 @@ status: Cette semaine
 > $$250(j_{2} - j_{1}) + \frac{j_{2}}{0.12 \times 10^{-3}s}$$
 > $$\begin{bmatrix} 0.05s+250 & -250 \\ -250 & 250 + \frac{1}{0.12 \times 10 ^{-3}s} \end{bmatrix}\begin{bmatrix} j_{1} \\ j_{2} \end{bmatrix} = \begin{bmatrix} -0.05s i_{g} \\ 0 \end{bmatrix}$$
 > $$\frac{\left|\begin{array}{cc} -0.05s i_{g} & -250 \\ 0 & 250 + \frac{1}{0.12 \times 10 ^{-3}s} \end{array}\right|}{\left|\begin{array}{cc} 0.05s+250 & -250 \\ -250 & 250 + \frac{1}{0.12 \times 10 ^{-3}s} \end{array}\right|}$$
-> $$\frac{-0.5s i_{g} \left( 250 + \frac{1}{0.12 \times 10 ^{-3}s} \right)}{(10.255+250)\left( 250+\frac{1}{} \right)}$$
+> $$\frac{-0.5s i_{g} \left( 250 + \frac{1}{0.12 \times 10 ^{-3}s} \right)}{(10.255+250)\left( 250+\frac{1}{0.12 \times 10^{-3}s}-\frac{250 \times 250}{62500} \right)}$$
+> ...
+> $$\frac{-0.05(250s \times 0.12 \times 10^{-3} + 1) i_{g}}{0.12 \times 10 ^{-3} \times 250 \times 0.05s + 0.05 + 250}$$
+> ...
+> $$i_{1} = -\frac{(a_{2}s^{2} + a_{0}s)i_{g}}{b_{2}s^{2} + b_{1}s + b_{0}}$$
+> $$i_{g} = 2.5u(t)$$
+> $$i_{1}(b_{2}s^{2}+b_{1}s+b_{0}) = (a_{1}s + a_{0})i_{g}$$
+> $$b_{2} \frac{d^{2}i_{1}}{dt^{2}} + b_{1} \frac{di_{1}}{dt} + b_{0} = a_{2} \frac{d^{2}i_{g}}{dt^{2}} + a_{1} \frac{di_{g}}{dt}$$
+> ...
+> $$\cases{b_{2} \frac{d^{2}x}{dt^{2}} + b_{1} \frac{dx}{dt} + b_{0}x = 0 \\ b_{2} \frac{d^{2}x}{dt^{2}} + b_{1} \frac{dx}{dt} + b_{0}x = 1}$$
+> $$x = x_{H}+x_{P} \qquad X_{H} = A_{1}e^{s_{1}t}+A_{2}e^{s_{2}t}$$
+> $$\cases{A_{1} = -\frac{s_{2}}{s_{2}-s_{1}}x_{p} \\ A_{2} = \frac{s_{1}}{s_{2} - s_{1}}x_{p}}$$
+> $$b_{2}s^{2} + b_{1}s_{1} + b_{0} = c?$$
 
 ---
 # En retrospective
