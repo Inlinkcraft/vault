@@ -40,6 +40,20 @@ status: Cette semaine
 > [!example] 
 > ![[Chapitre-6.pdf#page=98&rect=104,90,581,774&color=yellow|Chapitre-6, p.98]]
 > L' inductance ce comporte comme un cours-circuits
+> $$i_{L}(0^-)=\frac{120}{50}A = 2.4A$$
+> $$i_{L}(t) = 2.4u(t) = 2.4(1-u(t))A$$
+> $$V_{L}(0^-)=120V$$
+> $$V_{l}(t)=120(1-u(t))V$$
+> ----
+> $$i_{1}(0^-)=0$$
+> Ramener les chose dans Laplace
+> $$\underbrace{250}_{R} \qquad \underbrace{\frac{1}{0.12 \times 10^{-3}s}}_{C} \qquad \underbrace{0.05s}_{L}$$
+> Courant circulatoires
+> $$0.05s(j_{1} + j_{2}) + 250 (j_{1} - j_{2}) = 0$$
+> $$250(j_{2} - j_{1}) + \frac{j_{2}}{0.12 \times 10^{-3}s}$$
+> $$\begin{bmatrix} 0.05s+250 & -250 \\ -250 & 250 + \frac{1}{0.12 \times 10 ^{-3}s} \end{bmatrix}\begin{bmatrix} j_{1} \\ j_{2} \end{bmatrix} = \begin{bmatrix} -0.05s i_{g} \\ 0 \end{bmatrix}$$
+> $$\frac{\left|\begin{array}{cc} -0.05s i_{g} & -250 \\ 0 & 250 + \frac{1}{0.12 \times 10 ^{-3}s} \end{array}\right|}{\left|\begin{array}{cc} 0.05s+250 & -250 \\ -250 & 250 + \frac{1}{0.12 \times 10 ^{-3}s} \end{array}\right|}$$
+> $$\frac{-0.5s i_{g} \left( 250 + \frac{1}{0.12 \times 10 ^{-3}s} \right)}{(10.255+250)\left( 250+\frac{1}{} \right)}$$
 
 ---
 # En retrospective
