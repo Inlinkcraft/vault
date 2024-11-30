@@ -1,9 +1,8 @@
----
-name: Cours-23
+---"\rname": Cours-23
 type: Class
 course: GLO-2100
 date: 2024-11-28T10:30
-status: Cette semaine
+status: À Réviser
 ---
 #school/GLO-2100 
 ***

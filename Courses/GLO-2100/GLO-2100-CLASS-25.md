@@ -1,9 +1,8 @@
----
-name: Cours-25
+---name: Cours-25
 type: Class
 course: GLO-2100
 date: 2024-12-05T10:30
-status: "À Faire"
+status: Cette semaine
 ---
 #school/GLO-2100 
 ***

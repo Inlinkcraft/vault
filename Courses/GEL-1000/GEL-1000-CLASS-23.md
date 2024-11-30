@@ -1,9 +1,8 @@
----
-name: Cours-23
+---name: Cours-23
 type: Class
 course: GEL-1000
 date: 2024-12-06T09:30
-status: À Faire
+status: Cette semaine
 ---
 #school/GEL-1000  
 *** 

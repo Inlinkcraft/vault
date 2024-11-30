@@ -23,6 +23,10 @@ Décomposition en fraction partielle
 ---
 ![[Décomposition en fractions partielles]]
 
+Analyse des circuits dans l'espace de Laplace
+---
+
+
 Transformation de sources
 ---
 ![[Chapitre-6.pdf#page=49&rect=187,157,504,636|Chapitre-6, p.49]]
