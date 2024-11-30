@@ -29,28 +29,6 @@ Analyse des circuits dans l'espace de Laplace
 
 ![[Manipulation de circuit à domaine de Laplace]]
 
-### Impédance et admittance dans l'espace de Laplace
-([[Chapitre-6.pdf#page=53&selection=0,48,0,48&color=yellow|Chapitre-6, p.53]])
-
-##### Diviseur de tension dans le domaine s
-([[Chapitre-6.pdf#page=54&selection=0,0,0,37&color=yellow|Chapitre-6, p.54]])
-
-##### Diviseur de courant dans le domaine s
-([[Chapitre-6.pdf#page=55&selection=0,0,0,37&color=yellow|Chapitre-6, p.55]])
-
-Fonctionne a condition d'utilisée l'impédence et admittance
-
-![[Chapitre-6.pdf#page=57&rect=54,68,574,751&color=yellow|Chapitre-6, p.57]]
-
-#### EXAMPLE 15.1
-([[Chapitre-6.pdf#page=58&selection=0,0,0,12&color=yellow|Chapitre-6, p.58]])
-$$V_{T}=\frac{1}{s}+1.5|_{0.5s=z_{2}}^{2\Omega=z_{1}}$$
-$$V_{1}=\frac{V_{T}\times z_{1}}{z_{1}+z_{2}}$$
-#### EXAMPLE 15.3
-([[Chapitre-6.pdf#page=59&selection=0,0,0,12&color=yellow|Chapitre-6, p.59]])
-- Addition des sources
-	$$\frac{4}{s}-\frac{2}{s}+3=\frac{3s+2}{s}$$
-
 ### Méthode d'analyse par la T. de Laplace 
 1. Transformer le circuit du domaine temps vers le domaine s. 
 2. Établir les équations d'équilibre en utilisant les méthodes habituelles. Les équations obtenues sont des équations algébriques. 
