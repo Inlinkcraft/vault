@@ -23,6 +23,23 @@ Henri: ($H$)
 L'inductance d'un condensateur est décrite par l'équation suivante:
 $$L=\frac{\mu N^{2}A}{h} \qquad N \varphi = L\, i$$
 
+### Représentation Laplace
+---
+La représentation d'une inductance dans le domaine de [[Transformation de Laplace|Laplace]]
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[european]
+\draw (0,0) to[R, l=$I$, v=$V$] (3,0); 
+\end{circuitikz} 
+\end{document} 
+```
+Formule:
+
+| [[Impédance]] | [[Admittance]] |
+| :-----------: | :------------: |
+|     $Ls$      | $\frac{1}{Ls}$ |
+
 ## Lois de Faraday
 ---
 L'équation qui décrit une inductance et qui mets en relation le [[Courant électrique|courant]] et la [[Tension électrique|tension]].

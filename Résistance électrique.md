@@ -20,6 +20,23 @@ Objet ou [[Composante électrique|composante]] qui oppose le déplacement des é
 #### unité:
 Ohm: ($\ohm$)
 
+### Représentation Laplace
+---
+La représentation d'une inductance dans le domaine de [[Transformation de Laplace|Laplace]]
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[european]
+\draw (0,0) to[R, l=$I$, v=$V$] (3,0); 
+\end{circuitikz} 
+\end{document} 
+```
+Formule:
+
+| [[Impédance]] | [[Admittance]] |
+| :-----------: | :------------: |
+|      $R$      | $\frac{1}{R}$  |
+
 ## Lois d'ohm
 ---
 La loi d'ohm permet de mettre en relation la résistance électrique, le [[Courant électrique|courant]] et la [[Tension électrique|tension]].

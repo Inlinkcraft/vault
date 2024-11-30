@@ -21,6 +21,22 @@ Farad: ($F$)
 #### Capacité
 La capacité d'un condensateur est décrite par l'équation suivante:
 $$C=\frac{\epsilon A}{d}$$
+### Représentation Laplace
+---
+La représentation d'une inductance dans le domaine de [[Transformation de Laplace|Laplace]]
+```tikz
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[european]
+\draw (0,0) to[R, l=$I$, v=$V$] (3,0); 
+\end{circuitikz} 
+\end{document} 
+```
+Formule:
+
+| [[Impédance]]  | [[Admittance]] |
+| :------------: | :------------: |
+| $\frac{1}{Cs}$ |      $Cs$      |
 
 ## Modèle mathématique
 ---
