@@ -27,27 +27,11 @@ Analyse des circuits dans l'espace de Laplace
 ---
 ![[Composante transformer en domaine Laplace]]
 
-Transformation de sources
----
-![[Chapitre-6.pdf#page=49&rect=187,157,504,636|Chapitre-6, p.49]]
-
-La resistance ne change pas 
-
-Transformation de condensateur
-([[Chapitre-6.pdf#page=51&selection=0,30,0,30&color=yellow|Chapitre-6, p.51]])
-
-Transformation d'inductance
-([[Chapitre-6.pdf#page=52&selection=0,27,0,27&color=yellow|Chapitre-6, p.52]])
+![[Manipulation de circuit à domaine de Laplace]]
 
 ### Impédance et admittance dans l'espace de Laplace
 ([[Chapitre-6.pdf#page=53&selection=0,48,0,48&color=yellow|Chapitre-6, p.53]])
 
-
-| Élément | $Z(s)$ | $Y(s)$ |
-| ------- | ------ | ------ |
-| $R$       | $R$    | $1/R$  |
-| $L$       | $Ls$   | $1/Ls$ |
-| $C$       | $1/Cs$ | $Cs$   |
 ##### Diviseur de tension dans le domaine s
 ([[Chapitre-6.pdf#page=54&selection=0,0,0,37&color=yellow|Chapitre-6, p.54]])
 
