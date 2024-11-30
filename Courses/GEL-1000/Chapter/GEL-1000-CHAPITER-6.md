@@ -25,7 +25,7 @@ Décomposition en fraction partielle
 
 Analyse des circuits dans l'espace de Laplace
 ---
-
+![[Transformation Lapla]]
 
 Transformation de sources
 ---
