@@ -38,7 +38,30 @@ L'analyse des mailles s'applique au [[Circuit électrique|circuit]] [[Transforma
 
 ### Équivalent Thévenin
 ---
-La tension équivalente de [[Théorème de Thévenin|Thévenin]] $V_{th}(s)$ est obtenue en trouvant la [[Tens|tension]] en circuit ouvert entre les borne à partir du circuit d'origine. ([[Chapitre-6.pdf#page=65&selection=11,0,15,68&color=yellow|Chapitre-6, p.65]])
+La tension équivalente de [[Théorème de Thévenin|Thévenin]] $V_{th}(s)$ est obtenue en trouvant la [[Tension électrique|tension]] en [[Circuit électrique|circuit]] ouvert entre les borne à partir du [[Circuit électrique|circuit]] d'origine. ([[Chapitre-6.pdf#page=65&selection=11,0,15,68&color=yellow|Chapitre-6, p.65]]) 
+
+> [!note] La résistance est remplacer
+> Trois méthodes pour trouver l'impédance équivalente de Thévenin $Z_{th}(s)$:
+> 1. Trouver le courant de court-circuit $I_{sc}(s)$ entre les bornes:
+> $$Z_{th} = \frac{V_{th}(s)}{I_{sc}(s)}$$
+> 2. Désactiver les [[Source indépendante|sources indépendantes]] dans le [[Circuit électrique|circuit]] en court-circuitant les sources de [[Tension électrique|tension]] et en ouvrant les sources de [[Courant électrique|courant]]. Ensuite, trouvez l'[[Impédance|impédance]] équivalente vue des bornes. 
+> > [!attention] 
+> > Cette méthode ne peut pas être utilisée si le circuit contient des sources dépendantes.
+> 
+> 3. Expérimental
+> ([[Chapitre-6.pdf#page=65&selection=20,0,21,7&color=yellow|Chapitre-6, p.65]])
 
 #### Équivalent Norton
 ---
+Le courant équivalent de [[Théorème de Norton|Norton]] $I_{N}(s)$ est obtenu en trouvant le [[Courant électrique|courant]] de court-circuit entre les bornes du [[Circuit électrique|circuit]] d'origine. ([[Chapitre-6.pdf#page=68&selection=14,1,19,58&color=yellow|Chapitre-6, p.68]])
+
+> [!note] La résistance est remplacer
+> Trois méthodes pour trouver l'impédance équivalente de Norton $Z_{N}(s)$:
+> 1. Trouver la tension de circuit-ouvert $V_{co}(s)$ entre les bornes:
+> $$Z_{N} = \frac{V_{co}(s)}{I_{N}(s)}$$
+> 2. Désactiver les [[Source indépendante|sources indépendantes]] dans le [[Circuit électrique|circuit]] en court-circuitant les sources de [[Tension électrique|tension]] et en ouvrant les sources de [[Courant électrique|courant]]. Ensuite, trouvez l'[[Impédance|impédance]] équivalente vue des bornes. 
+> > [!attention] 
+> > Cette méthode ne peut pas être utilisée si le circuit contient des sources dépendantes.
+> 
+> 3. Expérimental
+> ([[Chapitre-6.pdf#page=65&selection=20,0,21,7&color=yellow|Chapitre-6, p.65]])
