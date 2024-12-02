@@ -172,3 +172,18 @@ Si les colonnes de $A$ sont linéairement indépendantes, alors $A^TA$ est inver
 > $$||v||^2 = 0$$
 > $$v = 0$$
 > Si les colonne de $A$ sont indépendante la seule solution possible ces $x = 0$
+
+### Factorisation QR
+---
+Peut-on utiliser la factorisation QR pour résoudre l’équation normale ([[Chapitre-6b.pdf#page=9&selection=20,0,20,69&color=yellow|Chapitre-6b, p.9]])
+$$A = QR$$
+$$(QR)^TQR \hat{x} = (QR)^T b$$
+$$R^TQ^TQR \hat{x} = R^TQ^Tb$$
+$$R^TR \hat{x} = R^TQ^Tb$$
+$$R \hat{x} = Q^T b$$
+$$\hat{x} = R^{-1}Q^Tb$$
+### Orthogonalité
+---
+Si les colonnes de sont orthonormales ([[Chapitre-6b.pdf#page=10&selection=20,0,22,18&color=yellow|Chapitre-6b, p.10]]):
+$$A^TA=I$$
+alors $\hat{x} = A^Tb$
