@@ -83,7 +83,28 @@ $$Z_{\text{obs}} = \frac{\bar{X}-\mu_{0}}{\frac{\sigma}{\sqrt{n}}}$$
 > on avait $Z_{obs}=1.2$ donc
 > $$p_value = \mathbb{P}[|Z| > |Z_{obs}|] = \mathbb{P}[|Z| > 1.2] = 2\mathbb{P}[|Z| > 1.2]$$
 > $$= 2(1-\mathbb{P}[|Z| < 1.2]) = 2(1-\Phi(1.2)) = 2(1-0.8849) = \dots = 0.2302$$
-> **Remarque**: $p_value > \alpha = 0.05$, c'est pour cela que l'on n'avait pas rejeter $H_{0}$ 
+> **Remarque**: $p_value > \alpha = 0.05$, c'est pour cela que l'on n'avait pas rejeter $H_{0}$
+> 
+
+Rappel des distributions d’échantillonnage
+![[STT-2920-Chapter-13.pdf#page=12&rect=18,14,442,172&color=red|STT-2920-Chapter-13, p.12]]
+
+>[!example] 
+>>[!question] 
+>>![[STT-2920-Chapter-13.pdf#page=13&rect=37,160,439,217&color=red|STT-2920-Chapter-13, p.13]]
+>
+>>[!success] Solution
+>>**Solution**
+>> Soit μ la réelle durée de vie moyenne des pneus avec le nouveau procédé.
+>> **Hypothèses**
+>> $$H_{0} : \mu = 30000 \qquad H_{1} : \mu > 30000$$
+>> On a donc un test unilatéral à droite au seuil $\alpha = 5\%$
+>> **Collecte des données échantillonnale**
+>> On a $n = 16$, $\bar{x} = 32000$km et $s = 3500$km
+>> **Distribution d'échantillonnage à utiliser**
+>> Puisque que l'on a une population mère normale et $\sigma$ est inconnu, on a que
+>> $$T = \frac{\bar{x}-\mu_{0}}{\frac{S}{\sqrt{ n }}} \sim t_{n-1}$$
+>> Sous $H_{0}$: on a que $\frac{\bar{x}-30000}{\frac{S}{\sqrt{ n }}} \sim t_{n-1}$
 
 Test d’hypothèse sur une moyenne (présentation détaillée)
 ---
