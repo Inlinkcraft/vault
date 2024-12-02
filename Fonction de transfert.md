@@ -6,41 +6,39 @@ type: Matière
 ***
 Dans le circuit transformé de Laplace avec des ==conditions initiales nulles==, le rapport de la sortie dans le domaine s à l'entrée dans le domaine s est défini comme la fonction de transfert. ([[Chapitre-6.pdf#page=70&selection=3,1,6,31&color=yellow|Chapitre-6, p.70]])
 
+![[Chapitre-6.pdf#page=71&rect=432,169,569,641&color=yellow|Chapitre-6, p.71]]
 ### Définition mathématique
 ---
 Soit $X(s)$ la représentation du domaine $s$ de l'entrée, et soit $Y(s)$ la représentation du domaine $s$ de la sortie. La fonction de transfert est alors:
-$$$$
+$$H(s) = \frac{Y(s)}{X(s)}$$
+$$Y(s) = H(s){X(s)}$$
 ([[Chapitre-6.pdf#page=70&selection=10,1,11,77&color=yellow|Chapitre-6, p.70]])
-
-
-
 > [!note] $H(s)$
 > $H(s)$ est "ADN" du système
 > Se nomme la "Fonction réseau"
-- L'entrée peut être une tension ou un courant, et la sortie peut être une tension ou un courant. La ou les sorties Y peuvent être écrites sous la forme $$Y(s) = H(s)X(s)$$
-- La fonction de transfert $H(s)$ transfère l'entrée $X(s)$ vers la (les) sortie(s). Dans le processus de transfert, le signal d'entrée est modifié. La nature de la modification est spécifiée dans la fonction de transfert. 
-- La fonction de transfert $H(s)$ représente les effets du circuit (ou du système en général) sur le(s) signaux $X(s)$ d'entrée.
-([[Chapitre-6.pdf#page=70&selection=0,0,29,41&color=yellow|Chapitre-6, p.70]])
 
-![[Chapitre-6.pdf#page=71&rect=432,169,569,641&color=yellow|Chapitre-6, p.71]]
-
+### Fonction de réseau
+---
 ![[Chapitre-6.pdf#page=72&rect=324,80,557,778&color=yellow|Chapitre-6, p.72]]
 
-| Fonction de réseau    |                         | $H(s)$                             |
-| --------------------- | ----------------------- | ---------------------------------- |
-| Immitance             | Impédance               | $Z_1(s)=\frac{V_{1}(s)}{I_{1}(s)}$ |
-|                       | Admittance              | $Y_1(s)=\frac{I_{1}(s)}{V_{1}(s)}$ |
-| Fonction de transfert | Impédance de transfert  | $Z_1(s)=\frac{V_{1}(s)}{I_{1}(s)}$ |
-|                       | Admittance de transfert | $Z_1(s)=\frac{V_{1}(s)}{I_{1}(s)}$ |
-|                       | Gain en tension         | $Z_1(s)=\frac{V_{1}(s)}{I_{1}(s)}$ |
-|                       | Gain en courant         | $Z_1(s)=\frac{V_{1}(s)}{I_{1}(s)}$ |
+| Fonction de réseau    |                         | $H(s)$                                    |
+| --------------------- | ----------------------- | ----------------------------------------- |
+| Immitance             | Impédance               | $Z_1(s)=\frac{V_{1}(s)}{I_{1}(s)}$        |
+|                       | Admittance              | $Y_1(s)=\frac{I_{1}(s)}{V_{1}(s)}$        |
+| Fonction de transfert | Impédance de transfert  | $Z_{12}(s)=\frac{V_{2}(s)}{I_{1}(s)}$     |
+|                       | Admittance de transfert | $Y_{12}(s)=\frac{I_{2}(s)}{V_{1}(s)}$     |
+|                       | Gain en tension         | $A_{V_{12}}(s)=\frac{V_{2}(s)}{V_{1}(s)}$ |
+|                       | Gain en courant         | $A_{i_{12}}(s)=\frac{I_{2}(s)}{I_{1}(s)}$ |
 
 ##### Réponse à l’impulsion, réponse à l’échelon, réponse à la rampe
-- La fonction de transfert H(s) masque les détails du circuit et décrit mathématiquement les effets du circuit sur le signal d'entrée. Le circuit donné peut maintenant être représenté comme une boîte noire avec H(s) comme le montre la Figure 15.71. 
-- La sortie y(t) est obtenue en prenant la transformée de Laplace inverse de Y(s), c'est-à-dire y(t) = L-1[Y(s)] = L-1[H(s)X(s)]. 
-- Réponse impulsionnelle: x(t) = (t). X(s) = 1. Y(s) = H(s)1 = H(s). h(t) = L1[H(s)] 
-- Réponse à l'échelon: x(t) = u(t). X(s) = 1/s. Y(s) = H(s)/s. h s(t) = L1[H(s)/s] 
-- Réponse à la rampe: x(t) = tu(t). X(s) = 1/s 2. Y(s) = H(s)/s 2. h r (t) = L1[H(s)/s2
+La sortie $y(t)$ est obtenue en prenant la transformée de Laplace inverse de $Y(s)$, c'est-à-dire: $$y(t) = L-1[Y(s)] = L-1[H(s)X(s)]$$**Réponse impulsionnelle**: $$x(t) = \delta(t) \qquad X(s) = 1 \qquad Y(s) = H(s) \times 1 = H(s) \qquad h(t) = L^{-1}[H(s)]$$**Réponse à l'échelon:** $$x(t) = u(t) \qquad X(s) = \frac{1}{s} \qquad Y(s) = \frac{H(s)}{s} \qquad h_{s}(t) = L^{-1}\left[ \frac{H(s)}{s} \right]$$
+**Réponse à la rampe:** $$x(t) = tu(t) \qquad X(s) = \frac{1}{s^{2}} \qquad Y(s) = \frac{H(s)}{s^{2}} \qquad h_{r}(t) = L^{-1}\left[ \frac{H(s)}{s^{2}} \right]$$
+([[Chapitre-6.pdf#page=74&selection=12,0,70,1&color=yellow|Chapitre-6, p.74]])
+
+
+
+
+
 
 La fonction de transfert peut être écrite sous forme factorisée comme suit : 
 
