@@ -144,8 +144,31 @@ $$A^{T}A \hat{x} = A ^{T}b$$
 >  Trouvons les $\hat{C}$ et $\hat{D}$ qui minimiserons notre erreur
 >  $$A^TA \hat{x} = A^{T}b$$
 >  $$\begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 3 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix} = \begin{bmatrix}3 & 6 \\ 6 & 14\end{bmatrix} \qquad \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 3 \end{bmatrix}\begin{bmatrix}1 \\ 2 \\ 2 \end{bmatrix}= \begin{bmatrix}5 \\ 11\end{bmatrix}$$
->  $$\begin{bmatrix}3 & 6 \\ 6 & 14\end{bmatrix}\begin{bmatrix} \hat{C} \\ \hat{D} \end{bmatrix} = \begin{bmatrix}5 \\ 11\end{bmatrix} \to \begin{bmatrix} 3 & 6 & 5 \\ 6 & 14 & \dots \end{bmatrix}$$
+>  $$\begin{bmatrix}3 & 6 \\ 6 & 14\end{bmatrix}\begin{bmatrix} \hat{C} \\ \hat{D} \end{bmatrix} = \begin{bmatrix}5 \\ 11\end{bmatrix} \to \begin{bmatrix} 3 & 6 & 5 \\ 6 & 14 & 11 \end{bmatrix}$$
 >  ...
 >  $$x_{2} = \frac{2}{3}+\frac{1}{2}x_{1}$$
+>  Maintenant quelle est notre erreur ?
+>  $$\epsilon_{1} = \frac{1}{6} \quad \epsilon_{2} = -\frac{2}{6} \quad \epsilon_{3} = \frac{1}{6}$$
+>  Erreur quadratique moyenne ?:
+>  $$\left( \frac{1}{6} \right)^{2} + \left( -\frac{2}{6} \right)^{2} + \left( \frac{1}{6} \right)^{2}$$
+>
 >  [[Chapitre-6b.pdf#page=4&color=yellow|Chapitre-6b, p.4]]
 
+### Inversibilité
+---
+Matrice pseudo inverse
+$$\hat{x} = \underbrace{(A^TA)^{-1}A^{T}}_{\text{pseudo inverse}}b$$
+Si les colonnes de $A$ sont linéairement indépendantes, alors $A^TA$ est inversible.
+([[Chapitre-6b.pdf#page=8&selection=4,0,8,15&color=yellow|Chapitre-6b, p.8]])
+
+> [!important] Preuve
+> $$A^TAx = 0$$
+> démontrons que la seule solution possible est $x = 0$
+> multiplions par $x^T$
+> $$x^TA^TAx = 0$$
+> $$(Ax)^TAx = 0$$
+> renommons $v = Ax$
+> $$v^Tv = 0$$
+> $$||v||^2 = 0$$
+> $$v = 0$$
+> Si les colonne de $A$ sont indépendante la seule solution possible ces $x = 0$
