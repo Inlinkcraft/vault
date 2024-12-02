@@ -119,3 +119,19 @@ $$\epsilon = ||b - \hat{b}||$$
 \end{array}\right]$$
 > ....
 
+Moindres carrés
+---
+![[Chapitre-6b.pdf#page=2&rect=642,45,1270,515|Chapitre-6b, p.2]]
+
+##### L'équation normale
+$$A^{T}A \hat{x} = A ^{T}b$$
+> [!info] 
+> Ici $\hat{x}$ est la solution aux moindres carrés car elle minimise l'erreur quadratiques moyenne
+
+>  [!example] 
+>  $$p \to \{(1,1), (2, 2), (3, 2)\}$$
+>  On cherche la meilleur droite pour représenter ces point
+>  $\to$ objectif répartir l'erreur sur tous les point pour minimiser la somme des erreur aux carrée
+>  - $p_{1} : 1 = C + D$
+>  - $p_{2} : 2 = C + 2D$
+>  - 
