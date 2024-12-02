@@ -128,10 +128,24 @@ $$A^{T}A \hat{x} = A ^{T}b$$
 > [!info] 
 > Ici $\hat{x}$ est la solution aux moindres carrés car elle minimise l'erreur quadratiques moyenne
 
->  [!example] 
+> [!example] Example
 >  $$p \to \{(1,1), (2, 2), (3, 2)\}$$
 >  On cherche la meilleur droite pour représenter ces point
 >  $\to$ objectif répartir l'erreur sur tous les point pour minimiser la somme des erreur aux carrée
 >  - $p_{1} : 1 = C + D$
 >  - $p_{2} : 2 = C + 2D$
->  - 
+>  - $p_{3} : 2 = C + 3D$
+>  Avec une matrice
+>  $$\begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix} \begin{bmatrix} C \\ D \end{bmatrix} = \begin{bmatrix}1 \\ 2 \\ 2 \end{bmatrix}$$
+>  > [!attention] Aucune solutoion
+>  > **Interpretation**: $b$ n'est pas dans les colonne de $A$
+>  > Il n'y a pas de droite qui passe par les 3 points
+>  
+>  Trouvons les $\hat{C}$ et $\hat{D}$ qui minimiserons notre erreur
+>  $$A^TA \hat{x} = A^{T}b$$
+>  $$\begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 3 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix} = \begin{bmatrix}3 & 6 \\ 6 & 14\end{bmatrix} \qquad \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 3 \end{bmatrix}\begin{bmatrix}1 \\ 2 \\ 2 \end{bmatrix}= \begin{bmatrix}5 \\ 11\end{bmatrix}$$
+>  $$\begin{bmatrix}3 & 6 \\ 6 & 14\end{bmatrix}\begin{bmatrix} \hat{C} \\ \hat{D} \end{bmatrix} = \begin{bmatrix}5 \\ 11\end{bmatrix} \to \begin{bmatrix} 3 & 6 & 5 \\ 6 & 14 & \dots \end{bmatrix}$$
+>  ...
+>  $$x_{2} = \frac{2}{3}+\frac{1}{2}x_{1}$$
+>  [[Chapitre-6b.pdf#page=4&color=yellow|Chapitre-6b, p.4]]
+
