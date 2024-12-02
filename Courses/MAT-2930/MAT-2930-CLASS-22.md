@@ -21,6 +21,12 @@ status: Cette semaine
 
 ## Notes supplémentaire
 
+##### Tp5 Atelier prep
+`coeff = np.polyfit(x, y, degree)`: ==Interdit pour le tp==
+	`coeff`: Les coefficients
+
+`np.mean(arr)`: Donne la moyenne
+	`arr` La matrice
 
 ---
 # En retrospective
