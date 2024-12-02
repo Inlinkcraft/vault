@@ -21,6 +21,15 @@ status: Cette semaine
 
 ## Notes supplémentaire
 
+- Chapitre 11
+	- n.1
+		- a) $9$
+		- b) $\frac{81}{7}$
+		- c) $13.54$
+	- n.2
+		- a) $0$
+		- b) $\frac{7}{6}$
+		- c) 
 
 ---
 # En retrospective
