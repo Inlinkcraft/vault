@@ -94,17 +94,29 @@ Rappel des distributions d’échantillonnage
 >>![[STT-2920-Chapter-13.pdf#page=13&rect=37,160,439,217&color=red|STT-2920-Chapter-13, p.13]]
 >
 >>[!success] Solution
->>**Solution**
+>><u>**Solution**</u>
 >> Soit μ la réelle durée de vie moyenne des pneus avec le nouveau procédé.
->> **Hypothèses**
+>> <u>**Hypothèses**</u>
 >> $$H_{0} : \mu = 30000 \qquad H_{1} : \mu > 30000$$
 >> On a donc un test unilatéral à droite au seuil $\alpha = 5\%$
->> **Collecte des données échantillonnale**
+>> <u>**Collecte des données échantillonnale**</u>
 >> On a $n = 16$, $\bar{x} = 32000$km et $s = 3500$km
->> **Distribution d'échantillonnage à utiliser**
+>> <u>**Distribution d'échantillonnage à utiliser**</u>
 >> Puisque que l'on a une population mère normale et $\sigma$ est inconnu, on a que
 >> $$T = \frac{\bar{x}-\mu_{0}}{\frac{S}{\sqrt{ n }}} \sim t_{n-1}$$
 >> Sous $H_{0}$: on a que $\frac{\bar{x}-30000}{\frac{S}{\sqrt{ n }}} \sim t_{n-1}$
+>> <u>**Règle de décision**</u>
+>> La valeur critique est $t_{15;0.05} = 1.753$.
+>> Règle de décision : Rejet de $H_{0}$ si $T > 1.753$, non rejet de $H_{0}$ sinon.
+>> <u>**Valeur observée de décision**</u>
+>> Valeur observée : $T_{obs} = \frac{\bar{x}-\mu_{0}}{\frac{S}{\sqrt{ n }}} = \frac{32000-30000}{\frac{3500}{\sqrt{ 16 }}} = 2.29$
+>> Décision: Puisque $T_{obs} = 2.29 > 1.753$, on rejette $H_0$ et on valide donc $H_{1}$
+>> <u>**Conclusion**</u>
+>> Au seuil de signification 5%, on a une évidence statistique permettant de croire que le nouveau procédé améliore la durée de vie moyenne des pneus
+>> <u>**Estimation de la p-value**</u>
+>> p-value = $\mathbb{P}[T > T_{obs}] = \mathbb{P}[T_{15} > 2.29] = ?$
+>> Tout ce que l’on peut dire avec la table de la loi de Student est que la p-value est entre 0.010 et 0.025.
+>> 
 
 Test d’hypothèse sur une moyenne (présentation détaillée)
 ---
