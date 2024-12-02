@@ -70,6 +70,21 @@ $$Z_{\text{obs}} = \frac{\bar{X}-\mu_{0}}{\frac{\sigma}{\sqrt{n}}}$$
 > 
 ([[STT-2920-Chapter-13.pdf#page=7&selection=0,0,37,2&color=yellow|STT-2920-Chapter-13, p.7]])
 
+##### Le seuil de signification empirique (la valeur p ou p-value)
+ le plus petit seuil de signification possible faisant en sorte que le test mène au rejet de $H_{0}$ (i.e. à la validation de $H_{1}$)
+([[STT-2920-Chapter-13.pdf#page=10&selection=20,49,30,1&color=yellow|STT-2920-Chapter-13, p.10]])
+
+ $\mathbb{P} [|Z| > |Z_{\text{obs}}| |H_{0} \text{ vraie}]$ dans un test bilatéral 
+ $\mathbb{P} [Z < Z_{\text{obs}} |H_{0} \text{ vraie}]$  dans un test unilatéral à gauche 
+ $\mathbb{P} [Z > Z_{\text{obs}} |H_{0} \text{ vraie}]$ dans un test unilatéral à droite
+([[STT-2920-Chapter-13.pdf#page=10&selection=45,0,102,32&color=red|STT-2920-Chapter-13, p.10]])
+
+> [!example] 
+> on avait $Z_{obs}=1.2$ donc
+> $$p_value = \mathbb{P}[|Z| > |Z_{obs}|] = \mathbb{P}[|Z| > 1.2] = 2\mathbb{P}[|Z| > 1.2]$$
+> $$= 2(1-\mathbb{P}[|Z| < 1.2]) = 2(1-\Phi(1.2)) = 2(1-0.8849) = \dots = 0.2302$$
+> **Remarque**: $p_value > \alpha = 0.05$, c'est pour cela que l'on n'avait pas rejeter $H_{0}$ 
+
 Test d’hypothèse sur une moyenne (présentation détaillée)
 ---
 Test d’hypothèse sur une moyenne (un premier exemple)
