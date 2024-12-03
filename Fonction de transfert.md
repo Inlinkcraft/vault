@@ -17,6 +17,10 @@ $$Y(s) = H(s){X(s)}$$
 > $H(s)$ est "ADN" du système
 > Se nomme la "Fonction réseau"
 
+$$H(s) = K \frac{(s-z_{1})(s-z_{2})\dots(s-z_{m})}{(s-p_{1})(s-p_{2})}$$
+> [!note] 
+> où p1, p2, ….., pn sont des pôles, z 1, z 2, ….., zm sont des zéros, et K est une constante.
+> ([[Chapitre-6.pdf#page=75&selection=21,0,40,14&color=yellow|Chapitre-6, p.75]])
 ### Fonction de réseau
 ---
 ![[Chapitre-6.pdf#page=72&rect=324,80,557,778&color=yellow|Chapitre-6, p.72]]
@@ -34,16 +38,6 @@ $$Y(s) = H(s){X(s)}$$
 La sortie $y(t)$ est obtenue en prenant la transformée de Laplace inverse de $Y(s)$, c'est-à-dire: $$y(t) = L-1[Y(s)] = L-1[H(s)X(s)]$$**Réponse impulsionnelle**: $$x(t) = \delta(t) \qquad X(s) = 1 \qquad Y(s) = H(s) \times 1 = H(s) \qquad h(t) = L^{-1}[H(s)]$$**Réponse à l'échelon:** $$x(t) = u(t) \qquad X(s) = \frac{1}{s} \qquad Y(s) = \frac{H(s)}{s} \qquad h_{s}(t) = L^{-1}\left[ \frac{H(s)}{s} \right]$$
 **Réponse à la rampe:** $$x(t) = tu(t) \qquad X(s) = \frac{1}{s^{2}} \qquad Y(s) = \frac{H(s)}{s^{2}} \qquad h_{r}(t) = L^{-1}\left[ \frac{H(s)}{s^{2}} \right]$$
 ([[Chapitre-6.pdf#page=74&selection=12,0,70,1&color=yellow|Chapitre-6, p.74]])
-
-
-
-
-
-
-La fonction de transfert peut être écrite sous forme factorisée comme suit : 
-
-où p1, p2, ….., pn sont des pôles, z 1, z 2, ….., zm sont des zéros, et K est une constante.
-([[Chapitre-6.pdf#page=75&selection=21,0,40,14&color=yellow|Chapitre-6, p.75]])
 
 #### Réponse en amplitude 
 - La réponse en fréquence H() est obtenue en évaluant la fonction de transfert à s = j:
