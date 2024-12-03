@@ -83,3 +83,7 @@ La réponse d’amplitude en dB est définie comme suit : M dB() = 20 log 10(
 
 **Convertion en décibel**
 $$M_{dB}(\omega) = 20 \log_{10}(|H(\omega)|)$$
+
+Révision
+---
+![[Chapitre-6.pdf#page=115&rect=37,28,571,781&color=yellow|Chapitre-6, p.115]]![[Chapitre-6.pdf#page=116&rect=50,33,565,785&color=yellow|Chapitre-6, p.116]]![[Chapitre-6.pdf#page=120&rect=29,91,520,752&color=yellow|Chapitre-6, p.120]]
