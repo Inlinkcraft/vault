@@ -21,11 +21,6 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
 
 ### À faire
 ---
-##### critère
-- [ ] Les tables de dispersion doivent avoir une taille adéquate. ([[Tp3-Enoncer.pdf#page=3&selection=54,0,56,1&color=yellow|Tp3-Enoncer, p.3]])
-- [ ] La fonction de hachage et de redispersions doit être celle fournie (HString1). ([[Tp3-Enoncer.pdf#page=3&selection=60,0,71,1&color=yellow|Tp3-Enoncer, p.3]])
-- [ ] Vous devez gérer les exceptions dans toutes les méthodes de la classe Bottin ([[Tp3-Enoncer.pdf#page=3&selection=74,1,75,76&color=yellow|Tp3-Enoncer, p.3]])
-
 ##### fonctionnalité
 
 > [!note] Format des entré dans le fichier text
@@ -41,6 +36,7 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
         - [ ] Précondition: le fichier est conforme au format attendu([[Tp3-Enoncer.pdf#page=4&selection=40,0,40,41&color=yellow|Tp3-Enoncer, p.4]])
         - [ ] Paramètres d'entré: `std::ifstream & p_fichierEntree`
         - [ ] Paramètres d'entré: `size_t p_table_size = 100`
+        
     - [ ] ``void Bottin::ajouter()`` ([[Tp3-Enoncer.pdf#page=5&selection=10,0,10,20&color=yellow|Tp3-Enoncer, p.5]])
         - [ ] Précondition: Les numeros de telephones sont valides ([[Tp3-Enoncer.pdf#page=5&selection=42,0,42,38&color=yellow|Tp3-Enoncer, p.5]])
         - [ ] Précondition: Les entrées ne sont pas vides. ([[Tp3-Enoncer.pdf#page=5&selection=44,0,44,30&color=yellow|Tp3-Enoncer, p.5]]) 
@@ -51,22 +47,76 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
         - [ ] Paramètre: ``const std::string & p_cellulaire`` ([[Tp3-Enoncer.pdf#page=5&selection=13,2,13,34&color=yellow|Tp3-Enoncer, p.5]])
         - [ ] Paramètre: ``const std::string & p_courriel`` ([[Tp3-Enoncer.pdf#page=5&selection=15,0,15,30&color=yellow|Tp3-Enoncer, p.5]])
         - [ ] Postcondition: La clef est insérée dans les deux tables et les données dans le tableau([[Tp3-Enoncer.pdf#page=5&selection=50,0,50,71&color=yellow|Tp3-Enoncer, p.5]])
+        
     - [ ] ``const Bottin::Entree & Bottin::trouverAvecNomPrenom() const`` ([[Tp3-Enoncer.pdf#page=5&selection=52,0,54,30&color=yellow|Tp3-Enoncer, p.5]])
         - [ ] Précondition: Les entrées ne sont pas vides. ([[Tp3-Enoncer.pdf#page=5&selection=80,0,80,30&color=yellow|Tp3-Enoncer, p.5]])
         - [ ] Paramètre: ``const std::string & p_nom`` ([[Tp3-Enoncer.pdf#page=5&selection=56,1,58,5&color=yellow|Tp3-Enoncer, p.5]])
         - [ ] Paramètre: ``const std::string & p_prenom``([[Tp3-Enoncer.pdf#page=5&selection=60,0,62,8&color=yellow|Tp3-Enoncer, p.5]])
         - [ ] Retourne: l'entrée trouvée, exception si non trouvé. ([[Tp3-Enoncer.pdf#page=5&selection=84,0,84,42&color=yellow|Tp3-Enoncer, p.5]])
+        
     - [ ] ``const Bottin::Entree & Bottin::trouverAvecTelephone() const``([[Tp3-Enoncer.pdf#page=6&selection=10,0,10,52&color=yellow|Tp3-Enoncer, p.6]])
         - [ ] Précondition: L'entrée n'est pas vide. ([[Tp3-Enoncer.pdf#page=6&selection=29,0,29,24&color=yellow|Tp3-Enoncer, p.6]])
         - [ ] Paramètre: ``const std::string & p_telephoneFixe``([[Tp3-Enoncer.pdf#page=6&selection=10,52,12,15&color=yellow|Tp3-Enoncer, p.6]])
         - [ ] Retourne: l'entrée trouvée, exception si non trouvé ([[Tp3-Enoncer.pdf#page=6&selection=33,0,33,41&color=yellow|Tp3-Enoncer, p.6]])
+        
     - [ ] ``void Bottin::afficherBottin() const``([[Tp3-Enoncer.pdf#page=6&selection=49,0,52,0&color=yellow|Tp3-Enoncer, p.6]])
         - [ ] Paramètres: ``std::ostream & p_out`` ([[Tp3-Enoncer.pdf#page=6&selection=52,1,54,4&color=yellow|Tp3-Enoncer, p.6]])
+        
     - [ ] ``int Bottin::nombreEntrees () const``([[Tp3-Enoncer.pdf#page=6&selection=65,0,65,34&color=yellow|Tp3-Enoncer, p.6]])
         - [ ] Retourne: le nombre d'entrées ([[Tp3-Enoncer.pdf#page=6&selection=69,0,71,19&color=yellow|Tp3-Enoncer, p.6]])
+        
     - [ ] ``double Bottin::ratioDeCollisionsNomPrenom () const`` ([[Tp3-Enoncer.pdf#page=6&selection=73,0,77,5&color=yellow|Tp3-Enoncer, p.6]])
         - [ ] Retourne: le ratio nombre de collision / nombre d'insertions pour la table de hachage NomPrenom ([[Tp3-Enoncer.pdf#page=6&selection=81,9,81,94&color=yellow|Tp3-Enoncer, p.6]])
-    - [ ] 
+        
+    - [ ] ``double Bottin::ratioDeCollisionTelephone () const`` ([[Tp3-Enoncer.pdf#page=6&selection=83,0,83,49&color=yellow|Tp3-Enoncer, p.6]])
+        - [ ] Retourne: le ratio nombre de collision / nombre d'insertions pour la table de hachage avec telephone ([[Tp3-Enoncer.pdf#page=6&selection=89,0,89,90&color=yellow|Tp3-Enoncer, p.6]])
+        
+    - [ ] ``int TP3::Bottin::maximumNbCollisionNomPrenom () const`` ([[Tp3-Enoncer.pdf#page=7&selection=10,0,14,5&color=yellow|Tp3-Enoncer, p.7]])
+        - [ ] Retourne: le nombre maximal de collision pour une insertion pour nom / prenom ([[Tp3-Enoncer.pdf#page=7&selection=18,9,18,76&color=yellow|Tp3-Enoncer, p.7]])
+        
+    - [ ] ``int Bottin::maximumNbCollisionTelephone () const`` ([[Tp3-Enoncer.pdf#page=7&selection=20,0,20,48&color=yellow|Tp3-Enoncer, p.7]])
+        - [ ] Retourne: le nombre maximal de collision pour une insertion pour telephone ([[Tp3-Enoncer.pdf#page=7&selection=24,9,24,73&color=yellow|Tp3-Enoncer, p.7]])
+        
+- [ ] TableHachage.hpp
+    - [ ] Modifier le nombre de collisions. Le nombre de collisions doit être remis à 0 avant chaque rechaghage. ([[Tp3-Enoncer.pdf#page=7&selection=36,2,36,93&color=yellow|Tp3-Enoncer, p.7]])
+    
+    - [ ] Modifier le  nombre d’insertions. Le nombre d’insertions doit être remis à 0 avant chaque rehachage ([[Tp3-Enoncer.pdf#page=7&selection=40,2,46,24&color=yellow|Tp3-Enoncer, p.7]])
+    
+    - [ ] Modifier le  nombre maximal de collision pour une insertion. ([[Tp3-Enoncer.pdf#page=7&selection=50,2,51,18&color=yellow|Tp3-Enoncer, p.7]])
+
+##### critère
+- [ ] Les tables de dispersion doivent avoir une taille adéquate. ([[Tp3-Enoncer.pdf#page=3&selection=54,0,56,1&color=yellow|Tp3-Enoncer, p.3]])
+- [ ] La fonction de hachage et de redispersions doit être celle fournie (HString1). ([[Tp3-Enoncer.pdf#page=3&selection=60,0,71,1&color=yellow|Tp3-Enoncer, p.3]])
+- [ ] Vous devez gérer les exceptions dans toutes les méthodes de la classe Bottin ([[Tp3-Enoncer.pdf#page=3&selection=74,1,75,76&color=yellow|Tp3-Enoncer, p.3]])
+- [ ] Respect des biens livrables
+- [ ] Portabilité de votre code source
+- [ ] Structure, organisation du code, lisibilité
+- [ ] Documentation
+- [ ] Exactitude du code (fonctionnalité)
+- [ ] La gestion dynamique de la mémoire.
+- [ ] La gestion des exceptions 
+- [ ] La qualité de vos testeurs 
+- [ ] Le respect des prototypes des méthodes quand ils sont imposés.
+- [ ] L’implémentation du contrat
+([[Tp3-Enoncer.pdf#page=8&selection=149,0,192,27&color=yellow|Tp3-Enoncer, p.8]])
+
+##### À remettre
+- [ ] Le fichier Bottin.txt contenant les données à lire sur les employés. 
+- [ ] Le fichier Bottin.h avec les déclarations des méthodes publiques, à compléter. 
+- [ ] Le fichier TableHachage.h à compléter. 
+- [ ] Le fichier TableHachage.hpp à modifier.
+- [ ] Le fichier FoncteurHachage.hpp à ne pas modifier.
+- [ ] Fichier à remettre
+    - [ ] Bottin.h
+    - [ ] Bottin.cpp
+    - [ ] TableHachage.h
+    - [ ] TableHachage.hpp
+    - [ ] FoncteurHachage.hpp
+    - [ ] ContratException.h
+    - [ ] ContratException.cpp
+    - [ ] vos testeurs
+    - [ ] le fichier de données test ainsi tous les fichiers sources nécessaires à la compilation de votre projet.
+([[Tp3-Enoncer.pdf#page=8&selection=14,0,44,1&color=yellow|Tp3-Enoncer, p.8]])([[Tp3-Enoncer.pdf#page=7&selection=84,0,123,49&color=yellow|Tp3-Enoncer, p.7]])
 
 ### FAQ
 ---
