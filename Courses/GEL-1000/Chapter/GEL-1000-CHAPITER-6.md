@@ -39,8 +39,7 @@ Fonction de transfert
 ---
 ![[Fonction de transfert]]
 
-#### Diagramme de Bode ? : Matlab (à voir)
-??????
+
 
 #### Filtre et Passe
 
@@ -72,3 +71,15 @@ Y(s) & \leftrightarrow & y(t)
 
 ### Convolutions impliquant la fonction delta de Dirac
 ---
+De la propriété de tamisage de la fonction delta de Dirac, on obtient ([[Chapitre-6.pdf#page=106&selection=4,0,5,7&color=yellow|Chapitre-6, p.106]])
+$$\delta (t) * f(t) = \int^{t}_{-\infty} \delta (\lambda)f(t - \lambda) \ d \lambda = f(t)$$![[Chapitre-6.pdf#page=107&rect=247,514,519,773&color=yellow|Chapitre-6, p.107]]
+Diagramme de Bode ? : Matlab (à voir)
+---
+Le diagramme de Bode représente la réponse d’amplitude en dB (décibels) et la réponse de phase d’un système décrit par la fonction de transfert H(s).
+([[Chapitre-6.pdf#page=110&selection=4,0,5,71&color=yellow|Chapitre-6, p.110]])
+La réponse d’amplitude en dB est définie comme suit : M dB() = 20 log 10(|H()|)
+([[Chapitre-6.pdf#page=110&selection=13,0,24,3&color=yellow|Chapitre-6, p.110]])
+`logspace(0.1, N)`
+
+**Convertion en décibel**
+$$M_{dB}(\omega) = 20 \log_{10}(|H(\omega)|)$$
