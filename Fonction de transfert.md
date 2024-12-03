@@ -7,6 +7,10 @@ type: Matière
 Dans le circuit transformé de Laplace avec des ==conditions initiales nulles==, le rapport de la sortie dans le domaine s à l'entrée dans le domaine s est défini comme la fonction de transfert. ([[Chapitre-6.pdf#page=70&selection=3,1,6,31&color=yellow|Chapitre-6, p.70]])
 
 ![[Chapitre-6.pdf#page=71&rect=432,169,569,641&color=yellow|Chapitre-6, p.71]]
+
+> [!tip] 
+> Fonction de transfert revient a dire de trouver le rapport entre la sortie et l'entré:
+> $$\frac{V_{o}}{V_{i}} = H(s) \qquad V_{o} = H(s) V_{in}$$
 ### Définition mathématique
 ---
 Soit $X(s)$ la représentation du domaine $s$ de l'entrée, et soit $Y(s)$ la représentation du domaine $s$ de la sortie. La fonction de transfert est alors:
@@ -57,16 +61,18 @@ $$|H(\omega)|= |K| \frac{|j\omega-z_{1}||j\omega-z_{2}|\dots|j\omega-z_{m}|}{|j\
 > 
 ##### Réponse en phase 
 La réponse en phase est obtenue en prenant l'angle de $H(\omega)$. 
-$$\angle H(\omega) = \angle K \frac{e^{j\angle j \omega -z_{1}}e^{j\angle j \omega -z_{2}}\dots e^{j\angle j \omega -z_{m}}}{e^{j\angle j \omega -p_{1}}}$$
-Chaque terme du dénominateur est l'angle de j à l'emplacement d'un pôle, et chaque terme du numérateur est l'angle de j à l'emplacement d'un zéro. La réponse en phase peut être obtenue en ajoutant les angles de j à tous les zéros AZk et l’angle de K, K, puis en le soustrayant par la somme des angles de j à tous les pôles AP k. 
-- À la fréquence  = ∞ 
-	- chaque zéro contribue pour +90o à l’angle de phase H()
-	- chaque pôle contribue pour –90o à l’angle de phase H()
-([[Chapitre-6.pdf#page=77&selection=0,0,69,1&color=yellow|Chapitre-6, p.77]])
+$$\angle H(\omega) = \angle K \frac{e^{j\angle j \omega -z_{1}}e^{j\angle j \omega -z_{2}}\dots e^{j\angle j \omega -z_{m}}}{e^{j\angle j \omega -p_{1}}e^{j\angle j \omega -p_{2}}\dots e^{j\angle j \omega -p_{n}}}$$
+Chaque terme du dénominateur est l'angle de $j\omega$ à l'emplacement d'un pôle, et chaque terme du numérateur est l'angle de j à l'emplacement d'un zéro. La réponse en phase peut être obtenue en ajoutant les angles de $j\omega$ à tous les zéros $AZ_{k}$ et l’angle de $K$, $\angle K$, puis en le soustrayant par la somme des angles de $j \omega$ à tous les pôles $AP_{k}$. 
+$$\angle H(\omega) = \angle K + \angle j\omega - z_{1} + \angle j\omega - z_{2} + \dots + \angle j\omega - z_{m} - \angle j\omega - p_{1} - \angle j\omega - p_{2} - \dots - \angle j\omega - p_{n}$$
+$$\angle H(\omega) = \angle K + \sum^{m}_{k=1}AZ_{k} - \sum_{k=1}^{n} AP_{k}$$
+[[Chapitre-6.pdf#page=77&selection=4,0,35,1&color=yellow|Chapitre-6, p.77]]
 
-> [!tip] 
-> Fonction de transfert revient a dire de trouver le rapport entre la sortie et l'entré:
-> $$\frac{V_{o}}{V_{i}} = H(s) \qquad V_{o} = H(s) V_{in}$$
+> [!note] À la fréquence $\omega = \infty$ 
+> - chaque zéro contribue pour $+90\degree$ à l’angle de phase $\angle H(\omega)$
+> - chaque pôle contribue pour $–90\degree$ à l’angle de phase $\angle H(\omega)$
+> [[Chapitre-6.pdf#page=77&selection=0,16,69,1&color=yellow|Chapitre-6, p.77]]
+
+# Note
 
 > [!question] Question examen
 > ![[Chapitre-6.pdf#page=83&rect=28,36,573,809&color=yellow|Chapitre-6, p.83]]
