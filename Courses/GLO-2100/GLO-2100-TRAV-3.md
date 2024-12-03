@@ -37,12 +37,36 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
 > > ([[Tp3-Enoncer.pdf#page=4&selection=96,0,108,1&color=yellow|Tp3-Enoncer, p.4]])
 
 - [ ] Bottin.cpp
-    - [ ] Constructeur ([[Tp3-Enoncer.pdf#page=4&selection=26,0,28,60&color=yellow|Tp3-Enoncer, p.4]])
+    - [ ] ``Bottin()`` ([[Tp3-Enoncer.pdf#page=4&selection=26,0,26,6&color=yellow|Tp3-Enoncer, p.4]])
         - [ ] Précondition: le fichier est conforme au format attendu([[Tp3-Enoncer.pdf#page=4&selection=40,0,40,41&color=yellow|Tp3-Enoncer, p.4]])
         - [ ] Paramètres d'entré: `std::ifstream & p_fichierEntree`
         - [ ] Paramètres d'entré: `size_t p_table_size = 100`
-    - [ ] void Bottin::ajouter ([[Tp3-Enoncer.pdf#page=5&selection=10,0,10,20&color=yellow|Tp3-Enoncer, p.5]])
-        - [ ] ``const std::string & p_nom`` Nom ([[Tp3-Enoncer.pdf#page=5&selection=10,22,10,47&color=yellow|Tp3-Enoncer, p.5]])
+    - [ ] ``void Bottin::ajouter()`` ([[Tp3-Enoncer.pdf#page=5&selection=10,0,10,20&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Précondition: Les numeros de telephones sont valides ([[Tp3-Enoncer.pdf#page=5&selection=42,0,42,38&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Précondition: Les entrées ne sont pas vides. ([[Tp3-Enoncer.pdf#page=5&selection=44,0,44,30&color=yellow|Tp3-Enoncer, p.5]]) 
+        - [ ] Précondition: La clef à insérer n'est pas déjà présente dans la table ([[Tp3-Enoncer.pdf#page=5&selection=46,0,46,55&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Paramètre: ``const std::string & p_nom``  ([[Tp3-Enoncer.pdf#page=5&selection=10,22,10,47&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Paramètre: ``const std::string & p_prenom`` ([[Tp3-Enoncer.pdf#page=5&selection=10,49,10,77&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Paramètre: ``const std::string & p_telephoneFixe`` ([[Tp3-Enoncer.pdf#page=5&selection=12,0,12,35&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Paramètre: ``const std::string & p_cellulaire`` ([[Tp3-Enoncer.pdf#page=5&selection=13,2,13,34&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Paramètre: ``const std::string & p_courriel`` ([[Tp3-Enoncer.pdf#page=5&selection=15,0,15,30&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Postcondition: La clef est insérée dans les deux tables et les données dans le tableau([[Tp3-Enoncer.pdf#page=5&selection=50,0,50,71&color=yellow|Tp3-Enoncer, p.5]])
+    - [ ] ``const Bottin::Entree & Bottin::trouverAvecNomPrenom() const`` ([[Tp3-Enoncer.pdf#page=5&selection=52,0,54,30&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Précondition: Les entrées ne sont pas vides. ([[Tp3-Enoncer.pdf#page=5&selection=80,0,80,30&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Paramètre: ``const std::string & p_nom`` ([[Tp3-Enoncer.pdf#page=5&selection=56,1,58,5&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Paramètre: ``const std::string & p_prenom``([[Tp3-Enoncer.pdf#page=5&selection=60,0,62,8&color=yellow|Tp3-Enoncer, p.5]])
+        - [ ] Retourne: l'entrée trouvée, exception si non trouvé. ([[Tp3-Enoncer.pdf#page=5&selection=84,0,84,42&color=yellow|Tp3-Enoncer, p.5]])
+    - [ ] ``const Bottin::Entree & Bottin::trouverAvecTelephone() const``([[Tp3-Enoncer.pdf#page=6&selection=10,0,10,52&color=yellow|Tp3-Enoncer, p.6]])
+        - [ ] Précondition: L'entrée n'est pas vide. ([[Tp3-Enoncer.pdf#page=6&selection=29,0,29,24&color=yellow|Tp3-Enoncer, p.6]])
+        - [ ] Paramètre: ``const std::string & p_telephoneFixe``([[Tp3-Enoncer.pdf#page=6&selection=10,52,12,15&color=yellow|Tp3-Enoncer, p.6]])
+        - [ ] Retourne: l'entrée trouvée, exception si non trouvé ([[Tp3-Enoncer.pdf#page=6&selection=33,0,33,41&color=yellow|Tp3-Enoncer, p.6]])
+    - [ ] ``void Bottin::afficherBottin() const``([[Tp3-Enoncer.pdf#page=6&selection=49,0,52,0&color=yellow|Tp3-Enoncer, p.6]])
+        - [ ] Paramètres: ``std::ostream & p_out`` ([[Tp3-Enoncer.pdf#page=6&selection=52,1,54,4&color=yellow|Tp3-Enoncer, p.6]])
+    - [ ] ``int Bottin::nombreEntrees () const``([[Tp3-Enoncer.pdf#page=6&selection=65,0,65,34&color=yellow|Tp3-Enoncer, p.6]])
+        - [ ] Retourne: le nombre d'entrées ([[Tp3-Enoncer.pdf#page=6&selection=69,0,71,19&color=yellow|Tp3-Enoncer, p.6]])
+    - [ ] ``double Bottin::ratioDeCollisionsNomPrenom () const`` ([[Tp3-Enoncer.pdf#page=6&selection=73,0,77,5&color=yellow|Tp3-Enoncer, p.6]])
+        - [ ] Retourne: le ratio nombre de collision / nombre d'insertions pour la table de hachage NomPrenom ([[Tp3-Enoncer.pdf#page=6&selection=81,9,81,94&color=yellow|Tp3-Enoncer, p.6]])
+    - [ ] 
 
 ### FAQ
 ---
