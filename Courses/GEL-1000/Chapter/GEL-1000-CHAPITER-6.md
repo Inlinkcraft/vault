@@ -129,4 +129,9 @@ w 624 368 688 368 0
 >
 > ---
 > $$V_{a} = \frac{sLRI_{L_{0}}}{s^{2}RLC+sL+R}$$
-> $$$$
+> $$RLCs^{2}V_{a}+L_{s}Va + RV_{a} = sLR I_{L_{0}}$$
+> $$RLC \frac{d^{2}}{dt^{2}}V_{a} + L \frac{d}{dt}V_{a} + RV_{a} = sLR \frac{d}{dt}u(t)$$
+> $$RLC \frac{d^{2}}{dt^{2}}z+L \frac{d}{dt}z + Rz = -30u(t)$$
+> $$V_{a} = \frac{d}{dt}z$$
+> $$z = z_{h} + z_{p}$$
+> 
