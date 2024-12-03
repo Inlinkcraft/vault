@@ -47,3 +47,28 @@ Fonction de transfert
 
 La convolution
 ---
+
+### Definition mathématique
+---
+**Symbole**: $*$
+$$\begin{array}{rcl}
+H(s) \times X(s) & \leftrightarrow & h(t) * x(t) \\
+Y(s) & \leftrightarrow & y(t)
+\end{array}$$
+
+![[Chapitre-6.pdf#page=101&rect=289,85,536,759|Chapitre-6, p.101]]
+
+##### Propriété
+ Commutativité f 1(t)  f 2(t) = f 2(t)  f 1(t) 
+ Associativité [f 1(t)  f 2(t)]  f 3(t) = f 1(t)  [f 2(t)  f 3(t)]
+ Distributivité f 1(t)  [f 2(t) + f3(t)] = f1(t)  f 2(t) + f 1(t)  f 3(t) 
+ Décalage temporal If f(t) = f 1(t)  f 2(t), then f 1(t – t d)  f 2(t) = f(t – t d) 
+ Propriété de Convolution de la transformée de Laplace L[f 1(t)  f 2(t)] = F1(s)F2(s)
+([[Chapitre-6.pdf#page=102&selection=2,0,150,3&color=yellow|Chapitre-6, p.102]])
+
+> [!example] 
+> ![[Chapitre-6.pdf#page=103&rect=42,78,564,781&color=yellow|Chapitre-6, p.103]]
+> ![[Chapitre-6.pdf#page=104&rect=44,73,557,787&color=yellow|Chapitre-6, p.104]]
+
+### Convolutions impliquant la fonction delta de Dirac
+---
