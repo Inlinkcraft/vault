@@ -87,3 +87,21 @@ $$M_{dB}(\omega) = 20 \log_{10}(|H(\omega)|)$$
 Révision
 ---
 ![[Chapitre-6.pdf#page=115&rect=37,28,571,781&color=yellow|Chapitre-6, p.115]]![[Chapitre-6.pdf#page=116&rect=50,33,565,785&color=yellow|Chapitre-6, p.116]]![[Chapitre-6.pdf#page=120&rect=29,91,520,752&color=yellow|Chapitre-6, p.120]]
+
+> [!example] 
+> ![[Chapitre-6.pdf#page=98&rect=108,98,346,673&color=yellow|Chapitre-6, p.98]]
+> ```circuitjs
+> $ 64 0.000005 1.0312258501325766 50 5 50 5e-11
+> r 480 192 608 192 0 50
+> r 608 192 608 304 0 100
+> v 480 304 480 192 0 0 40 120 0 0 0.5
+> w 480 304 608 304 0
+> w 608 304 672 304 0
+> w 672 304 672 192 1
+> w 672 192 608 192 0
+> ```
+> ```circuitjs
+> ```
+> $$\begin{array}{lll}
+  & = &  \\
+\end{array}$$
