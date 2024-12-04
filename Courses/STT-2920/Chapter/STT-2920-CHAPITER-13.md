@@ -126,7 +126,19 @@ Rappel des distributions d’échantillonnage
 > > ![[STT-2920-Chapter-13.pdf#page=15&rect=22,40,404,155|STT-2920-Chapter-13, p.15]]
 > > ![[STT-2920-Chapter-13.pdf#page=16&rect=23,196,327,229|STT-2920-Chapter-13, p.16]]
 > > Sous $H_{0}$:
-> > $
+> > $$\chi^{2}= \frac{(n-1)s^{2}}{(0.10)^{2}} \sim \chi_{n-1}^{2}$$
+> > ![[STT-2920-Chapter-13.pdf#page=16&rect=24,3,431,160|STT-2920-Chapter-13, p.16]]
+
+> [!example] 
+> > [!question] 
+> > ![[STT-2920-Chapter-13.pdf#page=17&rect=35,140,437,221|STT-2920-Chapter-13, p.17]]
+> 
+> >[!success] solution
+> >![[STT-2920-Chapter-13.pdf#page=17&rect=23,0,269,133|STT-2920-Chapter-13, p.17]]
+> >![[STT-2920-Chapter-13.pdf#page=18&rect=25,181,413,231|STT-2920-Chapter-13, p.18]]
+> >...
+> >![[STT-2920-Chapter-13.pdf#page=18&rect=27,2,363,133|STT-2920-Chapter-13, p.18]]
+> >![[STT-2920-Chapter-13.pdf#page=19&rect=25,115,416,233|STT-2920-Chapter-13, p.19]]
 
 Test d’hypothèse sur une moyenne (présentation détaillée)
 ---
