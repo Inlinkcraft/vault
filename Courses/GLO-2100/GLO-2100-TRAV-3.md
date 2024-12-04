@@ -33,8 +33,8 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
 
 - [ ] Bottin.cpp
     - [ ] ``Bottin()`` ([[Tp3-Enoncer.pdf#page=4&selection=26,0,26,6&color=yellow|Tp3-Enoncer, p.4]])
-        - [ ] Précondition: le fichier est conforme au format attendu([[Tp3-Enoncer.pdf#page=4&selection=40,0,40,41&color=yellow|Tp3-Enoncer, p.4]])
-        - [ ] Paramètres d'entré: `std::ifstream & p_fichierEntree`
+        - [x] Précondition: le fichier est conforme au format attendu([[Tp3-Enoncer.pdf#page=4&selection=40,0,40,41&color=yellow|Tp3-Enoncer, p.4]])
+        - [x] Paramètres d'entré: `std::ifstream & p_fichierEntree`
         - [ ] Paramètres d'entré: `size_t p_table_size = 100`
         
     - [ ] ``void Bottin::ajouter()`` ([[Tp3-Enoncer.pdf#page=5&selection=10,0,10,20&color=yellow|Tp3-Enoncer, p.5]])
