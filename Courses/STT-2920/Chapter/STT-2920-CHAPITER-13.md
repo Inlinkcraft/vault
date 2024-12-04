@@ -118,6 +118,16 @@ Rappel des distributions d’échantillonnage
 >> Tout ce que l’on peut dire avec la table de la loi de Student est que la p-value est entre 0.010 et 0.025.
 >> 
 
+> [!example] 
+> > [!question] 
+> > ![[STT-2920-Chapter-13.pdf#page=15&rect=35,171,437,216|STT-2920-Chapter-13, p.15]]
+> 
+> > [!success] solution
+> > ![[STT-2920-Chapter-13.pdf#page=15&rect=22,40,404,155|STT-2920-Chapter-13, p.15]]
+> > ![[STT-2920-Chapter-13.pdf#page=16&rect=23,196,327,229|STT-2920-Chapter-13, p.16]]
+> > Sous $H_{0}$:
+> > $
+
 Test d’hypothèse sur une moyenne (présentation détaillée)
 ---
 Test d’hypothèse sur une moyenne (un premier exemple)
