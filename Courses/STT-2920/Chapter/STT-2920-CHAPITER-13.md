@@ -136,8 +136,9 @@ Rappel des distributions d’échantillonnage
 > >[!success] solution
 > >![[STT-2920-Chapter-13.pdf#page=17&rect=23,0,269,133|STT-2920-Chapter-13, p.17]]
 > >![[STT-2920-Chapter-13.pdf#page=18&rect=25,181,413,231|STT-2920-Chapter-13, p.18]]
-> >...
+> > $$T=\frac{\bar{X}_{1}-\bar{X}_{2}-0}{S_{1}\sqrt{ \frac{1}{n_{1}} + \frac{1}{n_{2}} }} \sim t_{n_{1}+n_{2}-2}$$
 > >![[STT-2920-Chapter-13.pdf#page=18&rect=27,2,363,133|STT-2920-Chapter-13, p.18]]
+> >p-value
 > >![[STT-2920-Chapter-13.pdf#page=19&rect=25,115,416,233|STT-2920-Chapter-13, p.19]]
 
 Test d’hypothèse sur une moyenne (présentation détaillée)
@@ -154,5 +155,16 @@ Exemple d’un test d’hypothèse sur la comparaison de deux moyennes
 ---
 Les types d’erreur et fonction puissance
 ---
+![[STT-2920-Chapter-13.pdf#page=20&rect=77,142,380,183|STT-2920-Chapter-13, p.20]]
+
+### Erreur de premère espèce
+---
+$$α = P[Rejeter H_{0}|H_{0} est vraie] = P_{H_{0}} [Rejeter H_{0}]$$
+([[STT-2920-Chapter-13.pdf#page=20&selection=91,0,120,1&color=yellow|STT-2920-Chapter-13, p.20]])
+### Erreur de second espèce
+---
+$$β = P [Ne pas rejeter H_{0}|H_{0} est fausse]$$
+([[STT-2920-Chapter-13.pdf#page=20&selection=122,0,138,1&color=yellow|STT-2920-Chapter-13, p.20]])
+
 Principe de dualité entre un test bilatéral et un intervalle de confiance
 ---
