@@ -168,3 +168,13 @@ $$β = P [Ne pas rejeter H_{0}|H_{0} est fausse]$$
 
 Principe de dualité entre un test bilatéral et un intervalle de confiance
 ---
+(Seulement pour du bilatérale)
+
+![[STT-2920-Chapter-13.pdf#page=21&rect=22,11,429,232&color=yellow|STT-2920-Chapter-13, p.21]]
+
+> [!example] 
+> > [!question] 
+> > ![[STT-2920-Chapter-13.pdf#page=22&rect=25,198,276,249&color=yellow|STT-2920-Chapter-13, p.22]]
+> 
+> > [!success] solution
+> > ![[STT-2920-Chapter-13.pdf#page=22&rect=23,158,372,195&color=yellow|STT-2920-Chapter-13, p.22]]
