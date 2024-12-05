@@ -187,3 +187,7 @@ $$\hat{x} = R^{-1}Q^Tb$$
 Si les colonnes de sont orthonormales ([[Chapitre-6b.pdf#page=10&selection=20,0,22,18&color=yellow|Chapitre-6b, p.10]]):
 $$A^TA=I$$
 alors $\hat{x} = A^Tb$
+> [!note] 
+> $$D=A^{T}A=\begin{bmatrix} 
+4 & 0
+> 0 & 90\end{bmatrix}$$
