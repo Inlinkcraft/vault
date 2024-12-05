@@ -54,10 +54,10 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
         - [x] Paramètre: ``const std::string & p_prenom``([[Tp3-Enoncer.pdf#page=5&selection=60,0,62,8&color=yellow|Tp3-Enoncer, p.5]])
         - [x] Retourne: l'entrée trouvée, exception si non trouvé. ([[Tp3-Enoncer.pdf#page=5&selection=84,0,84,42&color=yellow|Tp3-Enoncer, p.5]])
         
-    - [ ] ``const Bottin::Entree & Bottin::trouverAvecTelephone() const``([[Tp3-Enoncer.pdf#page=6&selection=10,0,10,52&color=yellow|Tp3-Enoncer, p.6]])
-        - [ ] Précondition: L'entrée n'est pas vide. ([[Tp3-Enoncer.pdf#page=6&selection=29,0,29,24&color=yellow|Tp3-Enoncer, p.6]])
-        - [ ] Paramètre: ``const std::string & p_telephoneFixe``([[Tp3-Enoncer.pdf#page=6&selection=10,52,12,15&color=yellow|Tp3-Enoncer, p.6]])
-        - [ ] Retourne: l'entrée trouvée, exception si non trouvé ([[Tp3-Enoncer.pdf#page=6&selection=33,0,33,41&color=yellow|Tp3-Enoncer, p.6]])
+    - [x] ``const Bottin::Entree & Bottin::trouverAvecTelephone() const``([[Tp3-Enoncer.pdf#page=6&selection=10,0,10,52&color=yellow|Tp3-Enoncer, p.6]])
+        - [x] Précondition: L'entrée n'est pas vide. ([[Tp3-Enoncer.pdf#page=6&selection=29,0,29,24&color=yellow|Tp3-Enoncer, p.6]])
+        - [x] Paramètre: ``const std::string & p_telephoneFixe``([[Tp3-Enoncer.pdf#page=6&selection=10,52,12,15&color=yellow|Tp3-Enoncer, p.6]])
+        - [x] Retourne: l'entrée trouvée, exception si non trouvé ([[Tp3-Enoncer.pdf#page=6&selection=33,0,33,41&color=yellow|Tp3-Enoncer, p.6]])
         
     - [x] ``void Bottin::afficherBottin() const``([[Tp3-Enoncer.pdf#page=6&selection=49,0,52,0&color=yellow|Tp3-Enoncer, p.6]])
         - [x] Paramètres: ``std::ostream & p_out`` ([[Tp3-Enoncer.pdf#page=6&selection=52,1,54,4&color=yellow|Tp3-Enoncer, p.6]])
@@ -83,6 +83,8 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
     - [ ] Modifier le  nombre d’insertions. Le nombre d’insertions doit être remis à 0 avant chaque rehachage ([[Tp3-Enoncer.pdf#page=7&selection=40,2,46,24&color=yellow|Tp3-Enoncer, p.7]])
     
     - [ ] Modifier le  nombre maximal de collision pour une insertion. ([[Tp3-Enoncer.pdf#page=7&selection=50,2,51,18&color=yellow|Tp3-Enoncer, p.7]])
+
+![[Pasted image 20241204215105.png]]
 
 ##### critère
 - [ ] Les tables de dispersion doivent avoir une taille adéquate. ([[Tp3-Enoncer.pdf#page=3&selection=54,0,56,1&color=yellow|Tp3-Enoncer, p.3]])
