@@ -188,6 +188,66 @@ Si les colonnes de sont orthonormales ([[Chapitre-6b.pdf#page=10&selection=20,0,
 $$A^TA=I$$
 alors $\hat{x} = A^Tb$
 > [!note] 
-> $$D=A^{T}A=\begin{bmatrix} 
-4 & 0
-> 0 & 90\end{bmatrix}$$
+> $$
+> D=A^{T}A=
+> \begin{bmatrix}
+> 4 & 0 \\
+> 0 & 90
+> \end{bmatrix}
+> $$
+> $$
+> D^{-1}
+> \begin{bmatrix}
+> \frac{1}{4} & 0  \\
+> 0 & \frac{1}{90}
+> \end{bmatrix}
+> $$
+> $$
+> \hat{x} = D^{-1}A^{T}b = 
+> \begin{bmatrix}
+> \frac{1}{4} & 0  \\
+> 0 & \frac{1}{90}
+> \end{bmatrix}
+> \begin{bmatrix}
+> 8 \\
+> 45
+> \end{bmatrix}
+> =
+> \begin{bmatrix}
+> 2 \\
+> \frac{1}{2}
+> \end{bmatrix}
+> $$
+> Erreur
+> $$
+> \epsilon = \dots
+> $$
+
+Moindres carrés et fonctions fondamentales
+---
+
+Nous permet d'aproximer des coefficient linéaire pour différent degrée de prolynome
+$$y=ax^{2}+bx+c$$
+Nous cherchons $a, b, c$ qui sont des variable linéaire
+![[Chapitre-6c.pdf#page=3&rect=983,17,1842,899|Chapitre-6c, p.3]]
+$$P = \{(-4,5),(-2,1),(0,0),(2,1.5),(3,5)\}$$
+> Nous récrivons les équation selon chacun des points
+> Ici cela est 5 équation qu'on transformera en matrice
+
+$$
+\begin{bmatrix}
+16 & -4 & 1 \\
+4 & -2 & 1 \\ \\
+0 & 0 & 1
+
+\end{bmatrix}
+\begin{bmatrix}
+a \\
+b \\
+c
+\end{bmatrix}
+\begin{bmatrix}
+5 \\
+1
+\end{bmatrix}
+$$
