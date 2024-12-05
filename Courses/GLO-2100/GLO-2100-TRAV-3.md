@@ -84,8 +84,6 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
     
     - [ ] Modifier le  nombre maximal de collision pour une insertion. ([[Tp3-Enoncer.pdf#page=7&selection=50,2,51,18&color=yellow|Tp3-Enoncer, p.7]])
 
-![[Pasted image 20241204215105.png]]
-
 ##### critère
 - [ ] Les tables de dispersion doivent avoir une taille adéquate. ([[Tp3-Enoncer.pdf#page=3&selection=54,0,56,1&color=yellow|Tp3-Enoncer, p.3]])
 - [ ] La fonction de hachage et de redispersions doit être celle fournie (HString1). ([[Tp3-Enoncer.pdf#page=3&selection=60,0,71,1&color=yellow|Tp3-Enoncer, p.3]])
