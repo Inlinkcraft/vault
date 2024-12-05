@@ -308,3 +308,20 @@ Matrice $V$
 
 > Resemblances aux vecteur propre mais avec une rotation ?
 $$Av_{i} = u_{i}\sigma_{1}$$
+
+### Trouver la factorisation
+---
+$$A=U\Sigma V^T$$
+##### Obtenir V
+On veut se débarrasser de $U$. (Utiliser $A^TA$)
+$$A^TA$$
+$$= (U\Sigma V^{T})^TU\Sigma V^T$$
+$$=V\Sigma^{T} U^TU \Sigma V^T$$
+$$=V\Sigma^{T} \Sigma V^T$$
+$$=V \Sigma^{2} V^T$$
+Donc selon $V\Sigma V^T$, $V$ Contient les vecteur propre de $A^TA$ parce que $A^{T}A$ est symétrique
+
+### Obtenir $\Sigma$ et $U$
+Sachant que
+$$\sigma_{i}u_{i} = Av_{i}$$
+On utilise les vecteur trouver de $V$ et sachant que les vecteur $u_{i}$ 
