@@ -66,7 +66,24 @@ status: Cette semaine
 		- avec $h_i = (h(x) + f(i))  \mod{N}$
 	- nécessite aussi la présence d'un champ état pour chaque entré de la table de dispertion
 	- indique l'état de cette entré:
-		- ACTIVE: si cettre entrée contiennt une clé vali
+		- ACTIVE: si cettre entrée contiennt une clé valide
+		- DELETED: si cette entré a déjà contenu une cle mais que celle-ci retirée par la suite avec une opération enlever(x)
+		- EMPTY: si cette entrée est vide et n'a jamais contenu une clé
+- Sondage linéaire
+	- Le sondage f utilisé est linéairement, i,.e. f(i) = i
+		- signifie qu'après...
+		- ...
+- Le sondage quadratique
+	- utilisé f(i) = i^2
+	- ...
+- Analyse du sondage quadratique
+	- Démontron s qu'on est assuré de trouver une position vacante dans la table lorsque celle-ci est au moins à moitié vidence
+		- On re-hachera la table lorsque l'insertion d'un élément nous donne une table avec moin de la moitié de ses cases dans l'état EMPTY
+		- ..
+- Double hachage
+	- consiste à calculer séquentiellement le position position $h_{0}$ ... avec $h_{i} = (h(x) + f(i)) \mod{N}$ avec f(i) = i \times h'(x) ou h'(x) est une seconde fonction de hachage.
+		- éviter d'avoir h'(x) = 0 (ex: h'(x) = c(x) mod R pour R < N)
+			- Tous les x tels que h'(x) = 0 produiront h_0(x) = h_
 
 ---
 # En retrospective
