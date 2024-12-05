@@ -280,3 +280,28 @@ y_{m}
 \end{bmatrix}
 $$
 ![[Chapitre-6c.pdf#page=7&rect=255,39,1655,210|Chapitre-6c, p.7]]
+
+Décomposition en valeurs singulières
+---
+Le summum du cours
+
+<u>Rappel</u>
+**Diagonalisation**
+$A = PDP^{-1}$
+	**symétrique**: $A = PDP^{T}$
+> [!attention] 
+> Carré seulement
+
+La décomposition en valeurs singulières
+---
+Pour n'importe qu'elle matrice $A$
+$$A = U \Sigma V^T \qquad AV=U\Sigma$$
+Matrice $U$
+- Colonne orthonormal
+
+Matrice $\Sigma$
+- Structure diagonale
+
+Matrice $V$
+- Colonne orthonormal
+- Observation: $V^{-1} = V^{T}$ (car les colonne sont orthonormal)
