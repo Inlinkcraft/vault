@@ -31,13 +31,13 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
 > > Dans le fichier que nous vous fournissons, les champs sont séparés par des tabulations ( '\t' ). Notez que les espaces ne constituent pas une délimitation de champ, mais que les noms et prénoms sont séparés par , + espace.
 > > ([[Tp3-Enoncer.pdf#page=4&selection=96,0,108,1&color=yellow|Tp3-Enoncer, p.4]])
 
-- [ ] Bottin.cpp
-    - [ ] ``Bottin()`` ([[Tp3-Enoncer.pdf#page=4&selection=26,0,26,6&color=yellow|Tp3-Enoncer, p.4]])
+- [x] Bottin.cpp
+    - [x] ``Bottin()`` ([[Tp3-Enoncer.pdf#page=4&selection=26,0,26,6&color=yellow|Tp3-Enoncer, p.4]])
         - [x] Précondition: le fichier est conforme au format attendu([[Tp3-Enoncer.pdf#page=4&selection=40,0,40,41&color=yellow|Tp3-Enoncer, p.4]])
         - [x] Paramètres d'entré: `std::ifstream & p_fichierEntree`
-        - [ ] Paramètres d'entré: `size_t p_table_size = 100`
+        - [x] Paramètres d'entré: `size_t p_table_size = 100`
         
-    - [ ] ``void Bottin::ajouter()`` ([[Tp3-Enoncer.pdf#page=5&selection=10,0,10,20&color=yellow|Tp3-Enoncer, p.5]])
+    - [x] ``void Bottin::ajouter()`` ([[Tp3-Enoncer.pdf#page=5&selection=10,0,10,20&color=yellow|Tp3-Enoncer, p.5]])
         - [x] Précondition: Les numeros de telephones sont valides ([[Tp3-Enoncer.pdf#page=5&selection=42,0,42,38&color=yellow|Tp3-Enoncer, p.5]])
         - [x] Précondition: Les entrées ne sont pas vides. ([[Tp3-Enoncer.pdf#page=5&selection=44,0,44,30&color=yellow|Tp3-Enoncer, p.5]]) 
         - [x] Précondition: La clef à insérer n'est pas déjà présente dans la table ([[Tp3-Enoncer.pdf#page=5&selection=46,0,46,55&color=yellow|Tp3-Enoncer, p.5]])
@@ -46,7 +46,7 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
         - [x] Paramètre: ``const std::string & p_telephoneFixe`` ([[Tp3-Enoncer.pdf#page=5&selection=12,0,12,35&color=yellow|Tp3-Enoncer, p.5]])
         - [x] Paramètre: ``const std::string & p_cellulaire`` ([[Tp3-Enoncer.pdf#page=5&selection=13,2,13,34&color=yellow|Tp3-Enoncer, p.5]])
         - [x] Paramètre: ``const std::string & p_courriel`` ([[Tp3-Enoncer.pdf#page=5&selection=15,0,15,30&color=yellow|Tp3-Enoncer, p.5]])
-        - [ ] Postcondition: La clef est insérée dans les deux tables et les données dans le tableau([[Tp3-Enoncer.pdf#page=5&selection=50,0,50,71&color=yellow|Tp3-Enoncer, p.5]])
+        - [x] Postcondition: La clef est insérée dans les deux tables et les données dans le tableau([[Tp3-Enoncer.pdf#page=5&selection=50,0,50,71&color=yellow|Tp3-Enoncer, p.5]])
         
     - [x] ``const Bottin::Entree & Bottin::trouverAvecNomPrenom() const`` ([[Tp3-Enoncer.pdf#page=5&selection=52,0,54,30&color=yellow|Tp3-Enoncer, p.5]])
         - [x] Précondition: Les entrées ne sont pas vides. ([[Tp3-Enoncer.pdf#page=5&selection=80,0,80,30&color=yellow|Tp3-Enoncer, p.5]])
@@ -85,35 +85,35 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
     - [x] Modifier le  nombre maximal de collision pour une insertion. ([[Tp3-Enoncer.pdf#page=7&selection=50,2,51,18&color=yellow|Tp3-Enoncer, p.7]])
 
 ##### critère
-- [ ] Les tables de dispersion doivent avoir une taille adéquate. ([[Tp3-Enoncer.pdf#page=3&selection=54,0,56,1&color=yellow|Tp3-Enoncer, p.3]])
-- [ ] La fonction de hachage et de redispersions doit être celle fournie (HString1). ([[Tp3-Enoncer.pdf#page=3&selection=60,0,71,1&color=yellow|Tp3-Enoncer, p.3]])
-- [ ] Vous devez gérer les exceptions dans toutes les méthodes de la classe Bottin ([[Tp3-Enoncer.pdf#page=3&selection=74,1,75,76&color=yellow|Tp3-Enoncer, p.3]])
-- [ ] Respect des biens livrables
+- [x] Les tables de dispersion doivent avoir une taille adéquate. ([[Tp3-Enoncer.pdf#page=3&selection=54,0,56,1&color=yellow|Tp3-Enoncer, p.3]])
+- [x] La fonction de hachage et de redispersions doit être celle fournie (HString1). ([[Tp3-Enoncer.pdf#page=3&selection=60,0,71,1&color=yellow|Tp3-Enoncer, p.3]])
+- [x] Vous devez gérer les exceptions dans toutes les méthodes de la classe Bottin ([[Tp3-Enoncer.pdf#page=3&selection=74,1,75,76&color=yellow|Tp3-Enoncer, p.3]])
+- [x] Respect des biens livrables
 - [ ] Portabilité de votre code source
-- [ ] Structure, organisation du code, lisibilité
+- [x] Structure, organisation du code, lisibilité
 - [ ] Documentation
-- [ ] Exactitude du code (fonctionnalité)
-- [ ] La gestion dynamique de la mémoire.
-- [ ] La gestion des exceptions 
+- [x] Exactitude du code (fonctionnalité)
+- [x] La gestion dynamique de la mémoire.
+- [x] La gestion des exceptions 
 - [ ] La qualité de vos testeurs 
-- [ ] Le respect des prototypes des méthodes quand ils sont imposés.
-- [ ] L’implémentation du contrat
+- [x] Le respect des prototypes des méthodes quand ils sont imposés.
+- [x] L’implémentation du contrat
 ([[Tp3-Enoncer.pdf#page=8&selection=149,0,192,27&color=yellow|Tp3-Enoncer, p.8]])
 
 ##### À remettre
-- [ ] Le fichier Bottin.txt contenant les données à lire sur les employés. 
-- [ ] Le fichier Bottin.h avec les déclarations des méthodes publiques, à compléter. 
-- [ ] Le fichier TableHachage.h à compléter. 
-- [ ] Le fichier TableHachage.hpp à modifier.
-- [ ] Le fichier FoncteurHachage.hpp à ne pas modifier.
+- [x] Le fichier Bottin.txt contenant les données à lire sur les employés. 
+- [x] Le fichier Bottin.h avec les déclarations des méthodes publiques, à compléter. 
+- [x] Le fichier TableHachage.h à compléter. 
+- [x] Le fichier TableHachage.hpp à modifier.
+- [x] Le fichier FoncteurHachage.hpp à ne pas modifier.
 - [ ] Fichier à remettre
-    - [ ] Bottin.h
-    - [ ] Bottin.cpp
-    - [ ] TableHachage.h
-    - [ ] TableHachage.hpp
-    - [ ] FoncteurHachage.hpp
-    - [ ] ContratException.h
-    - [ ] ContratException.cpp
+    - [x] Bottin.h
+    - [x] Bottin.cpp
+    - [x] TableHachage.h
+    - [x] TableHachage.hpp
+    - [x] FoncteurHachage.hpp
+    - [x] ContratException.h
+    - [x] ContratException.cpp
     - [ ] vos testeurs
     - [ ] le fichier de données test ainsi tous les fichiers sources nécessaires à la compilation de votre projet.
 ([[Tp3-Enoncer.pdf#page=8&selection=14,0,44,1&color=yellow|Tp3-Enoncer, p.8]])([[Tp3-Enoncer.pdf#page=7&selection=84,0,123,49&color=yellow|Tp3-Enoncer, p.7]])
