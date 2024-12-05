@@ -305,3 +305,6 @@ Matrice $\Sigma$
 Matrice $V$
 - Colonne orthonormal
 - Observation: $V^{-1} = V^{T}$ (car les colonne sont orthonormal)
+
+> Resemblances aux vecteur propre mais avec une rotation ?
+$$Av_{i} = u_{i}\sigma_{1}$$
