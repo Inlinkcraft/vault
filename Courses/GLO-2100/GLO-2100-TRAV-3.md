@@ -40,7 +40,7 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
     - [ ] ``void Bottin::ajouter()`` ([[Tp3-Enoncer.pdf#page=5&selection=10,0,10,20&color=yellow|Tp3-Enoncer, p.5]])
         - [ ] Précondition: Les numeros de telephones sont valides ([[Tp3-Enoncer.pdf#page=5&selection=42,0,42,38&color=yellow|Tp3-Enoncer, p.5]])
         - [x] Précondition: Les entrées ne sont pas vides. ([[Tp3-Enoncer.pdf#page=5&selection=44,0,44,30&color=yellow|Tp3-Enoncer, p.5]]) 
-        - [ ] Précondition: La clef à insérer n'est pas déjà présente dans la table ([[Tp3-Enoncer.pdf#page=5&selection=46,0,46,55&color=yellow|Tp3-Enoncer, p.5]])
+        - [x] Précondition: La clef à insérer n'est pas déjà présente dans la table ([[Tp3-Enoncer.pdf#page=5&selection=46,0,46,55&color=yellow|Tp3-Enoncer, p.5]])
         - [x] Paramètre: ``const std::string & p_nom``  ([[Tp3-Enoncer.pdf#page=5&selection=10,22,10,47&color=yellow|Tp3-Enoncer, p.5]])
         - [x] Paramètre: ``const std::string & p_prenom`` ([[Tp3-Enoncer.pdf#page=5&selection=10,49,10,77&color=yellow|Tp3-Enoncer, p.5]])
         - [x] Paramètre: ``const std::string & p_telephoneFixe`` ([[Tp3-Enoncer.pdf#page=5&selection=12,0,12,35&color=yellow|Tp3-Enoncer, p.5]])
@@ -59,8 +59,8 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
         - [ ] Paramètre: ``const std::string & p_telephoneFixe``([[Tp3-Enoncer.pdf#page=6&selection=10,52,12,15&color=yellow|Tp3-Enoncer, p.6]])
         - [ ] Retourne: l'entrée trouvée, exception si non trouvé ([[Tp3-Enoncer.pdf#page=6&selection=33,0,33,41&color=yellow|Tp3-Enoncer, p.6]])
         
-    - [ ] ``void Bottin::afficherBottin() const``([[Tp3-Enoncer.pdf#page=6&selection=49,0,52,0&color=yellow|Tp3-Enoncer, p.6]])
-        - [ ] Paramètres: ``std::ostream & p_out`` ([[Tp3-Enoncer.pdf#page=6&selection=52,1,54,4&color=yellow|Tp3-Enoncer, p.6]])
+    - [x] ``void Bottin::afficherBottin() const``([[Tp3-Enoncer.pdf#page=6&selection=49,0,52,0&color=yellow|Tp3-Enoncer, p.6]])
+        - [x] Paramètres: ``std::ostream & p_out`` ([[Tp3-Enoncer.pdf#page=6&selection=52,1,54,4&color=yellow|Tp3-Enoncer, p.6]])
         
     - [ ] ``int Bottin::nombreEntrees () const``([[Tp3-Enoncer.pdf#page=6&selection=65,0,65,34&color=yellow|Tp3-Enoncer, p.6]])
         - [ ] Retourne: le nombre d'entrées ([[Tp3-Enoncer.pdf#page=6&selection=69,0,71,19&color=yellow|Tp3-Enoncer, p.6]])
