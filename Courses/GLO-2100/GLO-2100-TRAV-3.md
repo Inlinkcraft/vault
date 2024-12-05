@@ -48,11 +48,11 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
         - [x] Paramètre: ``const std::string & p_courriel`` ([[Tp3-Enoncer.pdf#page=5&selection=15,0,15,30&color=yellow|Tp3-Enoncer, p.5]])
         - [ ] Postcondition: La clef est insérée dans les deux tables et les données dans le tableau([[Tp3-Enoncer.pdf#page=5&selection=50,0,50,71&color=yellow|Tp3-Enoncer, p.5]])
         
-    - [ ] ``const Bottin::Entree & Bottin::trouverAvecNomPrenom() const`` ([[Tp3-Enoncer.pdf#page=5&selection=52,0,54,30&color=yellow|Tp3-Enoncer, p.5]])
-        - [ ] Précondition: Les entrées ne sont pas vides. ([[Tp3-Enoncer.pdf#page=5&selection=80,0,80,30&color=yellow|Tp3-Enoncer, p.5]])
-        - [ ] Paramètre: ``const std::string & p_nom`` ([[Tp3-Enoncer.pdf#page=5&selection=56,1,58,5&color=yellow|Tp3-Enoncer, p.5]])
-        - [ ] Paramètre: ``const std::string & p_prenom``([[Tp3-Enoncer.pdf#page=5&selection=60,0,62,8&color=yellow|Tp3-Enoncer, p.5]])
-        - [ ] Retourne: l'entrée trouvée, exception si non trouvé. ([[Tp3-Enoncer.pdf#page=5&selection=84,0,84,42&color=yellow|Tp3-Enoncer, p.5]])
+    - [x] ``const Bottin::Entree & Bottin::trouverAvecNomPrenom() const`` ([[Tp3-Enoncer.pdf#page=5&selection=52,0,54,30&color=yellow|Tp3-Enoncer, p.5]])
+        - [x] Précondition: Les entrées ne sont pas vides. ([[Tp3-Enoncer.pdf#page=5&selection=80,0,80,30&color=yellow|Tp3-Enoncer, p.5]])
+        - [x] Paramètre: ``const std::string & p_nom`` ([[Tp3-Enoncer.pdf#page=5&selection=56,1,58,5&color=yellow|Tp3-Enoncer, p.5]])
+        - [x] Paramètre: ``const std::string & p_prenom``([[Tp3-Enoncer.pdf#page=5&selection=60,0,62,8&color=yellow|Tp3-Enoncer, p.5]])
+        - [x] Retourne: l'entrée trouvée, exception si non trouvé. ([[Tp3-Enoncer.pdf#page=5&selection=84,0,84,42&color=yellow|Tp3-Enoncer, p.5]])
         
     - [ ] ``const Bottin::Entree & Bottin::trouverAvecTelephone() const``([[Tp3-Enoncer.pdf#page=6&selection=10,0,10,52&color=yellow|Tp3-Enoncer, p.6]])
         - [ ] Précondition: L'entrée n'est pas vide. ([[Tp3-Enoncer.pdf#page=6&selection=29,0,29,24&color=yellow|Tp3-Enoncer, p.6]])
