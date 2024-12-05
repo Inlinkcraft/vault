@@ -234,12 +234,14 @@ $$P = \{(-4,5),(-2,1),(0,0),(2,1.5),(3,5)\}$$
 > Nous récrivons les équation selon chacun des points
 > Ici cela est 5 équation qu'on transformera en matrice
 
+**Pour un polynôme de degree 2**
 $$
 \begin{bmatrix}
 16 & -4 & 1 \\
-4 & -2 & 1 \\ \\
-0 & 0 & 1
-
+4 & -2 & 1 \\
+0 & 0 & 1 \\
+4 & 2 & 1 \\
+9 & 3 & 1
 \end{bmatrix}
 \begin{bmatrix}
 a \\
@@ -248,6 +250,33 @@ c
 \end{bmatrix}
 \begin{bmatrix}
 5 \\
-1
+1 \\
+0 \\
+1.5 \\
+5
 \end{bmatrix}
 $$
+### Généralement
+---
+$$
+\begin{bmatrix}
+f_{1}(x_{1}) & f_{2}(x_{1}) & \dots & f_{n}(x_{1}) \\
+f_{1}(x_{2}) & f_{2}(x_{2}) & \dots & f_{n}(x_{2}) \\
+\vdots & \vdots & \ddots & \vdots \\
+f_{1}(x_{m}) & f_{2}(x_{m}) & \dots & f_{n}(x_{m})
+\end{bmatrix}
+\begin{bmatrix}
+c_{1} \\
+c_{2} \\
+\vdots \\
+c_{n}
+\end{bmatrix}
+=
+\begin{bmatrix}
+y_{1} \\
+y_{2} \\
+\vdots \\
+y_{m}
+\end{bmatrix}
+$$
+![[Chapitre-6c.pdf#page=7&rect=255,39,1655,210|Chapitre-6c, p.7]]
