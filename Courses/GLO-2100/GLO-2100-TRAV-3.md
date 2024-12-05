@@ -66,16 +66,16 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
         - [x] Retourne: le nombre d'entrées ([[Tp3-Enoncer.pdf#page=6&selection=69,0,71,19&color=yellow|Tp3-Enoncer, p.6]])
         
     - [ ] ``double Bottin::ratioDeCollisionsNomPrenom () const`` ([[Tp3-Enoncer.pdf#page=6&selection=73,0,77,5&color=yellow|Tp3-Enoncer, p.6]])
-        - [ ] Retourne: le ratio nombre de collision / nombre d'insertions pour la table de hachage NomPrenom ([[Tp3-Enoncer.pdf#page=6&selection=81,9,81,94&color=yellow|Tp3-Enoncer, p.6]])
+        - [x] Retourne: le ratio nombre de collision / nombre d'insertions pour la table de hachage NomPrenom ([[Tp3-Enoncer.pdf#page=6&selection=81,9,81,94&color=yellow|Tp3-Enoncer, p.6]])
         
     - [ ] ``double Bottin::ratioDeCollisionTelephone () const`` ([[Tp3-Enoncer.pdf#page=6&selection=83,0,83,49&color=yellow|Tp3-Enoncer, p.6]])
-        - [ ] Retourne: le ratio nombre de collision / nombre d'insertions pour la table de hachage avec telephone ([[Tp3-Enoncer.pdf#page=6&selection=89,0,89,90&color=yellow|Tp3-Enoncer, p.6]])
+        - [x] Retourne: le ratio nombre de collision / nombre d'insertions pour la table de hachage avec telephone ([[Tp3-Enoncer.pdf#page=6&selection=89,0,89,90&color=yellow|Tp3-Enoncer, p.6]])
         
     - [ ] ``int TP3::Bottin::maximumNbCollisionNomPrenom () const`` ([[Tp3-Enoncer.pdf#page=7&selection=10,0,14,5&color=yellow|Tp3-Enoncer, p.7]])
-        - [ ] Retourne: le nombre maximal de collision pour une insertion pour nom / prenom ([[Tp3-Enoncer.pdf#page=7&selection=18,9,18,76&color=yellow|Tp3-Enoncer, p.7]])
+        - [x] Retourne: le nombre maximal de collision pour une insertion pour nom / prenom ([[Tp3-Enoncer.pdf#page=7&selection=18,9,18,76&color=yellow|Tp3-Enoncer, p.7]])
         
     - [ ] ``int Bottin::maximumNbCollisionTelephone () const`` ([[Tp3-Enoncer.pdf#page=7&selection=20,0,20,48&color=yellow|Tp3-Enoncer, p.7]])
-        - [ ] Retourne: le nombre maximal de collision pour une insertion pour telephone ([[Tp3-Enoncer.pdf#page=7&selection=24,9,24,73&color=yellow|Tp3-Enoncer, p.7]])
+        - [x] Retourne: le nombre maximal de collision pour une insertion pour telephone ([[Tp3-Enoncer.pdf#page=7&selection=24,9,24,73&color=yellow|Tp3-Enoncer, p.7]])
         
 - [ ] TableHachage.hpp
     - [ ] Modifier le nombre de collisions. Le nombre de collisions doit être remis à 0 avant chaque rechaghage. ([[Tp3-Enoncer.pdf#page=7&selection=36,2,36,93&color=yellow|Tp3-Enoncer, p.7]])
