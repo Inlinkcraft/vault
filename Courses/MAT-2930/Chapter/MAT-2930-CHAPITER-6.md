@@ -324,4 +324,24 @@ Donc selon $V\Sigma V^T$, $V$ Contient les vecteur propre de $A^TA$ parce que $A
 ### Obtenir $\Sigma$ et $U$
 Sachant que
 $$\sigma_{i}u_{i} = Av_{i}$$
-On utilise les vecteur trouver de $V$ et sachant que les vecteur $u_{i}$ 
+On utilise les vecteur trouver de $V$ et sachant que les vecteur $u_{i}$ doivent être normal on trouve les $\sigma_{i}$:
+$$\sigma_{i}=||Av_{i}|| \qquad u_{i} = \frac{Av_{i}}{\sigma_{i}}$$
+Il faut s'assurer de l'orthonormalité donc on utilise Gram-smiths
+
+> [!example] 
+> > [!question] 
+> > ![[Chapitre-6d.pdf#page=10&rect=766,883,1164,1038|Chapitre-6d, p.10]]
+> 
+> > [!success] Solution
+> > <u>Étape 1, Trouver V</u>
+> > $A^TA = \begin{bmatrix}1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1\end{bmatrix}$
+> > Trouver les valeur propre de $A^TA$
+> > $\lambda_{1} = 2$
+> > $\lambda_{2} = 1$
+> > $\lambda_{3} = 0$
+> > Trouver les vecteur propre
+> > $v_{1}=\begin{bmatrix} 1 \\ 1 \\ 0\end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{ 2 }} \\ \frac{1}{\sqrt{ 2 }} \\ 0 \end{bmatrix}$
+> > $v_{2} = \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}$
+> > $v_{3} = \begin{bmatrix}-1 \\ 1 \\ 0\end{bmatrix} = \begin{bmatrix} -\frac{1}{\sqrt{ 2 }} \\ \frac{1}{\sqrt{ 2 }} \\ 0 \end{bmatrix}$
+> > 
+
