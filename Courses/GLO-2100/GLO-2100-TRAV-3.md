@@ -91,7 +91,7 @@ Votre mandat est de représenter l’information nécessaire à la gestion d’u
 - [x] Respect des biens livrables
 - [ ] Portabilité de votre code source
 - [x] Structure, organisation du code, lisibilité
-- [ ] Documentation
+- [x] Documentation
 - [x] Exactitude du code (fonctionnalité)
 - [x] La gestion dynamique de la mémoire.
 - [x] La gestion des exceptions 
