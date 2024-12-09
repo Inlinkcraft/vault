@@ -344,8 +344,27 @@ Il faut s'assurer de l'orthonormalité donc on utilise Gram-smiths
 > > $v_{2} = \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}$
 > > $v_{3} = \begin{bmatrix}-1 \\ 1 \\ 0\end{bmatrix} = \begin{bmatrix} -\frac{1}{\sqrt{ 2 }} \\ \frac{1}{\sqrt{ 2 }} \\ 0 \end{bmatrix}$
 > > $V= \begin{bmatrix} \frac{1}{\sqrt{ 2 }} & 0 & \frac{1}{\sqrt{ 2 }}\\ \frac{1}{\sqrt{ 2 }} & 0 & \frac{1}{\sqrt{ 2 }} \\ 0 & 1 & 0 \end{bmatrix}$
-> > $\sigma_{1}$
->> 
+> > $\sigma_{1}u_{1}=Av_{1}= \begin{bmatrix} 1 & 1 & 0 \\ 0  & 0 & 1 \end{bmatrix}\begin{bmatrix}\frac{1}{\sqrt{ 2 }} \\ \frac{1}{\sqrt{ 2 }} \\ 0\end{bmatrix} = \begin{bmatrix} \frac{2}{\sqrt{ 2 }} \\ 0\end{bmatrix} = \begin{bmatrix}\sqrt{ 2 } \\ 0\end{bmatrix}$
+> > donc $\sigma_{1} = \sqrt{ 2 } \qquad u_{1}=\begin{bmatrix}1 \\ 0\end{bmatrix}$
+> > ...
+> > donc $\sigma_{2}=1 \qquad u_{2} = \begin{bmatrix}0  \\ 1\end{bmatrix}$
+> > Donc : $U = \begin{bmatrix}1 & 0 \\ 0 & 1 \end{bmatrix}$ Orthogonal !
+> > $A=\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}\begin{bmatrix}\sqrt{ 2 } & 0 & 0 \\ 0 & 1 & 0\end{bmatrix}\begin{bmatrix}\frac{1}{\sqrt{ 2 }} & 0 & \frac{1}{\sqrt{ 2 }} \\ \frac{1}{\sqrt{ 2 }} & 0 & \frac{1}{\sqrt{ 2 }} \\ 0 & 1 & 0\end{bmatrix}$
 
-$$A =\left[\underbrace{\vec{u_{1}} \quad \vec{u_{2}} \quad \dots \quad \vec{u_{r}}}_{\text{Base Col } A} \quad \underbrace{\vec{u_{r-1}} \quad \dots \vec{u_{m}}}_{\text{Base Nul } A}\right]$$
+$$A =\left[\underbrace{\vec{u_{1}} \quad \vec{u_{2}} \quad \dots \quad \vec{u_{r}}}_{\text{Base Col } A} \quad \underbrace{\vec{u_{r-1}} \quad \dots \vec{u_{m}}}_{\text{Base Nul } A^T}\right]$$
 
+> [!example] 
+> > [!question] 
+> > $\begin{bmatrix}1 & -1 \\ -2 & 2  \\ 2 & -2 \end{bmatrix}$
+> 
+> > [!success] Solution
+> > U : 3x3
+> > sigma 3x2
+> > V : 2x2
+> > Trouver V vect propre de A^TA
+> > $A^TA = \begin{bmatrix}1 & -2 & 2 \\ 1 & 2 & -2\end{bmatrix}\begin{bmatrix}1 & -1 \\ -2 & 2 \\ 2 & -2\end{bmatrix}=\begin{bmatrix}9 & -9 \\ -9 & 9\end{bmatrix}$
+> > $v_{2}= \begin{bmatrix}1 \\ 1\end{bmatrix} \qquad \lambda_{2}=0$
+> > $v_{1}= \begin{bmatrix}-1 \\ 1\end{bmatrix} \qquad \lambda_{1}=18$
+> > Sigma et U
+> > $\sigma_{1}u_{1}=Av_{1}$
+> > 
