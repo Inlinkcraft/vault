@@ -367,4 +367,20 @@ $$A =\left[\underbrace{\vec{u_{1}} \quad \vec{u_{2}} \quad \dots \quad \vec{u_{r
 > > $v_{1}= \begin{bmatrix}-1 \\ 1\end{bmatrix} \qquad \lambda_{1}=18$
 > > Sigma et U
 > > $\sigma_{1}u_{1}=Av_{1}$
-> > 
+> > $\begin{bmatrix}1 & -1 \\ -2 & 2 \\ 2 & -2\end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{ 2 }} \\ \frac{1}{\sqrt{ 2 } } \end{bmatrix}=\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}$
+> > $\sigma_{1} u_{1} = Av_{1} = \begin{bmatrix} 1 & -1 \\ -2 & 2 \\2 & -2\end{bmatrix}$
+> > .....
+> > ...
+> > .
+> > ..
+> > .
+
+Application de la SVD
+---
+### Pseudo-inverse
+---
+![[Chapitre-6e.pdf#page=3&rect=260,21,1641,917|Chapitre-6e, p.3]]
+
+$$\begin{array}{llll}
+A = 
+\end{array}$$
