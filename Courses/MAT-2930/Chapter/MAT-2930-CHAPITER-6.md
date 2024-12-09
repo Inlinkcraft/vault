@@ -382,5 +382,9 @@ Application de la SVD
 ![[Chapitre-6e.pdf#page=3&rect=260,21,1641,917|Chapitre-6e, p.3]]
 
 $$\begin{array}{llll}
-A = 
+A & = & U \Sigma V^T \\
+A^{-1} & = & \left(U \Sigma V^T\right)^{-1} \\
+& = & (V^{T})\Sigma^{-1}U^{-1} \\
+& = & V \Sigma^{-1} U^T & \Sigma^{-1}\text{ existe pas}  \\
+A^{+} & = & V \Sigma^{-1} U^T & \Sigma^{-1}\text{ avec juste la diagonal !}
 \end{array}$$
