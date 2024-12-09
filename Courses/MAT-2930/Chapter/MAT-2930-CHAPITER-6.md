@@ -343,5 +343,9 @@ Il faut s'assurer de l'orthonormalité donc on utilise Gram-smiths
 > > $v_{1}=\begin{bmatrix} 1 \\ 1 \\ 0\end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{ 2 }} \\ \frac{1}{\sqrt{ 2 }} \\ 0 \end{bmatrix}$
 > > $v_{2} = \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}$
 > > $v_{3} = \begin{bmatrix}-1 \\ 1 \\ 0\end{bmatrix} = \begin{bmatrix} -\frac{1}{\sqrt{ 2 }} \\ \frac{1}{\sqrt{ 2 }} \\ 0 \end{bmatrix}$
-> > 
+> > $V= \begin{bmatrix} \frac{1}{\sqrt{ 2 }} & 0 & \frac{1}{\sqrt{ 2 }}\\ \frac{1}{\sqrt{ 2 }} & 0 & \frac{1}{\sqrt{ 2 }} \\ 0 & 1 & 0 \end{bmatrix}$
+> > $\sigma_{1}$
+>> 
+
+$$A =\left[\underbrace{\vec{u_{1}} \quad \vec{u_{2}} \quad \dots \quad \vec{u_{r}}}_{\text{Base Col } A} \quad \underbrace{\vec{u_{r-1}} \quad \dots \vec{u_{m}}}_{\text{Base Nul } A}\right]$$
 
