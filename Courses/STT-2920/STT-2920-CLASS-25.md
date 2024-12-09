@@ -21,6 +21,8 @@ status: "À Faire"
 
 ## Notes supplémentaire
 
+Exercices 7
+
 
 ---
 # En retrospective
