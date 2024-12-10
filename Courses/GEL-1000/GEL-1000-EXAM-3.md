@@ -20,7 +20,7 @@ status: En cours
 3. Circuit la fonction de transfer avec apli-op (Passe/filtre)
     - [x] Question à dévelopmment
 4. Fonction de transfert Laplace / inverse
-    - [ ] 2 Questions ?
+    - [x] 2 Questions ?
 5. Calculer le décalage ? Transformation de réponse
 6. Circuit RL du premier ordre Laplace
 
