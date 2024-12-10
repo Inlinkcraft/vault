@@ -12,13 +12,13 @@ status: En cours
 ### Structure de l'examen
 ---
 1. Circuit LC Source commander Laplace
-    - [ ] Méthode des noeud
-    - [ ] Méthode des maille
-    - [ ] Valeur finale
+    - [x] Méthode des noeud
+    - [x] Méthode des maille
+    - [x] Valeur finale
 2. Circuit d'ordre 2 condition initial avec différentielle
-    - [ ] Bonnus coefficient d'ammortissement pour le comportement
+    - [x] Bonnus coefficient d'ammortissement pour le comportement
 3. Circuit la fonction de transfer avec apli-op (Passe/filtre)
-    - [ ] Question à dévelopmment
+    - [x] Question à dévelopmment
 4. Fonction de transfert Laplace / inverse
     - [ ] 2 Questions ?
 5. Calculer le décalage ? Transformation de réponse
