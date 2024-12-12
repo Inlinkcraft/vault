@@ -14,6 +14,17 @@ status: "À Faire"
 ## Todo
 - 
 
+Chapitre 11:
+	Numero 7:
+		
+
+| Vrai                        | Estim                  |
+| --------------------------- | ---------------------- |
+| $\mu$                       | $\bar{x}$              |
+| $\sigma$                    | $s$                    |
+| $\frac{\sigma}{\sqrt{ n }}$ | $\frac{S}{\sqrt{ n }}$ |
+
+
 Chapitre 13:
 	Numero 11:
 		Question: Disent que leur vie est de 1000h, échantillon de 75, moyenne de 955.15, variance de 126.55h
@@ -26,6 +37,7 @@ Chapitre 13:
 		p-value $= P(Z \le Z_{obs})$
 		$=P(Z \le -30.7)$
 		$\Phi(-3.07) = 1 - \Phi(3.07)= 1-0.9989 = 0.0011$
+
 Exercise complémentaire
 	Numéro 1:
 		On a $n, IC(\mu), \sigma$ connue
@@ -34,6 +46,17 @@ Exercise complémentaire
 		$NC \uparrow \implies \alpha \downarrow$
 	Numero 3:
 		$E_{2} = \frac{E_{1}}{k}$
+		$\frac{1}{\sqrt{ n_{2} }}=\frac{1}{k\sqrt{ n_{1} }}$
+		$n_{2} = k^{2}n_{1}$
+	Numero 4:
+		$n, IC_{95}(\mu), 100$
+		100
+	Numéro 5:
+		$\alpha, \mu, \sigma$ connue, test $\implies \emptyset$ reg. $H_{0}$
+	Numéro 6:
+		$n, \sigma$ connu, test sur $\mu$
+		$n \uparrow \implies p-value \downarrow$
+		
 
 ---
 # Matière abordée
