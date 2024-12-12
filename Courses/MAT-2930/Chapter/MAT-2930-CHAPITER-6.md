@@ -388,3 +388,7 @@ A^{-1} & = & \left(U \Sigma V^T\right)^{-1} \\
 & = & V \Sigma^{-1} U^T & \Sigma^{-1}\text{ existe pas}  \\
 A^{+} & = & V \Sigma^{-1} U^T & \Sigma^{-1}\text{ avec juste la diagonal !}
 \end{array}$$
+
+### Décomposition spectrale
+---
+![[Chapitre-6e.pdf#page=5&rect=11,552,1912,903|Chapitre-6e, p.5]]
