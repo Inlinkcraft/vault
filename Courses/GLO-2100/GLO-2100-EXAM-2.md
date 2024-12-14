@@ -13,13 +13,13 @@ status: "À Faire"
 ### Plan d'étude
 
 - [x] Fonction de hachage
-- [ ] Gestion  des collisions
+- [x] Gestion  des collisions
     - [x] Chaînage externe
-    - [ ] Adressage ouvert
-        - [ ] Sondage linéaire
-        - [ ] Sondage quadratique
-        - [ ] Double hachage
-- [ ] Hachage universel
+    - [x] Adressage ouvert
+        - [x] Sondage linéaire
+        - [x] Sondage quadratique
+        - [x] Double hachage
+- [x] Hachage universel
 - [ ] Terminologie des arbres
 - [ ] Parcours d'arbres
     - [ ] Pré-ordre
