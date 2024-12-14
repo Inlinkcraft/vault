@@ -41,4 +41,28 @@ status: "À Faire"
     - [ ] Le facteur d'équilibre d'un noeud est de k lorsque:
         - [ ] |hauteur(sous-arbre droit)- hauteur(sous-arbre gauche)| = k
         - [ ] Remarque: La hauteur d'un arbre de 0 noeud est  -1
-    - [ ] Un arbre est HB[k] lorsque le facteur d'équilibre
+    - [ ] Un arbre est $HB[k]$ lorsque le facteur d'équilibre de ses noeuds est $\le$ k
+    - [ ] Noeud critique
+    - [ ] Déséquilibre
+        - [ ] Trouver les cas de déséquilibre
+            - [ ] ZigZigGauche
+            - [ ] ZigZigDroit
+            - [ ] ZigZagDroit
+            - [ ] ZigZagGauche
+    - [ ] Retirer
+    - [ ] Recherche
+- [ ] Arbre rouge et noir
+    - [ ] Propriétés
+        - [ ] Arbre binaire ordonné
+        - [ ] Noeud rouge ou noir seulement
+        - [ ] La racine est noir
+        - [ ] Les feuille sont null et noir
+        - [ ] Les enfant d'un noeud rouge sont noir
+        - [ ] à partir de n'importe quel noeud, tous les chemins de la racine jusqu'à un pointeur NULL doivent avoir le même nombre de noeuds noir.
+    - [ ] Exemples
+    - [ ] insertions
+        - [ ] 3 Cas
+    - [ ] Supressions
+        - [ ] Supprimer le noeud à la bonne position comme dans un arbre AVL
+        - [ ] Ensuite, on doit gérer le coloriage et le balancement
+        - [ ] 3 cas de la suppression et 6 pour fixer le coloriage
