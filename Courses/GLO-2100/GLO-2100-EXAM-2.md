@@ -14,7 +14,7 @@ status: "À Faire"
 
 - [x] Fonction de hachage
 - [ ] Gestion  des collisions
-    - [ ] Chaînage externe
+    - [x] Chaînage externe
     - [ ] Adressage ouvert
         - [ ] Sondage linéaire
         - [ ] Sondage quadratique
