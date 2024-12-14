@@ -12,7 +12,7 @@ status: "À Faire"
 
 ### Plan d'étude
 
-- [ ] Fonction de hachage
+- [x] Fonction de hachage
 - [ ] Gestion  des collisions
     - [ ] Chaînage externe
     - [ ] Adressage ouvert
