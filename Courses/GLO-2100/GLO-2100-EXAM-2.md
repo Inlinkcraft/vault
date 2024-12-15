@@ -37,10 +37,10 @@ status: "À Faire"
         - [ ] Trouver un élément (déterminer si un élément est présent)
     - [ ] s'effectuent en $O (\log(n))$ lorsque l'arbre de n élément est équilibré
 - [ ] Arbre AVL
-    - [ ] un arbre binaire de recherche (de tri) doit être équilibré pour supporter efficacement les opérations de recherche, d'insertion et de suppression
-    - [ ] Le facteur d'équilibre d'un noeud est de k lorsque:
-        - [ ] |hauteur(sous-arbre droit)- hauteur(sous-arbre gauche)| = k
-        - [ ] Remarque: La hauteur d'un arbre de 0 noeud est  -1
+    - [x] un arbre binaire de recherche (de tri) doit être équilibré pour supporter efficacement les opérations de recherche, d'insertion et de suppression
+    - [x] Le facteur d'équilibre d'un noeud est de k lorsque:
+        - [x] |hauteur(sous-arbre droit)- hauteur(sous-arbre gauche)| = k
+        - [x] Remarque: La hauteur d'un arbre de 0 noeud est  -1
     - [ ] Un arbre est $HB[k]$ lorsque le facteur d'équilibre de ses noeuds est $\le$ k
     - [ ] Noeud critique
     - [ ] Déséquilibre
