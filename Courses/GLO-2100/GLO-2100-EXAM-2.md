@@ -25,10 +25,10 @@ status: "À Faire"
     - [x] Pré-ordre
     - [x] Post-ordre
     - [x] En-ordre
-- [ ] Implémentation des arbres dans un tableau
-    - [ ] Implémentation par chaînage
-- [ ] Monceaux
-    - [ ] Tri par tas ("Heap sort")
+- [x] Implémentation des arbres dans un tableau
+    - [x] Implémentation par chaînage
+- [x] Monceaux
+    - [x] Tri par tas ("Heap sort")
 - [ ] Arbre binaire de recherche
     - [ ] Peuvent être utilisés pour implémenter les dictionnaires
     - [ ] Dictionnaire: conteneur d'élément devant supporter efficacement les opérations suivante:
