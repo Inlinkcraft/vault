@@ -3,7 +3,7 @@ name: Arbre rouge et noir
 type: Chapter
 course: GLO-2100
 ---
-
+/
 Arbres rouge et noir
 ---
 > [!todo] Motivation
