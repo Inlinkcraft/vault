@@ -20,11 +20,11 @@ status: "À Faire"
         - [x] Sondage quadratique
         - [x] Double hachage
 - [x] Hachage universel
-- [ ] Terminologie des arbres
-- [ ] Parcours d'arbres
-    - [ ] Pré-ordre
-    - [ ] Post-ordre
-    - [ ] En-ordre
+- [x] Terminologie des arbres
+- [x] Parcours d'arbres
+    - [x] Pré-ordre
+    - [x] Post-ordre
+    - [x] En-ordre
 - [ ] Implémentation des arbres dans un tableau
     - [ ] Implémentation par chaînage
 - [ ] Monceaux
