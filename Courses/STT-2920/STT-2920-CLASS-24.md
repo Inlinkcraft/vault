@@ -22,10 +22,10 @@ status: Cette semaine
 ## Notes supplémentaire
 
 ##### examen
-Chapitre 6: ``10%``
-	Espérance, variance
-Chapitre 7: ``15%``
-	Processus de poisson
+~~Chapitre 6: ``10%``~~
+	~~Espérance, variance~~
+~~Chapitre 7: ``15%``~~
+	~~Processus de poisson~~
 Chapitre 8: ``20%``
 	Lois normale et théorème central limite*
 		Correction pour la continuité
