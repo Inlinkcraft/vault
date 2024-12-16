@@ -26,9 +26,9 @@ status: Cette semaine
 	~~Espérance, variance~~
 ~~Chapitre 7: ``15%``~~
 	~~Processus de poisson~~
-Chapitre 8: ``20%``
-	Lois normale et théorème central limite*
-		Correction pour la continuité
+~~Chapitre 8: ``20%``~~
+	~~Lois normale et théorème central limite*~~
+		~~Correction pour la continuité~~
 Chapitre 10: ``10%``
 	Statistique descriptive
 Chapitre 11-12: ``20-25%``
